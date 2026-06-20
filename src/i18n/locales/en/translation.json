@@ -1,0 +1,875 @@
+{
+  "language_switcher": {
+    "switch_to_en": "Switch to English",
+    "switch_to_hu": "Switch to Hungarian",
+    "switch_to_de": "Switch to German",
+    "hu": "HU",
+    "en": "EN",
+    "de": "DE"
+  },
+  "nav": {
+    "home": "Home",
+    "solutions": "Solutions",
+    "website": "Website",
+    "about": "About",
+    "results": "Results",
+    "partners": "Partners",
+    "contact": "Contact",
+    "free_consultation": "Free consultation"
+  },
+  "hero": {
+    "badge": "AI-driven marketing and automation",
+    "title_line1": "AdyFlow – where advertising is",
+    "title_line2": "an investment, not a cost.",
+    "subtitle": "Performance-based customer acquisition systems from the ad to the paying customer. With strategic campaign management and automated processes, we build predictable, measurable growth.",
+    "cta_primary": "Request a free consultation",
+    "cta_secondary": "Discover our solutions",
+    "stat_growth": "3x faster growth",
+    "stat_time": "80% time saved",
+    "stat_transparency": "100% transparency",
+    "scroll_down": "Scroll down",
+    "stat1_label": "faster growth",
+    "stat2_label": "time saved",
+    "stat3_label": "transparency",
+    "benefit1_title": "Performance-driven mindset",
+    "benefit1_desc": "Only results matter. With us, advertising budget is an investment, not an expense.",
+    "benefit2_title": "Automated systems",
+    "benefit2_desc": "Efficient processes, less manual work, more time for value creation.",
+    "benefit3_title": "Predictable growth",
+    "benefit3_desc": "Measurable results; we build your growth as a long-term partner.",
+    "badge_transparent": "100% transparency"
+  },
+  "partner_badges": {
+    "meta": "Meta Business Partner",
+    "google": "Google Partner"
+  },
+  "audience": {
+    "title_line1": "AdyFlow is for",
+    "title_highlight": "those who want to grow",
+    "subtitle": "For businesses and marketing teams who have moved beyond manual processes and are ready for a data-driven, automated system",
+    "cards": {
+      "smb": {
+        "title": "SMBs and startups",
+        "description": "Small and medium-sized businesses preparing for rapid growth"
+      },
+      "advertising": {
+        "title": "Already advertising, but...",
+        "description": "Actively present on digital channels, but without predictable revenue"
+      },
+      "open": {
+        "title": "Open to the new",
+        "description": "Intermediate marketing knowledge, ready for AI-based automation"
+      },
+      "longterm": {
+        "title": "Planning long-term",
+        "description": "Ready to invest in systematic, sustainable growth"
+      }
+    },
+    "callout_part1": "This is",
+    "callout_for_you": "for you",
+    "callout_part2": ", if you are ready for a",
+    "callout_data": "data-driven",
+    "callout_part3": ",",
+    "callout_automated": "automated system",
+    "callout_part4": "that delivers",
+    "callout_real": "real results",
+    "callout_part5": ""
+  },
+  "problem": {
+    "title_line1": "Lots of marketing activity,",
+    "title_highlight": "few real results",
+    "subtitle": "Most companies invest enormous amounts of energy and money into digital marketing, but the results often fall short",
+    "cards": {
+      "unpredictable": {
+        "title": "Unpredictable customer acquisition",
+        "description": "You can't predict how many customers you'll have next month"
+      },
+      "low_roi": {
+        "title": "Low campaign ROI",
+        "description": "You spend a lot on advertising, but the results lag behind"
+      },
+      "manual": {
+        "title": "Manual processes",
+        "description": "Your team is overwhelmed by repetitive tasks"
+      },
+      "disconnected": {
+        "title": "Marketing and sales misaligned",
+        "description": "Lead generation and sales aren't coordinated"
+      }
+    },
+    "callout_part1": "The problem isn't that",
+    "callout_no_marketing": "you have no marketing",
+    "callout_part2": "– it's that",
+    "callout_no_system": "there's no system behind it"
+  },
+  "flow": {
+    "section_label": "HOW IT WORKS",
+    "title_part1": "The AdyFlow system in",
+    "title_highlight": "5 steps",
+    "subtitle": "A transparent process from the click to the closed customer",
+    "steps": {
+      "ads": {
+        "title": "Targeted ads",
+        "description": "Data-driven campaigns to reach relevant prospects.",
+        "tooltip": "Meta and Google ads"
+      },
+      "conversion": {
+        "title": "Conversion page",
+        "description": "A page that generates a lead or appointment.",
+        "tooltip": "Landing pages with A/B tests"
+      },
+      "crm": {
+        "title": "CRM intake",
+        "description": "Automatic lead management with statuses.",
+        "tooltip": "Pipeline transparency"
+      },
+      "automation": {
+        "title": "Automation",
+        "description": "Follow-up messages and reminders.",
+        "tooltip": "SMS and email automation"
+      },
+      "result": {
+        "title": "Business outcome",
+        "description": "Appointment or customer – with measurable numbers.",
+        "tooltip": "ROI tracking"
+      }
+    }
+  },
+  "flow_section": {
+    "badge": "IN 5 STEPS",
+    "title_part1": "How we build an",
+    "title_highlight": "AI-powered customer acquisition system",
+    "subtitle": "A complete system that brings not just more leads, but higher-quality ones — predictably.",
+    "cards": {
+      "ads": {
+        "title": "Ad Management",
+        "subtitle": "Meta / Google Ads",
+        "description": "Data-driven campaigns that reach relevant prospects and collect all the important data.",
+        "bullets": [
+          "Meta + Google campaigns with creative testing",
+          "Remarketing to prospects for better ROI",
+          "Continuous cost optimization and reporting"
+        ]
+      },
+      "conversion": {
+        "title": "Conversion Page",
+        "subtitle": "Landing page",
+        "description": "A landing page that generates leads or appointment bookings — with smart contact management for valuable prospects.",
+        "bullets": [
+          "Easy-to-fill forms with fast responses",
+          "AI suggestions for content optimization",
+          "Active relationship building, not passive waiting"
+        ]
+      },
+      "crm": {
+        "title": "CRM Intake",
+        "subtitle": "Lead management",
+        "description": "Automatic lead management with statuses — every prospect organized in one place with AI tracking.",
+        "bullets": [
+          "AI-based CRM: automatic categorization",
+          "Transparent statuses for faster closing",
+          "Smart prioritization for the most valuable leads"
+        ]
+      },
+      "automation": {
+        "title": "Automation",
+        "subtitle": "AI Agents",
+        "description": "Follow-up messages, reminders, and AI Agents that respond at the right moment.",
+        "bullets": [
+          "Automatic follow-up messages and reminders",
+          "Personalized communication with AI",
+          "Less manual work, more deals closed"
+        ]
+      },
+      "result": {
+        "title": "Continuous Optimization",
+        "subtitle": "Business results",
+        "description": "Appointments or customers — with measurable numbers. The question isn't how many leads come in, but which ones become customers.",
+        "bullets": [
+          "Lead quality and pipeline movement tracking",
+          "Source-based analysis: which brings real customers",
+          "The entire system aligned to outcomes"
+        ]
+      }
+    },
+    "summary_title": "We don't make promises — we build working systems.",
+    "summary_subtitle": "We use AI, but the focus is always on business results."
+  },
+  "flow_details": {
+    "section_label": "DETAILED OPERATION",
+    "title_part1": "AI-driven",
+    "title_highlight": "customer acquisition system",
+    "subtitle": "A detailed look at how the entire system works together",
+    "ads": {
+      "title": "Ad management: Meta / Google Ads",
+      "creative": "Creative and copy with AI support",
+      "goal_label": "Goal:",
+      "goal_text": "Reach relevant prospects and collect every important data point",
+      "client_sees": "What the client sees:",
+      "meta_label": "Meta Ads:",
+      "meta_text": "Facebook + Instagram campaigns, creative testing, remarketing to prospects for better ROI.",
+      "google_label": "Google Ads:",
+      "google_text": "Search ads for purchase intent, keyword optimization, measurable conversions to capture immediate prospects.",
+      "summary_label": "Goal:",
+      "summary_text": "More inquiries and bookings, with continuous cost optimization and reporting for transparent, stable growth."
+    },
+    "conversion": {
+      "title": "Conversion – Conversion page",
+      "intro": "A landing page / page that generates a lead or appointment booking",
+      "ai_part1": "AI suggestions",
+      "ai_part2": "for content optimization",
+      "form_title": "Plain form:",
+      "form_passive": "Passive – waits",
+      "form_collects": "Collects data",
+      "form_manual": "Manual response",
+      "form_quantity": "Many leads, few closes",
+      "smart_title": "Smart contact handling for valuable leads",
+      "smart_active": "Active – reacts",
+      "smart_builds": "Builds the relationship",
+      "smart_personal": "Automated, but personal",
+      "smart_quality": "Fewer leads, better quality",
+      "client_sees": "What the client sees:",
+      "client_text": "Easy-to-fill form, fast feedback"
+    },
+    "crm": {
+      "title": "CRM – Lead intake",
+      "auto_part1": "Automatic lead management",
+      "auto_part2": "with statuses",
+      "intro": "Collecting and organizing data so sales can be tracked",
+      "client_sees": "What the client sees:",
+      "item1_label": "AI-powered CRM:",
+      "item1_text": "leads are automatically categorized by status, so you always see who's close to a decision.",
+      "item2_text": "Every prospect organized in one place, with AI tracking and transparent statuses for faster closes.",
+      "item3_label": "Automatic lead management:",
+      "item3_text": "the AI watches the process and helps prioritize the most valuable prospects.",
+      "item4_text": "Full transparency over the lead's journey, with AI-supported follow-up and clear next steps.",
+      "item5_label": "Smart CRM statuses:",
+      "item5_text": "fast reaction, personalized handling, fewer lost inquiries."
+    },
+    "automation": {
+      "title": "Auto – Automation",
+      "intro_part1": "Follow-up messages, reminders, with the help of",
+      "intro_part2": "AI Agents",
+      "intro_part3": "",
+      "metric_label": "What we measure:",
+      "metric_text": "The effectiveness of automated communication",
+      "client_sees": "What the client sees:",
+      "item1_label": "AI Agents",
+      "item1_text": "automatically send follow-up messages and reminders so every prospect gets a timely response.",
+      "item2_label": "Automated communication:",
+      "item2_text": "personalized messages, fast reactions, and follow-ups to speed up the decision.",
+      "item3_text": "Reminders and follow-up flows with AI, so no lead is lost after first contact.",
+      "item4_text": "AI-based automation that triggers a message, callback or next step at exactly the right moment.",
+      "item5_text": "Fast, personalized follow-up automated, with less manual work and more closes."
+    },
+    "result": {
+      "title": "Continuous performance optimization – Business outcome",
+      "intro_part1": "Appointment or customer",
+      "intro_part2": ", with measurable numbers",
+      "client_sees": "What the client sees:",
+      "client_item": "Tangible results, ROI",
+      "measure_title": "What do we actually measure?",
+      "measure_quality": "Lead quality",
+      "measure_pipeline": "Pipeline movement",
+      "measure_time": "Time from inquiry to decision",
+      "measure_dropoff": "Where people drop off",
+      "measure_source_part1": "Which source brings",
+      "measure_source_real": "REAL",
+      "measure_source_part2": "customers",
+      "interpretation": "Client interpretation",
+      "bad_label": "Bad:",
+      "bad_text": "\"We send a monthly report.\"",
+      "good_label": "Good:",
+      "good_text": "\"We show you which prospects bring real revenue, and we tune the entire system to that.\"",
+      "key_question": "The question isn't how many leads come in, but which ones turn into customers.",
+      "cta_question": "Want a system like this for your business?",
+      "cta_button": "Let's build a working system",
+      "cta_subtitle": "30-minute consultation – with proposals and numbers"
+    }
+  },
+  "ai_difference": {
+    "section_label": "THE AI DIFFERENCE",
+    "title_part1": "Why AdyFlow works better –",
+    "title_highlight": "AI-based growth system",
+    "subtitle": "We don't just manage ads – we build an AI-driven customer acquisition system that delivers measurable business growth.",
+    "traditional": {
+      "title": "The problem with traditional marketing",
+      "intro": "Most marketing agencies just use tools, but don't build a system:",
+      "item1": "Manages Meta and Google ads",
+      "item2": "Creates creatives and posts",
+      "item3": "Stops at the click",
+      "summary": "This is tool usage, not a business solution."
+    },
+    "adyflow": {
+      "title": "What makes AdyFlow different",
+      "intro": "AdyFlow is a complete, AI-driven business system:",
+      "item1": "Designs the entire customer journey from the first click to the returning customer",
+      "item2_part1": "Doesn't optimize for vanity metrics, but for",
+      "item2_strong": "revenue",
+      "item3_part1": "Every decision is",
+      "item3_strong": "AI-supported",
+      "summary": "A complete business system with predictable growth."
+    },
+    "benefits": {
+      "title_part1": "Why this is worth it",
+      "title_highlight": "for the client",
+      "subtitle": "Tangible business benefits that show up in the numbers",
+      "card1": {
+        "title": "Less wasted ad spend",
+        "description": "AI immediately filters out underperforming campaigns, so every forint works harder."
+      },
+      "card2": {
+        "title": "More closed deals from the same traffic",
+        "description": "AI-driven follow-up and remarketing increase the conversion rate."
+      },
+      "card3": {
+        "title": "Full transparency over prospect statuses",
+        "description": "You always know where each lead stands and what the next step is."
+      },
+      "card4": {
+        "title": "Higher customer lifetime value",
+        "description": "AI-supported relationship management increases returning customers and upsell opportunities."
+      },
+      "card5": {
+        "title": "Scalable growth without extra headcount",
+        "description": "Automation and AI let you handle more customers with the same resources."
+      }
+    },
+    "positioning": {
+      "label": "POSITIONING",
+      "quote_part1": "\"AdyFlow is not a marketing agency, but an",
+      "quote_highlight": "AI-based customer acquisition and growth system",
+      "quote_part2": "that delivers predictable business results.\"",
+      "subtitle": "If you've had enough of vanity metrics and tool-only work – let's talk about how to build a real customer acquisition system.",
+      "cta": "Book a strategic consultation",
+      "cta_subtitle": "30-minute consultation – AI-based growth plan for your business"
+    }
+  },
+  "team": {
+    "title_line1": "Our team is the engine of",
+    "title_highlight": "your growth",
+    "title_line2": "",
+    "intro1_part1": "AdyFlow is a",
+    "intro1_strong": "company operating since mid-2025",
+    "intro1_part2": ", with a young, modern approach to AI-driven customer acquisition. Our goal is to help our clients with automated customer acquisition using state-of-the-art techniques and an innovative approach.",
+    "intro2": "Our team is made up of enthusiastic, up-to-date entrepreneurs for whom continuous learning and following the latest trends matter. We're proud that with our flexible solutions, personalized services, and the most modern technology, we build long-term, reliable relationships with our clients.",
+    "location_label": "Headquarters:",
+    "location_value": "Pécs",
+    "clients_label": "Our clients:",
+    "clients_value": "national and international",
+    "values": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "We always use the latest AI and marketing technologies"
+      },
+      "results": {
+        "title": "Results focus",
+        "description": "Every decision we make is built on measurable business outcomes"
+      },
+      "partnership": {
+        "title": "Partnership",
+        "description": "We build long-term relationships, not one-off projects"
+      }
+    },
+    "why_us_title": "Why work with us?",
+    "why_us": [
+      "Transparent communication and full transparency",
+      "AI-based, data-driven solutions",
+      "Fast adaptation and a flexible way of working",
+      "Long-term growth strategies",
+      "A young, innovative team with 2025-level know-how"
+    ],
+    "quote_part1": "\"Through our work we strive to give our clients not just a service, but",
+    "quote_strong": "real value",
+    "quote_part2": "— solutions that move their business forward in the modern, digital world.\""
+  },
+  "social_proof": {
+    "title_highlight": "Measurable growth",
+    "title_line2": "proven results",
+    "subtitle": "With AdyFlow's systems, our partners achieve predictable, sustainable growth",
+    "stats": {
+      "growth": {
+        "label": "faster growth",
+        "description": "the average result of our partners"
+      },
+      "time": {
+        "label": "time saved",
+        "description": "with automation"
+      },
+      "roi": {
+        "label": "ROI growth",
+        "description": "through campaign optimization"
+      },
+      "transparency": {
+        "label": "transparency",
+        "description": "in every process"
+      }
+    },
+    "transparency": {
+      "title_line1": "Transparent operation,",
+      "title_highlight": "real results",
+      "subtitle": "You'll know exactly what we're doing, why we're doing it, and what business impact it has. No hidden processes – just clean data and measurable growth.",
+      "benefits": [
+        "Weekly performance reports with real KPIs",
+        "Live dashboard for campaign results",
+        "Clear ROI and ROAS measurement",
+        "Continuous communication and optimization"
+      ],
+      "card_label": "AVERAGE RESULTS AFTER 6 MONTHS",
+      "metrics": {
+        "cac": "Customer acquisition cost reduction",
+        "conversion": "Conversion rate growth",
+        "cycle": "Sales cycle shortening"
+      },
+      "footnote": "Average performance of real partners during the first 6 months"
+    }
+  },
+  "partners_slider": {
+    "label": "Those who already chose growth",
+    "title": "They're not trying anymore — they're building."
+  },
+  "solution": {
+    "section_label": "WHAT YOU GET FROM US",
+    "title_highlight": "We automate and optimize",
+    "title_line2": "everything you need for growth",
+    "subtitle": "AdyFlow builds a complete marketing and sales ecosystem: AI-based campaign optimization, lead generation, and automated sales processes",
+    "tags": {
+      "roi": "Measurable ROI from the very first month",
+      "scalable": "Scalable systems",
+      "optimization": "Continuous optimization"
+    },
+    "cards": {
+      "ai": {
+        "title": "AI-driven decisions",
+        "description": "Better ROI and faster optimization with the help of artificial intelligence",
+        "timing": "1-2 weeks"
+      },
+      "sales": {
+        "title": "Full sales automation",
+        "description": "Less manual work, automated processes from lead to customer",
+        "timing": "2-3 weeks"
+      },
+      "creative": {
+        "title": "Data-driven creative strategy",
+        "description": "Measurable results, campaigns proven by performance",
+        "timing": "1-2 weeks"
+      },
+      "scalable": {
+        "title": "Scalable processes",
+        "description": "Systems that grow with your company, designed for the long term",
+        "timing": "Ongoing"
+      }
+    },
+    "cta": "Let's start growing",
+    "cta_subtitle": "Free consultation – with concrete proposals and ROI estimates"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about our AI solutions",
+    "left": [
+      {
+        "question": "What happens if it doesn't deliver results?",
+        "answer": "During our initial discussion, we define a realistically achievable minimum number of incoming customers, which we record as a commitment level.\n\nIf we don't reach that number, we don't charge the service fee.\n\nSimply put: if we don't deliver measurable results, you don't pay.\nThe collaboration is therefore truly performance-based and risk-free."
+      },
+      {
+        "question": "What is the process of working together?",
+        "answer": "At the start we agree on the goals and the committed metrics, then build the campaign and follow-up system.\n\nDuring the engagement we hold regular meetings, send transparent reports, and continuously optimize the campaigns based on the results. We're available anytime via a dedicated communication channel.\n\nThe key: every step is measurable, traceable, and under control."
+      },
+      {
+        "question": "Does the cooperation require a fixed-term contractual commitment?",
+        "answer": "You aren't required to commit for a long period. The cooperation can also work in a flexible monthly setup, although for some projects – depending on the goals and strategy – we use a multi-month agreement.\n\nThe contractual form is always defined based on a prior discussion, with the focus on measurable results."
+      },
+      {
+        "question": "How is the service priced?",
+        "answer": "We don't think in pre-built packages. Before the cooperation we run a detailed assessment, then jointly determine the optimal setup based on the goals and numbers.\n\nWe build a system where the entire marketing spend has to pay back measurably – not just the service fee.\n\nOur view is clear: this isn't a cost, it's a controlled investment optimized for return."
+      }
+    ],
+    "right": [
+      {
+        "question": "What is an AI agency, and what does it do?",
+        "answer": "An AI agency develops and applies artificial intelligence-based solutions for businesses, such as automation, chatbots, analytical systems, or content generation."
+      },
+      {
+        "question": "What services do you offer?",
+        "answer": "We build complete, measurable customer acquisition systems – we don't just manage ads.\n\nOur services:\n\n• Strategic planning and management of Meta (Facebook, Instagram) ads\n• Full management of Google Ads campaigns\n• Conversion-optimized landing pages\n• CRM setup and structuring\n• Email and follow-up automations\n• Optionally: call center integration and sales support\n\nThe goal is not to generate traffic, but to turn the click into a paying customer.\n\nWe cover the entire process from the ad to closing the customer, in a structured, data-driven system."
+      },
+      {
+        "question": "Who are AI solutions recommended for?",
+        "answer": "Any business that wants to save time, money, or resources. From small businesses to large enterprises, anyone can benefit from AI."
+      },
+      {
+        "question": "How can I get in touch with you?",
+        "answer": "Reach out via our website, email, or phone, and we'll arrange a free consultation."
+      }
+    ]
+  },
+  "cta": {
+    "title_part1": "Are you ready to",
+    "title_highlight": "grow",
+    "title_part2": "?",
+    "subtitle": "Join the businesses that have already automated their marketing and sales processes and enjoy predictable growth",
+    "form_title": "Request a free consultation",
+    "label_name": "Name *",
+    "placeholder_name": "Your full name",
+    "label_email": "Email address *",
+    "placeholder_email": "email@example.com",
+    "label_phone": "Phone number *",
+    "placeholder_phone": "+36 20 123 4567",
+    "label_company": "Company name *",
+    "placeholder_company": "Company or business name",
+    "label_interest": "What are you interested in? *",
+    "interest_default": "Pick an option",
+    "interest_ads": "Ad management",
+    "interest_website": "Website development",
+    "interest_crm": "CRM system implementation",
+    "interest_creative": "Creative content production",
+    "interest_full": "Full-service marketing",
+    "interest_other": "Other...",
+    "submitting": "Sending...",
+    "submit": "Send",
+    "success": "Thank you! We will contact you shortly.",
+    "error": "An error occurred. Please try again later.",
+    "consent": "By submitting this form you accept our privacy notice",
+    "other_contact_title": "Other ways to get in touch",
+    "email_label": "Email",
+    "phone_label": "Phone",
+    "what_you_get_title": "What do you get on the consultation?",
+    "what_you_get": [
+      "A free audit of your current marketing system",
+      "A personalized growth plan",
+      "AI-based automation opportunities",
+      "ROI calculation and expected outcomes",
+      "Concrete next steps with an action plan"
+    ]
+  },
+  "footer": {
+    "tagline": "AI-based marketing and automation",
+    "follow_us": "Follow us on social media",
+    "contact_title": "Contact and headquarters",
+    "location": "Pécs, Hungary",
+    "service_area": "National and international service",
+    "legal_title": "Legal documents",
+    "aszf": "Terms and Conditions",
+    "privacy": "Privacy Notice",
+    "disclaimer": "Legal Disclaimer",
+    "copyright": "© 2025 AdyFlow. All rights reserved."
+  },
+  "eredmenyek": {
+    "hero_label": "Real results, from real clients",
+    "hero_title": "Results",
+    "hero_subtitle": "Numbers backed by real clients and real growth.",
+    "hero_description": "We don't promise – we prove. Every campaign is measurable, every forint traceable. Here are some highlights our partners achieved with us.",
+    "hero_cta": "Free consultation",
+    "kpi_label": "Aggregate performance",
+    "kpi_title_part1": "Our average client results",
+    "kpi_title_highlight": "at a glance",
+    "kpi_cards": {
+      "roas": { "label": "average ROAS", "description": "ad return on spend" },
+      "conversion": { "label": "conversion rate", "description": "average growth" },
+      "cac": { "label": "CAC reduction", "description": "customer acquisition cost" },
+      "transparency": { "label": "transparency", "description": "every client, every report" }
+    },
+    "case_study": {
+      "label": "Featured success story",
+      "title": "Alpaka Bakonya",
+      "industry_label": "Industry:",
+      "industry_value": "Guesthouse & experience tourism",
+      "period_label": "Period:",
+      "period_value": "March – April 2026 (6 weeks)",
+      "description": "Alpaka Bakonya is a business offering a unique guesthouse experience that previously did not run targeted Meta Ads campaigns. The goal: increase the number of bookings and reduce the customer acquisition cost.",
+      "what_we_did": "What we did",
+      "tasks": [
+        "Built a multi-layered Meta Ads campaign structure",
+        "Interest- and remarketing-based targeting",
+        "A/B testing of 2 ad creatives",
+        "Continuous optimization and daily monitoring"
+      ],
+      "revenue_label": "Generated revenue",
+      "revenue_caption": "Revenue generated in 6 weeks",
+      "currency_suffix": " HUF",
+      "ratio_part1": "From every 1 HUF of ad spend",
+      "ratio_part2": "14.3 HUF in revenue.",
+      "ad_spend_label": "Ad spend",
+      "roas_value": "x ROAS",
+      "roas_label": "Return on ad spend",
+      "bookings_suffix": " bookings",
+      "bookings_label": "Direct conversion",
+      "ctr_suffix": "% CTR",
+      "ctr_label": "Nearly three times the industry average",
+      "reach_suffix": "+ reach",
+      "reach_label": "In the targeted audience"
+    },
+    "why": {
+      "label": "Behind the method",
+      "title_part1": "Why does this",
+      "title_highlight": "work",
+      "title_part2": "?",
+      "items": [
+        {
+          "title": "Precise targeting",
+          "text": "We don't advertise to the masses, but to those who are genuinely interested in the product or service."
+        },
+        {
+          "title": "Data-driven decisions",
+          "text": "We optimize every campaign based on real-time data, on a daily basis."
+        },
+        {
+          "title": "Continuous testing",
+          "text": "With A/B tests we continuously improve creatives and targeting so every forint goes the furthest."
+        }
+      ]
+    },
+    "final_cta": {
+      "label": "Next step",
+      "title_part1": "Want similar",
+      "title_highlight": "results",
+      "title_part2": "?",
+      "subtitle": "On a free consultation we'll show you how we can deliver measurable growth for your business too.",
+      "cta": "Free consultation"
+    }
+  },
+  "partners_page": {
+    "hero_label": "Our clients and partner relationships",
+    "hero_title": "Our partners",
+    "hero_subtitle": "Those we work with for measurable growth.",
+    "hero_description": "Businesses that don't just try – they scale.",
+    "hero_cta": "Free consultation",
+    "grid_label": "Those who already chose growth",
+    "grid_title": "Companies we are proud to work with",
+    "cta_label": "Next step",
+    "cta_title_part1": "Will you be the next",
+    "cta_title_highlight": "success story",
+    "cta_title_part2": "?",
+    "cta_subtitle": "If you have serious goals, we build a serious system to match.",
+    "cta_button": "Book an appointment"
+  },
+  "aszf": {
+    "back": "Back to home",
+    "title": "Terms and Conditions (ÁSZF)",
+    "valid_from": "Effective from: November 30, 2025",
+    "operator": "Operator: adyflow",
+    "section1_title": "1. Service provider details",
+    "provider_name_label": "Provider name:",
+    "provider_name_value": "Kocsis Mehlmann Zénó (sole proprietor)",
+    "headquarters_label": "Headquarters:",
+    "headquarters_value": "7675 Bakonya, Petőfi Sándor u. 34, Hungary",
+    "email_label": "Email:",
+    "email_value": "info@adyflow.com",
+    "website_label": "Website:",
+    "website_value": "www.adyflow.com",
+    "phone_label": "Phone:",
+    "phone_value": "+36 20 437 8880",
+    "section2_title": "2. Nature of the service",
+    "section2_item1": "The information on the website is for informational purposes only; it does not constitute a contractual offer or a binding offer to contract.",
+    "section2_item2": "The packages presented on the site serve to describe the services of the AI Agency; however, no online purchase, payment, or contracting takes place via the website.",
+    "section2_item3": "Custom offers are prepared exclusively based on a personal consultation, which the prospect can initiate via the appointment booking interface.",
+    "section3_title": "3. Booking and contact",
+    "section3_item1": "The data provided during booking is used solely for the purpose of getting in touch.",
+    "section3_item2": "Submitting a booking does not constitute contracting and does not create a payment obligation.",
+    "section3_item3": "An individual offer, pricing, and service package may be defined during the consultation.",
+    "section4_title": "4. Limitation of liability",
+    "section4_text": "We do everything to ensure that the information on the website is accurate; however, it may contain errors. The Provider accepts no liability for any direct or indirect damages arising from a decision made based on the information on the website.",
+    "section5_title": "5. Copyright",
+    "section5_text": "All content on the website (text, graphics, video, logos, etc.) is protected by copyright; their use without permission is prohibited.",
+    "section6_title": "6. Contact",
+    "section6_intro": "If you have any questions, you can reach us at the following:",
+    "section6_email": "• Email: info@adyflow.com",
+    "section6_web": "• Website: www.adyflow.com",
+    "section6_phone": "• Phone: +36 20 437 8880",
+    "section7_title": "7. Final provisions",
+    "section7_text": "The Provider reserves the right to amend these Terms and Conditions at any time. Amendments take effect upon publication on the website.",
+    "footer": "© adyflow – All rights reserved."
+  },
+  "privacy": {
+    "back": "Back to home",
+    "title": "Privacy Notice",
+    "section1_title": "1. General information",
+    "section1_p1": "Kocsis Mehlmann Zénó (sole proprietor) respects the rights of visitors to its website regarding their personal data. This notice provides information about what information our company keeps on file and how it uses it. You can learn how to verify the accuracy of this data and how to request its deletion from the records of Kocsis Mehlmann Zénó (sole proprietor). Data collection, processing, and use comply with statutory provisions.",
+    "section1_p2": "This notice does not apply to websites accessible via hyperlinks from the website of Kocsis Mehlmann Zénó (sole proprietor).",
+    "section1_label": "Data controller name:",
+    "section1_value": "Kocsis Mehlmann Zénó (sole proprietor)",
+    "section2_title": "2. Collection, purpose, retention period, processing, use, modification, and deletion of personal data",
+    "purpose_title": "Purpose of data recording:",
+    "purpose_text": "We record and process your personal data to issue an invoice/delivery note containing the data required by law for the commercial relationship between us (you as Buyer and us as Seller).",
+    "legal_basis_title": "Legal basis for data processing:",
+    "legal_basis_text": "We process your data based on Act CXII of 2011 and the General Data Protection Regulation (GDPR, EU 2016/679) applicable in all EU member states from 25 May 2018.",
+    "categories_title": "Categories of personal data concerning private individuals:",
+    "categories": [
+      "username",
+      "password",
+      "name (first and last name)",
+      "place of residence",
+      "email address",
+      "phone number",
+      "language",
+      "date of data submission"
+    ],
+    "voluntary_text": "We only record personal data that the visitor voluntarily provides to us, and only with the visitor's express consent for recording, processing, and use. In doing so, the visitor also accepts the conditions below.",
+    "retention_title": "How long the company/organization retains the data:",
+    "retention_text": "At least for the period prescribed by the above law.",
+    "share_title": "Which other data controllers may receive the data:",
+    "share_text": "If you provide personal data to us, we will not use it beyond the legal scope or beyond your consent, and will not pass it to third parties. We will only forward your data without your consent if required by law, an authority, or a court. If Kocsis Mehlmann Zénó (sole proprietor) transfers data to a third party, this will be done in accordance with the legal provisions on the protection of personal data.",
+    "eu_title": "Whether we transfer data outside the EU:",
+    "eu_text": "Data is exchanged outside the EU only between you (as Buyer) and us (as Seller); otherwise it is not.",
+    "user_data_title": "What data you have provided and what you can do with it:",
+    "user_data_p1": "You can view the personal data you have provided after logging in, in your personal profile.",
+    "user_data_p2": "Kocsis Mehlmann Zénó (sole proprietor) deletes the recorded data from its records when the conditions for legal or other lawful retention are no longer met. Of course, you can also request the deletion of your personal data from the records at any time. You also have the right to withdraw your consent to the use or processing of your personal data at any time, with effect for the future. In these cases, or if you have any questions about your personal data, please contact us in writing electronically or on paper (info@primvol.hu). Please contact us also if you would like to know whether we hold any data about you, and if so, what. We will try to fulfil your requests immediately. You may request our reply on paper and/or as a verbal response.",
+    "section3_title": "3. Complaints",
+    "section3_p1": "If you find the management and protection of your data inadequate, you may file a complaint with the following authority:",
+    "section3_p2": "Hungarian National Authority for Data Protection and Freedom of Information (1024 Budapest, Szilágyi Erzsébet fasor 22/C., www.naih.hu, ugyfelszolgalat@naih.hu, +36-1-391-1400)",
+    "section4_title": "4. The existence and logic of decision-making based on automated data processing",
+    "section4_text": "When you visit the website, the server automatically stores certain data for system administration, statistical, or security reasons. This data includes the visitor's internet provider, in some cases the visitor's IP address, the version of the browser, the type of computer operating system, the website from which our site was accessed, the pages visited on the site, and the search terms used to reach the site. This data allows us to draw conclusions about site visits and the machines involved, but no personal data is used. The data is used anonymously only. See also section 6 \"Cookies\".",
+    "section5_title": "5. Security",
+    "section5_text": "Kocsis Mehlmann Zénó (sole proprietor) safely stores the data you provide and takes precautions to protect it – preventing loss, unauthorized use, or modification. The contractual partners of Kocsis Mehlmann Zénó (sole proprietor) who – with your consent or based on a legal provision – may access your data through the services they provide are obliged to keep it confidential and may not use it for purposes other than the contracted services.",
+    "section6_title": "6. Protection of children",
+    "section6_text": "Kocsis Mehlmann Zénó (sole proprietor) commits that the content found on its pages complies with the laws on the protection of children.",
+    "section7_title": "7. \"Cookies\"",
+    "section7_p1": "To make using the website easier, Kocsis Mehlmann Zénó (sole proprietor) uses anonymous visit identifiers, so-called \"cookies\". \"Cookies\" are small data files that are temporarily transferred from the browser program to the hard drive of your computer when visiting the site, and are required for the visit. The \"cookies\" we use are not capable of identifying the personal data of the visitor. Most browser programs automatically accept anonymous visit identifiers. By configuring your browser, however, you can prevent the visit identifier from being installed on your hard drive. You can remove stored \"cookies\" from your machine at any time by deleting the temporary internet files.",
+    "section7_p2": "(If you would like to learn more about this feature of your browser, please refer to its Help menu.)",
+    "section7_p3": "We will publish any changes to this notice on this website. So you can always find out what data we store and how data collection, processing, and use take place."
+  },
+  "disclaimer": {
+    "back": "Back to home",
+    "title": "Legal Disclaimer",
+    "last_updated": "Last updated: November 30, 2025",
+    "interpretation_title": "Interpretation and definitions",
+    "interpretation_subtitle": "Interpretation",
+    "interpretation_text": "Words with capitalized first letters have meanings defined under the following conditions. These definitions carry the same meaning regardless of whether they appear in singular or plural form.",
+    "definitions_title": "Definitions",
+    "definitions_intro": "For the purposes of this Legal Disclaimer:",
+    "company_label": "Company",
+    "company_text": "(referred to as \"the Company\", \"We\", \"Us\" or \"Our\") refers to Kocsis Mehlmann Zénó.",
+    "service_label": "Service",
+    "service_text": "refers to the Website.",
+    "you_label": "You",
+    "you_text": "the individual accessing the Service, or the company / legal entity on whose behalf such individual is using the Service.",
+    "website_label": "Website",
+    "website_text": "refers to Kocsis Mehlmann Zénó, accessible at www.adyflow.com",
+    "disclaimer_title": "Legal Disclaimer",
+    "disclaimer_p1": "The information found on the Service is for informational purposes only.",
+    "disclaimer_p2": "The Company assumes no responsibility for errors or omissions in the contents of the Service.",
+    "disclaimer_p3": "In no event shall the Company be liable for any special, direct, indirect, consequential, or incidental damages, or for any damages whatsoever – whether in contract, negligence, or other legal proceedings – arising out of or in connection with the use of the Service or its contents. The Company reserves the right to make additions, deletions, or modifications to the contents of the Service at any time without prior notice.",
+    "disclaimer_p4": "The Company does not warrant that the Service is free of viruses or other harmful components.",
+    "external_title": "Disclaimer for external links",
+    "external_p1": "The Service may contain links to external websites that are not operated, maintained, or endorsed by the Company.",
+    "external_p2": "Please note that the Company does not guarantee the accuracy, relevance, timeliness, or completeness of any information on these external websites.",
+    "errors_title": "Errors and omissions disclaimer",
+    "errors_p1": "The information given by the Service is for general guidance only. While the Company makes every effort to keep the content current and accurate, errors may occur. Due to the constantly changing nature of laws and regulations, the information may include delays, errors, or inaccuracies.",
+    "errors_p2": "The Company is not responsible for such errors or omissions, or for any consequences arising from them.",
+    "fairuse_title": "Fair use disclaimer",
+    "fairuse_p1": "The Company may use copyrighted material whose use has not always been specifically authorized by the copyright owner. This material is made available for purposes such as criticism, comment, news reporting, teaching, scholarship, or research.",
+    "fairuse_p2": "The Company believes that this constitutes \"fair use\" as defined in Section 107 of the United States Copyright Law.",
+    "fairuse_p3": "If you wish to use copyrighted material in a way that goes beyond fair use, you must obtain permission from the copyright owner.",
+    "views_title": "Views expressed disclaimer",
+    "views_p1": "The Service may contain views or opinions that solely reflect the position of the authors and do not necessarily represent the official position of the Company or any other organization.",
+    "views_p2": "Comments published by users are solely the responsibility of the respective user — the Company is not liable for their content and reserves the right to delete them for any reason.",
+    "liability_title": "Limitation of liability",
+    "liability_p1": "Information in the Service does not constitute legal, tax, accounting, or other professional advice. It therefore does not replace consultation with a qualified professional.",
+    "liability_p2": "In no event shall the Company or its suppliers be liable for any special, indirect, or consequential damages arising out of or in connection with the use or unavailability of the Service.",
+    "asis_title": "\"Use at your own risk\" disclaimer",
+    "asis_p1": "The contents of the Service are provided on an \"as is\" basis. We make no warranty as to its completeness, accuracy, or timeliness, nor as to the results of using the data. We make no express or implied warranties — including fitness for a particular purpose or performance.",
+    "asis_p2": "The Company assumes no liability for decisions made on the basis of this information or for the consequences thereof — even if it has been warned in advance of the possibility of damages.",
+    "contact_title": "Contact",
+    "contact_intro": "If you have any questions about this Legal Disclaimer, you can contact us in the following ways:",
+    "contact_email": "• Email: contact@adyflow.com",
+    "contact_web": "• Website: www.adyflow.com",
+    "contact_phone": "• Phone: +36 20 437 8880, +36 70 241 0378"
+  },
+  "weboldal_page": {
+    "eyebrow": "Custom website development",
+    "hero_title_part1": "A website that",
+    "hero_title_highlight": "works for you",
+    "hero_title_part2": "not just looks good.",
+    "hero_subtitle": "Fast, mobile-first, conversion-driven sites — from brand identity to domain, all under one roof.",
+    "float_palette": "Brand colours",
+    "cta_primary": "Request a website",
+    "cta_secondary": "What you get",
+    "cta_bullet_1": "Free consultation",
+    "cta_bullet_2": "Custom design",
+    "cta_bullet_3": "Domain & hosting handled",
+    "float_components": "components",
+    "float_components_sub": "Component library",
+    "float_responsive": "Responsive"
+  },
+  "website": {
+    "section_label": "Website development",
+    "title": "Website",
+    "subtitle": "Custom-built, professional websites that don't just look great — they bring customers.",
+    "features": {
+      "design": {
+        "title": "Custom design",
+        "description": "Fully bespoke look, tailored to your brand.",
+        "promise": "100% brand-tailored"
+      },
+      "conversion": {
+        "title": "Conversion-tuned",
+        "description": "Strategy, structure and copy for more enquiries.",
+        "promise": "Optimised for more leads"
+      },
+      "fast": {
+        "title": "24-hour first draft",
+        "description": "Your first design preview is ready within 24 hours.",
+        "promise": "First design within 24 hours"
+      },
+      "mobile": {
+        "title": "Mobile optimised",
+        "description": "A flawless experience on every screen.",
+        "bullet": "Perfect on every screen"
+      },
+      "domain": {
+        "title": "Domain & hosting handled",
+        "description": "Domain, hosting and SSL setup in one place, hassle-free.",
+        "bullet": "Technical setup in one place"
+      },
+      "auto": {
+        "title": "Automated lead capture",
+        "description": "Forms and leads are recorded automatically.",
+        "bullet": "Leads are captured instantly"
+      }
+    },
+    "portfolio": {
+      "label": "Portfolio",
+      "title": "Some of our work",
+      "subtitle": "A glimpse into the websites we have built.",
+      "view": "View site"
+    },
+    "feature_cta": {
+      "headline": "Ready for your first design preview?",
+      "description": "Request your first website draft and we'll show you the direction within 24 hours.",
+      "primary": "Request the draft",
+      "secondary": "Free consultation"
+    },
+    "cta_button": "I want a website",
+    "cta_subtitle": "Free consultation — reply within 24 hours."
+  },
+  "meta": {
+    "home": {
+      "title": "AdyFlow – AI-driven customer acquisition systems",
+      "description": "Performance-based customer acquisition systems from the ad to the paying customer. With strategic campaign management and automated processes we build predictable, measurable growth."
+    },
+    "eredmenyek": {
+      "title": "Results – AdyFlow",
+      "description": "Real client results and measurable campaign performance from AdyFlow: ROAS, conversion rate, customer acquisition cost, and featured case studies."
+    },
+    "weboldal": {
+      "title": "Website development – AdyFlow",
+      "description": "Custom-designed, mobile-optimised, conversion-driven websites from AdyFlow. Domain, SEO, and automated lead capture — all in one place."
+    },
+    "partners": {
+      "title": "Our partners – AdyFlow",
+      "description": "Companies we work with for measurable growth. Meet AdyFlow's partners and success stories."
+    },
+    "aszf": {
+      "title": "Terms and Conditions – AdyFlow",
+      "description": "AdyFlow's terms and conditions and service provisions."
+    },
+    "privacy": {
+      "title": "Privacy Notice – AdyFlow",
+      "description": "AdyFlow's privacy notice and the details of personal data handling."
+    },
+    "disclaimer": {
+      "title": "Legal Disclaimer – AdyFlow",
+      "description": "AdyFlow's legal disclaimer, liability terms and usage conditions."
+    }
+  }
+}

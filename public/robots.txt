@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Allow: /og/
+
+Sitemap: https://adyflow.hu/sitemap.xml

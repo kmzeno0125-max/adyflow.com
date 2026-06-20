@@ -1,0 +1,875 @@
+{
+  "language_switcher": {
+    "switch_to_en": "Váltás angolra",
+    "switch_to_hu": "Váltás magyarra",
+    "switch_to_de": "Váltás németre",
+    "hu": "HU",
+    "en": "EN",
+    "de": "DE"
+  },
+  "nav": {
+    "home": "Főoldal",
+    "solutions": "Megoldásaink",
+    "website": "Weboldal",
+    "about": "Rólunk",
+    "results": "Eredmények",
+    "partners": "Partnereink",
+    "contact": "Kapcsolat",
+    "free_consultation": "Ingyenes konzultáció"
+  },
+  "hero": {
+    "badge": "AI-vezérelt marketing és automatizáció",
+    "title_line1": "AdyFlow – ahol a hirdetés",
+    "title_line2": "befektetés, nem költség.",
+    "subtitle": "Teljesítményalapú ügyfélszerző rendszerek a hirdetéstől a fizető ügyfélig. Stratégiai kampánykezeléssel és automatizált folyamatokkal kiszámítható, mérhető növekedést építünk.",
+    "cta_primary": "Kérj ingyenes konzultációt",
+    "cta_secondary": "Fedezd fel a megoldásainkat",
+    "stat_growth": "3× gyorsabb növekedés",
+    "stat_time": "80% időmegtakarítás",
+    "stat_transparency": "100% átláthatóság",
+    "scroll_down": "Görgess lejjebb",
+    "stat1_label": "gyorsabb növekedés",
+    "stat2_label": "időmegtakarítás",
+    "stat3_label": "átláthatóság",
+    "benefit1_title": "Teljesítményalapú szemlélet",
+    "benefit1_desc": "Csak az eredmény számít. A hirdetési költség nálunk befektetés, nem költség.",
+    "benefit2_title": "Automatizált rendszerek",
+    "benefit2_desc": "Hatékony folyamatok, kevesebb manuális munka, több idő az értékteremtésre.",
+    "benefit3_title": "Kiszámítható növekedés",
+    "benefit3_desc": "Mérhető eredmények, hosszú távú partnerként építjük a növekedésed.",
+    "badge_transparent": "100% átláthatóság"
+  },
+  "partner_badges": {
+    "meta": "Meta Business Partner",
+    "google": "Google Partner"
+  },
+  "audience": {
+    "title_line1": "Az AdyFlow azoknak szól,",
+    "title_highlight": "akik növekedni akarnak",
+    "subtitle": "Vállalkozásoknak és marketingcsapatoknak, akik túl vannak a manuális folyamatokon és készen állnak egy adatvezérelt, automatizált rendszerre",
+    "cards": {
+      "smb": {
+        "title": "KKV-k és startupok",
+        "description": "Kis- és középvállalkozások, akik gyors növekedésre készülnek"
+      },
+      "advertising": {
+        "title": "Már hirdetnek, de...",
+        "description": "Aktívan jelen vannak digitális csatornákon, de nincs kiszámítható bevétel"
+      },
+      "open": {
+        "title": "Nyitottak az újra",
+        "description": "Középhaladó marketing ismeretekkel, készen állnak az AI-alapú automatizációra"
+      },
+      "longterm": {
+        "title": "Hosszú távra terveznek",
+        "description": "Készek befektetni rendszerszintű, fenntartható növekedésbe"
+      }
+    },
+    "callout_part1": "Ez",
+    "callout_for_you": "neked szól",
+    "callout_part2": ", ha készen állsz egy",
+    "callout_data": "adatvezérelt",
+    "callout_part3": ",",
+    "callout_automated": "automatizált rendszerre",
+    "callout_part4": ", ami",
+    "callout_real": "valódi eredményeket",
+    "callout_part5": "hoz"
+  },
+  "problem": {
+    "title_line1": "Sok marketingtevékenység,",
+    "title_highlight": "kevés valódi eredmény",
+    "subtitle": "A legtöbb cég rengeteg energiát és pénzt fektet digitális marketingbe, de az eredmények gyakran elmaradnak",
+    "cards": {
+      "unpredictable": {
+        "title": "Kiszámíthatatlan ügyfélszerzés",
+        "description": "Nem tudod előre jelezni, hány ügyfeled lesz jövő hónapban"
+      },
+      "low_roi": {
+        "title": "Alacsony kampány megtérülés",
+        "description": "Rengeteg pénzt költesz hirdetésre, de az eredmények elmaradnak"
+      },
+      "manual": {
+        "title": "Manuális folyamatok",
+        "description": "A csapatod túlterhelt a repetitív feladatokkal"
+      },
+      "disconnected": {
+        "title": "Marketing és sales szétesik",
+        "description": "Nincs összehangolva a leadgenerálás és az értékesítés"
+      }
+    },
+    "callout_part1": "A probléma nem az, hogy",
+    "callout_no_marketing": "nincs marketinged",
+    "callout_part2": "– hanem, hogy",
+    "callout_no_system": "nincs mögötte rendszer"
+  },
+  "flow": {
+    "section_label": "HOGYAN MŰKÖDIK",
+    "title_part1": "Az AdyFlow rendszer",
+    "title_highlight": "5 lépésben",
+    "subtitle": "Átlátható folyamat a kattintástól a lezárt ügyfélig",
+    "steps": {
+      "ads": {
+        "title": "Célzott hirdetések",
+        "description": "Adatvezérelt kampányok a releváns érdeklődők elérésére.",
+        "tooltip": "Meta és Google hirdetések"
+      },
+      "conversion": {
+        "title": "Konverziós oldal",
+        "description": "Oldal, amely leadet vagy időpontot generál.",
+        "tooltip": "Landing oldalak A/B tesztekkel"
+      },
+      "crm": {
+        "title": "CRM bekerülés",
+        "description": "Automatikus leadkezelés státuszokkal.",
+        "tooltip": "Pipeline átláthatóság"
+      },
+      "automation": {
+        "title": "Automatizáció",
+        "description": "Follow-up üzenetek és emlékeztetők.",
+        "tooltip": "SMS és email automatizáció"
+      },
+      "result": {
+        "title": "Üzleti eredmény",
+        "description": "Időpont vagy ügyfél – mérhető számokkal.",
+        "tooltip": "ROI tracking"
+      }
+    }
+  },
+  "flow_section": {
+    "badge": "5 LÉPÉSBEN",
+    "title_part1": "Így építünk",
+    "title_highlight": "AI-alapú ügyfélszerző rendszert",
+    "subtitle": "Egy teljes rendszer, ami nem csak több érdeklődőt hoz, hanem jobb minőségűeket — és kiszámíthatóan.",
+    "cards": {
+      "ads": {
+        "title": "Hirdetéskezelés",
+        "subtitle": "Meta / Google Ads",
+        "description": "Adatvezérelt kampányok, amelyek célzottan érik el a releváns érdeklődőket és minden fontos adatot összegyűjtenek.",
+        "bullets": [
+          "Meta + Google kampányok és kreatív tesztelés",
+          "Remarketing az érdeklődőknek a jobb megtérülésért",
+          "Folyamatos költségoptimalizálás és riportálás"
+        ]
+      },
+      "conversion": {
+        "title": "Konverziós oldal",
+        "subtitle": "Landing page",
+        "description": "Landing page, amely leadet vagy időpontfoglalást generál — okos kapcsolatkezeléssel az értékes érdeklődők számára.",
+        "bullets": [
+          "Könnyen kitölthető űrlap, gyors visszajelzés",
+          "AI-javaslatok a tartalom optimalizálásához",
+          "Aktív kapcsolatépítés, nem passzív várakozás"
+        ]
+      },
+      "crm": {
+        "title": "CRM bekerülés",
+        "subtitle": "Lead kezelés",
+        "description": "Automatikus leadkezelés státuszokkal — minden érdeklődő rendszerezve egy helyen, AI követéssel.",
+        "bullets": [
+          "AI-alapú CRM: automatikus kategorizálás",
+          "Átlátható státuszok a gyorsabb lezárásokért",
+          "Okos priorizálás a legértékesebb leadekre"
+        ]
+      },
+      "automation": {
+        "title": "Automatizáció",
+        "subtitle": "AI Agents",
+        "description": "Follow-up üzenetek, emlékeztetők és AI Agents, amelyek a megfelelő pillanatban reagálnak.",
+        "bullets": [
+          "Automatikus follow-up üzenetek és emlékeztetők",
+          "Személyre szabott kommunikáció AI-val",
+          "Kevesebb manuális munka, több lezárás"
+        ]
+      },
+      "result": {
+        "title": "Folyamatos optimalizálás",
+        "subtitle": "Üzleti eredmény",
+        "description": "Időpont vagy ügyfél — mérhető számokkal. Nem az a kérdés mennyi lead jön, hanem melyikből lesz ügyfél.",
+        "bullets": [
+          "Lead minőség és pipeline mozgás mérése",
+          "Forrásalapú elemzés: melyik hoz valódi ügyfelet",
+          "A teljes rendszer az eredményekhez igazítva"
+        ]
+      }
+    },
+    "summary_title": "Nem ígéreteket adunk, hanem működő rendszert.",
+    "summary_subtitle": "Az AI-t használjuk, de a fókusz mindig az üzleti eredményen van."
+  },
+  "flow_details": {
+    "section_label": "RÉSZLETES MŰKÖDÉS",
+    "title_part1": "AI-vezérelt",
+    "title_highlight": "ügyfélszerző rendszer",
+    "subtitle": "Részletes betekintés abba, hogyan működik együtt a teljes rendszer",
+    "ads": {
+      "title": "Hirdetéskezelés: Meta / Google Ads",
+      "creative": "Kreatív és copy AI-támogatással",
+      "goal_label": "Cél:",
+      "goal_text": "Releváns érdeklődők elérése és minden fontos adat összegyűjtése",
+      "client_sees": "Mit lát az ügyfél:",
+      "meta_label": "Meta Ads:",
+      "meta_text": "Facebook + Instagram kampányok, kreatív tesztelés, remarketing érdeklődőknek a jobb megtérülés érdekében.",
+      "google_label": "Google Ads:",
+      "google_text": "Keresési hirdetések vásárlási szándékra, kulcsszó-optimalizálás, mérhető konverziók azonnali érdeklődők megszerzésére.",
+      "summary_label": "Cél:",
+      "summary_text": "Több ajánlatkérés és foglalás, folyamatos költségoptimalizálással és riportálással átlátható, stabil növekedéshez."
+    },
+    "conversion": {
+      "title": "Conversion – Konverziós oldal",
+      "intro": "Landing page / oldal, amely leadet vagy időpontfoglalást generál",
+      "ai_part1": "AI-javaslatok",
+      "ai_part2": "a tartalom optimalizálásához",
+      "form_title": "Sima űrlap:",
+      "form_passive": "Passzív – vár",
+      "form_collects": "Adatot gyűjt",
+      "form_manual": "Manuális válasz",
+      "form_quantity": "Sok lead, kevés zárás",
+      "smart_title": "Okos kapcsolatkezelés az értékes leadek számára",
+      "smart_active": "Aktív – reagál",
+      "smart_builds": "Kapcsolatot épít",
+      "smart_personal": "Automatizált, de személyes",
+      "smart_quality": "Kevesebb lead, jobb minőség",
+      "client_sees": "Mit lát az ügyfél:",
+      "client_text": "Könnyen kitölthető űrlap, gyors visszajelzés"
+    },
+    "crm": {
+      "title": "CRM – Lead bekerülés",
+      "auto_part1": "Automatikus leadkezelés",
+      "auto_part2": "státuszokkal",
+      "intro": "Adatok gyűjtése és rendszerezése az értékesítés követhetősége érdekében",
+      "client_sees": "Mit lát az ügyfél:",
+      "item1_label": "AI-alapú CRM:",
+      "item1_text": "a leadek automatikus kategorizálása státusz szerint, így mindig látható, ki áll közel a döntéshez.",
+      "item2_text": "Minden érdeklődő rendszerezve egy helyen, AI követéssel és átlátható státuszokkal a gyorsabb lezárásokért.",
+      "item3_label": "Automatikus leadkezelés:",
+      "item3_text": "az AI figyeli a folyamatot, és segít priorizálni a legértékesebb érdeklődőket.",
+      "item4_text": "Teljes átláthatóság a leadek útjáról, AI-támogatott nyomon követéssel és pontos következő lépésekkel.",
+      "item5_label": "Okos CRM státuszok:",
+      "item5_text": "gyors reakció, személyre szabott kezelés, kevesebb elveszett megkeresés."
+    },
+    "automation": {
+      "title": "Auto – Automatizáció",
+      "intro_part1": "Follow-up üzenetek, emlékeztetők,",
+      "intro_part2": "AI Agents",
+      "intro_part3": "segítségével",
+      "metric_label": "Mit mérünk:",
+      "metric_text": "Automatikus kommunikáció hatékonysága",
+      "client_sees": "Mit lát az ügyfél:",
+      "item1_label": "AI Agents",
+      "item1_text": "automatikusan küldenek follow-up üzeneteket és emlékeztetőket, hogy minden érdeklődő időben választ kapjon.",
+      "item2_label": "Automatikus kommunikáció:",
+      "item2_text": "személyre szabott üzenetek, gyors reakciók és utánkövetés a döntés felgyorsítására.",
+      "item3_text": "Emlékeztetők és follow-up folyamatok AI-val, hogy egy lead se vesszen el a kapcsolatfelvétel után.",
+      "item4_text": "AI-alapú automatizáció, amely a megfelelő pillanatban indít üzenetet, visszahívást vagy következő lépést.",
+      "item5_text": "Gyors, személyre szabott utánkövetés automatizálva, kevesebb manuális munka mellett több lezárásért."
+    },
+    "result": {
+      "title": "Folyamatos teljesítményoptimalizálás – Üzleti eredmény",
+      "intro_part1": "Időpont vagy ügyfél",
+      "intro_part2": ", mérhető számokkal",
+      "client_sees": "Mit lát az ügyfél:",
+      "client_item": "Kézzelfogható eredmények, ROI",
+      "measure_title": "Mit mérünk valójában?",
+      "measure_quality": "Lead minőség",
+      "measure_pipeline": "Pipeline mozgás",
+      "measure_time": "Idő az érdeklődéstől a döntésig",
+      "measure_dropoff": "Hol esnek ki az emberek",
+      "measure_source_part1": "Mely forrás hoz",
+      "measure_source_real": "VALÓDI",
+      "measure_source_part2": "ügyfelet",
+      "interpretation": "Ügyfél-értelmezés",
+      "bad_label": "Rossz:",
+      "bad_text": "\"Havi riportot küldünk.\"",
+      "good_label": "Jó:",
+      "good_text": "\"Megmutatjuk, mely érdeklődők hoznak valódi bevételt, és ahhoz igazítjuk a teljes rendszert.\"",
+      "key_question": "Nem az a kérdés, mennyi lead jön, hanem hogy melyikből lesz ügyfél.",
+      "cta_question": "Szeretnél egy ilyen rendszert a vállalkozásodnak?",
+      "cta_button": "Építsünk egy működő rendszert",
+      "cta_subtitle": "30 perces konzultáció – javaslatokkal és számokkal"
+    }
+  },
+  "ai_difference": {
+    "section_label": "AI-ALAPÚ KÜLÖNBSÉG",
+    "title_part1": "Miért működik jobban az AdyFlow –",
+    "title_highlight": "AI-alapú növekedési rendszer",
+    "subtitle": "Nem hirdetéseket kezelünk, hanem egy AI-vezérelt ügyfélszerző rendszert építünk, ami mérhető üzleti növekedést hoz.",
+    "traditional": {
+      "title": "A hagyományos marketing problémája",
+      "intro": "A legtöbb marketingügynökség csak eszközöket használ, de nem épít rendszert:",
+      "item1": "Meta és Google hirdetéseket kezel",
+      "item2": "Kreatívokat és posztokat készít",
+      "item3": "A kattintásoknál megáll",
+      "summary": "Ez eszközhasználat, nem üzleti megoldás."
+    },
+    "adyflow": {
+      "title": "Miben más az AdyFlow",
+      "intro": "Az AdyFlow egy teljes körű, AI-vezérelt üzleti rendszer:",
+      "item1": "A teljes ügyfélutat megtervezi az első kattintástól a visszatérő ügyfélig",
+      "item2_part1": "Nem látszatmutatókra, hanem",
+      "item2_strong": "bevételre optimalizál",
+      "item3_part1": "Minden döntést",
+      "item3_strong": "AI támogat",
+      "summary": "Teljes üzleti rendszer, kiszámítható növekedéssel."
+    },
+    "benefits": {
+      "title_part1": "Miért éri meg ez",
+      "title_highlight": "az ügyfélnek",
+      "subtitle": "Kézzelfogható üzleti előnyök, amelyek számokban is megjelennek",
+      "card1": {
+        "title": "Kevesebb elpazarolt hirdetési költség",
+        "description": "Az AI azonnal kiszűri a rossz teljesítményű kampányokat, így minden forint hatékonyabban dolgozik."
+      },
+      "card2": {
+        "title": "Több lezárt üzlet ugyanabból a forgalomból",
+        "description": "Az AI-vezérelt utánkövetés és remarketing növeli a konverziós arányt."
+      },
+      "card3": {
+        "title": "Teljes átláthatóság az érdeklődők státuszáról",
+        "description": "Mindig tudod, hol tart minden egyes lead, és mi a következő lépés."
+      },
+      "card4": {
+        "title": "Nagyobb ügyfél-élettartam érték",
+        "description": "Az AI-támogatott kapcsolattartás növeli a visszatérő ügyfelek számát és az upsell lehetőségeket."
+      },
+      "card5": {
+        "title": "Skálázható növekedés plusz munkaerő nélkül",
+        "description": "Az automatizáció és AI lehetővé teszi, hogy több ügyfelet kezelj ugyanazzal az erőforrással."
+      }
+    },
+    "positioning": {
+      "label": "POZICIONÁLÁS",
+      "quote_part1": "„Az AdyFlow nem marketingügynökség, hanem egy",
+      "quote_highlight": "AI-alapú ügyfélszerző és növekedési rendszer",
+      "quote_part2": ", amely kiszámítható üzleti eredményeket hoz.\"",
+      "subtitle": "Ha már elég volt a látszatmutatókból és csak eszközhasználatból – beszéljünk arról, hogyan építhetsz egy valódi ügyfélszerző rendszert.",
+      "cta": "Stratégiai konzultáció foglalása",
+      "cta_subtitle": "30 perces konzultáció – AI-alapú növekedési terv az üzletedhez"
+    }
+  },
+  "team": {
+    "title_line1": "Csapatunk a",
+    "title_highlight": "növekedésed",
+    "title_line2": "motorja",
+    "intro1_part1": "Az AdyFlow egy",
+    "intro1_strong": "2025 közepe óta működő",
+    "intro1_part2": ", fiatalos és modern szemléletű AI ügyfélszerző vállalkozás. Célunk, hogy korszerű technikákkal és innovatív megközelítéssel segítsük ügyfeleinket automatizált ügyfélszerzésben.",
+    "intro2": "Csapatunk lelkes, naprakész vállalkozókból áll, akik számára fontos a folyamatos fejlődés és a legújabb trendek követése. Büszkék vagyunk arra, hogy rugalmas megoldásainkkal, személyre szabott szolgáltatásainkkal és a legmodernebb technológiával hosszú távú, megbízható kapcsolatokat építünk ki ügyfeleinkkel.",
+    "location_label": "Központunk:",
+    "location_value": "Pécs",
+    "clients_label": "Ügyfeleink:",
+    "clients_value": "országos és nemzetközi",
+    "values": {
+      "innovation": {
+        "title": "Innováció",
+        "description": "Mindig a legújabb AI és marketing technológiákat használjuk"
+      },
+      "results": {
+        "title": "Eredményközpontúság",
+        "description": "Minden döntésünk mérhető üzleti eredményekre épül"
+      },
+      "partnership": {
+        "title": "Partnerség",
+        "description": "Hosszú távú kapcsolatokat építünk, nem egyszeri projekteket"
+      }
+    },
+    "why_us_title": "Miért dolgozz velünk?",
+    "why_us": [
+      "Átlátható kommunikáció és teljes transzparencia",
+      "AI-alapú, adatvezérelt megoldások",
+      "Gyors alkalmazkodás és rugalmas munkamódszer",
+      "Hosszú távú növekedési stratégiák",
+      "Fiatalos, innovatív csapat 2025-ös tudással"
+    ],
+    "quote_part1": "\"Munkánk során arra törekszünk, hogy ügyfeleink ne csak szolgáltatást, hanem",
+    "quote_strong": "valódi értéket",
+    "quote_part2": "kapjanak — olyan megoldásokat, amelyek előre viszik vállalkozásukat a modern, digitális világban.\""
+  },
+  "social_proof": {
+    "title_highlight": "Mérhető növekedés",
+    "title_line2": "bizonyított eredmények",
+    "subtitle": "Az AdyFlow rendszereivel a partnereink kiszámítható, fenntartható növekedést érnek el",
+    "stats": {
+      "growth": {
+        "label": "gyorsabb növekedés",
+        "description": "partnereink átlagos eredménye"
+      },
+      "time": {
+        "label": "időmegtakarítás",
+        "description": "automatizációval"
+      },
+      "roi": {
+        "label": "ROI növekedés",
+        "description": "kampányoptimalizációval"
+      },
+      "transparency": {
+        "label": "transzparencia",
+        "description": "minden folyamatban"
+      }
+    },
+    "transparency": {
+      "title_line1": "Transzparens működés,",
+      "title_highlight": "valós eredmények",
+      "subtitle": "Pontosan tudni fogod, mit csinálunk, miért csináljuk, és milyen üzleti hatása van. Nincsenek rejtett folyamatok – csak tiszta adatok és mérhető növekedés.",
+      "benefits": [
+        "Heti teljesítményriportok valós KPI-okkal",
+        "Élő dashboard a kampányeredményekhez",
+        "Egyértelmű ROI és ROAS mérés",
+        "Folyamatos kommunikáció és optimalizáció"
+      ],
+      "card_label": "ÁTLAGOS EREDMÉNYEK 6 HÓNAP UTÁN",
+      "metrics": {
+        "cac": "Ügyfélszerzési költség csökkenés",
+        "conversion": "Konverziós ráta növekedés",
+        "cycle": "Sales ciklus rövidülés"
+      },
+      "footnote": "Valós partnerek átlagos teljesítménye az első 6 hónapban"
+    }
+  },
+  "partners_slider": {
+    "label": "Akik már a növekedést választották",
+    "title": "Ők már nem próbálkoznak — építkeznek."
+  },
+  "solution": {
+    "section_label": "MIT KAPSZ TŐLÜNK",
+    "title_highlight": "Automatizálunk és optimalizálunk",
+    "title_line2": "mindent, ami a növekedéshez kell",
+    "subtitle": "Az AdyFlow teljes marketing- és sales ökoszisztémát épít: AI-alapú kampányoptimalizáció, leadgenerálás és automatizált értékesítési folyamatok",
+    "tags": {
+      "roi": "Mérhető ROI már az első hónapban",
+      "scalable": "Skálázható rendszerek",
+      "optimization": "Folyamatos optimalizáció"
+    },
+    "cards": {
+      "ai": {
+        "title": "AI-vezérelt döntések",
+        "description": "Jobb ROI és gyorsabb optimalizáció mesterséges intelligencia segítségével",
+        "timing": "1-2 hét"
+      },
+      "sales": {
+        "title": "Teljes sales automatizáció",
+        "description": "Kevesebb manuális munka, automatizált folyamatok a leadtől az ügyfélig",
+        "timing": "2-3 hét"
+      },
+      "creative": {
+        "title": "Adatvezérelt kreatív stratégia",
+        "description": "Mérhető eredmények, kampányok amit a teljesítmény igazol",
+        "timing": "1-2 hét"
+      },
+      "scalable": {
+        "title": "Skálázható folyamatok",
+        "description": "Rendszerek, amelyek együtt nőnek a cégeddel, hosszú távra tervezve",
+        "timing": "Folyamatos"
+      }
+    },
+    "cta": "Kezdjük el a növekedést",
+    "cta_subtitle": "Ingyenes konzultáció – konkrét javaslatokkal és ROI becslésekkel"
+  },
+  "faq": {
+    "title": "Gyakori Kérdések",
+    "subtitle": "Minden, amit tudnod kell az AI megoldásainkról",
+    "left": [
+      {
+        "question": "Mi történik, ha nem hozza az eredményt?",
+        "answer": "A közös egyeztetés során meghatározunk egy reálisan elérhető minimum bejövő ügyfélszámot, amelyet vállalási szintként rögzítünk.\n\nAmennyiben ezt a számot nem teljesítjük, a szolgáltatási díjat nem számítjuk fel.\n\nEgyszerűen fogalmazva: ha nem hozunk mérhető eredményt, nem kell fizetni.\nAz együttműködés így valóban teljesítményalapú és kockázatmentes."
+      },
+      {
+        "question": "Milyen folyamat mentén dolgozunk együtt?",
+        "answer": "Az induláskor egyeztetjük a célokat és a vállalt mérőszámokat, majd felépítjük a kampány- és utánkövetési rendszert.\n\nA működés során rendszeres egyeztetéseket tartunk, átlátható riportokat küldünk, és folyamatosan optimalizáljuk a kampányokat az eredmények alapján. Dedikált kommunikációs csatornán bármikor elérhetőek vagyunk.\n\nA lényeg: minden lépés mérhető, követhető és kontroll alatt van."
+      },
+      {
+        "question": "Igényel fix időtartamú szerződéses vállalást az együttműködés?",
+        "answer": "Nem kötelező hosszú időszakra elköteleződni. Az együttműködés működhet havi, rugalmas konstrukcióban is, ugyanakkor bizonyos projektek esetén – a célok és a stratégia függvényében – több hónapos megállapodást alkalmazunk.\n\nA szerződéses forma mindig előzetes egyeztetés alapján kerül meghatározásra, a fókusz a mérhető eredményen van."
+      },
+      {
+        "question": "Hogyan alakul a szolgáltatás díjazása?",
+        "answer": "Nem előre gyártott csomagokban gondolkodunk. Az együttműködés előtt részletes felmérést végzünk, majd a célok és a számok alapján közösen határozzuk meg az optimális konstrukciót.\n\nOlyan rendszert építünk, ahol a teljes marketingráfordításnak mérhetően meg kell térülnie – nem csupán a szolgáltatási díjnak.\n\nA szemléletünk egyértelmű: ez nem költség, hanem kontrollált, megtérülésre optimalizált befektetés."
+      }
+    ],
+    "right": [
+      {
+        "question": "Mi az az AI ügynökség, és mivel foglalkozik?",
+        "answer": "Egy AI ügynökség mesterséges intelligencián alapuló megoldásokat fejleszt és alkalmaz vállalkozások számára, például automatizálást, chatbotokat, elemző rendszereket vagy tartalomgenerálást."
+      },
+      {
+        "question": "Milyen szolgáltatásokat kínáltok?",
+        "answer": "Komplett, mérhető ügyfélszerző rendszereket építünk, nem pusztán hirdetéseket kezelünk.\n\nSzolgáltatásaink:\n\n• Meta (Facebook, Instagram) hirdetések stratégiai tervezése és kezelése\n• Google Ads kampányok teljes körű menedzsmentje\n• Konverzióra optimalizált landing oldalak készítése\n• CRM rendszerek beállítása és strukturálása\n• Email és utánkövetési automatizációk\n• Opcionálisan: call center integráció és értékesítési támogatás\n\nA cél nem az, hogy forgalmat generáljunk, hanem az, hogy a kattintásból fizető ügyfél legyen.\n\nA teljes folyamatot lefedjük a hirdetéstől az ügyfélzárásig, strukturált, adatvezérelt rendszerben."
+      },
+      {
+        "question": "Kinek ajánlottak az AI-megoldások?",
+        "answer": "Minden vállalkozásnak, amely időt, költséget vagy erőforrást szeretne megtakarítani. Kisvállalkozásoktól a nagyvállalatokig bárki profitálhat az AI-ból."
+      },
+      {
+        "question": "Hogyan tudok kapcsolatba lépni veletek?",
+        "answer": "Vedd fel velünk a kapcsolatot weboldalunkon keresztül, emailben vagy telefonon, és egyeztetünk egy ingyenes konzultációt."
+      }
+    ]
+  },
+  "cta": {
+    "title_part1": "Készen állsz a",
+    "title_highlight": "növekedésre",
+    "title_part2": "?",
+    "subtitle": "Csatlakozz azokhoz a vállalkozásokhoz, akik már automatizálták marketing- és sales folyamataikat, és élvezik a kiszámítható növekedést",
+    "form_title": "Kérj ingyenes konzultációt",
+    "label_name": "Név *",
+    "placeholder_name": "Teljes neved",
+    "label_email": "E-mail cím *",
+    "placeholder_email": "email@pelda.hu",
+    "label_phone": "Telefonszám *",
+    "placeholder_phone": "+36 20 123 4567",
+    "label_company": "Cégnév *",
+    "placeholder_company": "Cég vagy vállalkozás neve",
+    "label_interest": "Mi érdekel? *",
+    "interest_default": "Válassz egy lehetőséget",
+    "interest_ads": "Hirdetéskezelés",
+    "interest_website": "Weboldal készítés",
+    "interest_crm": "CRM rendszer bevezetése",
+    "interest_creative": "Kreatív tartalomgyártás",
+    "interest_full": "Teljeskörű Marketing",
+    "interest_other": "Egyéb...",
+    "submitting": "Küldés...",
+    "submit": "Küldés",
+    "success": "Köszönjük! Hamarosan felvesszük veled a kapcsolatot.",
+    "error": "Hiba történt. Kérjük, próbáld újra később.",
+    "consent": "Az űrlap elküldésével elfogadod az adatkezelési tájékoztatónkat",
+    "other_contact_title": "Egyéb kapcsolatfelvételi lehetőségek",
+    "email_label": "E-mail",
+    "phone_label": "Telefonos elérhetőség",
+    "what_you_get_title": "Mit kapsz a konzultáción?",
+    "what_you_get": [
+      "Ingyenes audit a jelenlegi marketingrendszeredről",
+      "Személyre szabott növekedési terv",
+      "AI-alapú automatizációs lehetőségek",
+      "ROI kalkuláció és várt eredmények",
+      "Következő lépések konkrét akciótervvel"
+    ]
+  },
+  "footer": {
+    "tagline": "AI-alapú marketing és automatizáció",
+    "follow_us": "Kövess minket a közösségi médiában",
+    "contact_title": "Kapcsolat és Székhely",
+    "location": "Pécs, Magyarország",
+    "service_area": "Országos és nemzetközi szolgáltatás",
+    "legal_title": "Jogi dokumentumok",
+    "aszf": "Általános Szerződési Feltételek",
+    "privacy": "Adatvédelmi nyilatkozat",
+    "disclaimer": "Jogi nyilatkozat",
+    "copyright": "© 2025 AdyFlow. Minden jog fenntartva."
+  },
+  "eredmenyek": {
+    "hero_label": "Valós eredmények, valós ügyfelektől",
+    "hero_title": "Eredmények",
+    "hero_subtitle": "Számok, amik mögött valódi ügyfelek és valódi növekedés áll.",
+    "hero_description": "Nem ígérgetünk – bizonyítunk. Minden kampányunk mérhető, minden forint nyomon követhető. Íme néhány kiemelt eredmény, amit partnereink velünk értek el.",
+    "hero_cta": "Ingyenes konzultáció",
+    "kpi_label": "Összesített teljesítmény",
+    "kpi_title_part1": "Átlagos ügyféleredményeink",
+    "kpi_title_highlight": "egy pillantásra",
+    "kpi_cards": {
+      "roas": { "label": "átlagos ROAS", "description": "hirdetési megtérülés" },
+      "conversion": { "label": "konverziós ráta", "description": "átlagos növekedés" },
+      "cac": { "label": "CAC csökkenés", "description": "ügyfélszerzési költség" },
+      "transparency": { "label": "transzparencia", "description": "minden ügyfélnek, minden riportban" }
+    },
+    "case_study": {
+      "label": "Kiemelt sikertörténet",
+      "title": "Alpaka Bakonya",
+      "industry_label": "Iparág:",
+      "industry_value": "Vendégház & élményturizmus",
+      "period_label": "Időszak:",
+      "period_value": "2026. március – április (6 hét)",
+      "description": "Az Alpaka Bakonya egy egyedi vendégház-élményt kínáló vállalkozás, amely korábban nem használt célzott Meta Ads kampányokat. A cél: foglalások számának növelése és az ügyfélszerzési költség csökkentése.",
+      "what_we_did": "Mit csináltunk",
+      "tasks": [
+        "Többrétegű Meta Ads kampánystruktúra kiépítése",
+        "Érdeklődés- és remarketing-alapú célzás",
+        "2 hirdetési kreatív A/B tesztelése",
+        "Folyamatos optimalizáció és napi monitoring"
+      ],
+      "revenue_label": "Generált bevétel",
+      "revenue_caption": "Generált bevétel 6 hét alatt",
+      "currency_suffix": " Ft",
+      "ratio_part1": "Minden 1 forint hirdetésből",
+      "ratio_part2": "14,3 forint bevétel.",
+      "ad_spend_label": "Hirdetési költés",
+      "roas_value": "x ROAS",
+      "roas_label": "Hirdetési megtérülés",
+      "bookings_suffix": " foglalás",
+      "bookings_label": "Közvetlen konverzió",
+      "ctr_suffix": "% CTR",
+      "ctr_label": "Iparági átlag közel háromszorosa",
+      "reach_suffix": "+ elérés",
+      "reach_label": "Célzott közönségben"
+    },
+    "why": {
+      "label": "A módszer mögött",
+      "title_part1": "Miért",
+      "title_highlight": "működik",
+      "title_part2": "ez?",
+      "items": [
+        {
+          "title": "Pontos célzás",
+          "text": "Nem a tömegnek hirdetünk, hanem azoknak, akik valóban érdeklődnek a termék vagy szolgáltatás iránt."
+        },
+        {
+          "title": "Adatvezérelt döntések",
+          "text": "Minden kampányt valós idejű adatok alapján optimalizálunk, napi szinten."
+        },
+        {
+          "title": "Folyamatos tesztelés",
+          "text": "A/B tesztekkel folyamatosan javítjuk a kreatívokat és a célzást, hogy minden forint a legtöbbet hozza."
+        }
+      ]
+    },
+    "final_cta": {
+      "label": "Következő lépés",
+      "title_part1": "Szeretnél hasonló",
+      "title_highlight": "eredményeket",
+      "title_part2": "?",
+      "subtitle": "Egy ingyenes konzultáción megmutatjuk, hogyan érhetünk el mérhető növekedést a Te vállalkozásodban is.",
+      "cta": "Ingyenes konzultáció"
+    }
+  },
+  "partners_page": {
+    "hero_label": "Ügyfeleink és partnerkapcsolataink",
+    "hero_title": "Partnereink",
+    "hero_subtitle": "Akikkel együtt dolgozunk a mérhető növekedésért.",
+    "hero_description": "Olyan vállalkozások, akik nem próbálkoznak – hanem skáláznak.",
+    "hero_cta": "Ingyenes konzultáció",
+    "grid_label": "Akik már a növekedést választották",
+    "grid_title": "Vállalkozások, akikkel büszkék vagyunk együtt dolgozni",
+    "cta_label": "Következő lépés",
+    "cta_title_part1": "Te leszel a következő",
+    "cta_title_highlight": "sikertörténet",
+    "cta_title_part2": "?",
+    "cta_subtitle": "Ha komoly céljaid vannak, komoly rendszert építünk hozzá.",
+    "cta_button": "Időpontfoglalás"
+  },
+  "aszf": {
+    "back": "Vissza a főoldalra",
+    "title": "Általános Szerződési Feltételek (ÁSZF)",
+    "valid_from": "Érvényes: 2025. november 30-tól",
+    "operator": "Üzemeltető: adyflow",
+    "section1_title": "1. A Szolgáltató adatai",
+    "provider_name_label": "Szolgáltató neve:",
+    "provider_name_value": "Kocsis Mehlmann Zénó egyéni vállalkozó",
+    "headquarters_label": "Székhely:",
+    "headquarters_value": "7675 Bakonya Petőfi Sándor u. 34",
+    "email_label": "E-mail:",
+    "email_value": "info@adyflow.com",
+    "website_label": "Weboldal:",
+    "website_value": "www.adyflow.com",
+    "phone_label": "Telefonszám:",
+    "phone_value": "+36 20 437 8880",
+    "section2_title": "2. A Szolgáltatás jellege",
+    "section2_item1": "A weboldalon található információk kizárólag tájékoztató jellegűek, nem minősülnek szerződéses ajánlatnak vagy kötelező érvényű ajánlattételnek.",
+    "section2_item2": "Az oldalon bemutatott csomagok az AI Agency szolgáltatásainak ismertetésére szolgálnak, azonban online vásárlás, fizetés vagy szerződéskötés nem történik a weboldalon keresztül.",
+    "section2_item3": "Egyedi ajánlat kizárólag személyes konzultáció alapján készül, amelyet az érdeklődő az időpontfoglaló felületen keresztül kezdeményezhet.",
+    "section3_title": "3. Időpontfoglalás és kapcsolatfelvétel",
+    "section3_item1": "Az időpontfoglalás során megadott adatok kizárólag kapcsolatfelvétel céljából kerülnek felhasználásra.",
+    "section3_item2": "A foglalás elküldése nem jelent szerződéskötést, és nem jár fizetési kötelezettséggel.",
+    "section3_item3": "A konzultáció során kerülhet sor egyedi ajánlat, árazás és szolgáltatási csomag meghatározására.",
+    "section4_title": "4. Felelősség kizárása",
+    "section4_text": "A weboldalon szereplő információk pontosságáért mindent megteszünk, azonban azok hibát tartalmazhatnak. A Szolgáltató nem vállal felelősséget semmilyen közvetlen vagy közvetett kárért, amely a weboldalon szereplő információk alapján történő döntésből ered.",
+    "section5_title": "5. Szerzői jogok",
+    "section5_text": "A weboldalon található minden tartalom (szöveg, grafika, videó, logó stb.) szerzői jogvédelem alatt áll, azok engedély nélküli felhasználása tilos.",
+    "section6_title": "6. Kapcsolat",
+    "section6_intro": "Amennyiben kérdésed van, az alábbi elérhetőségeken léphetsz kapcsolatba velünk:",
+    "section6_email": "• E-mail: info@adyflow.com",
+    "section6_web": "• Weboldal: www.adyflow.com",
+    "section6_phone": "• Telefon: +36 20 437 8880",
+    "section7_title": "7. Záró rendelkezések",
+    "section7_text": "A Szolgáltató fenntartja a jogot, hogy jelen ÁSZF-et bármikor módosítsa. A módosítás a weboldalon történő közzététellel válik hatályossá.",
+    "footer": "© adyflow – Minden jog fenntartva."
+  },
+  "privacy": {
+    "back": "Vissza a főoldalra",
+    "title": "Adatvédelmi nyilatkozat",
+    "section1_title": "1. Általános tudnivalók",
+    "section1_p1": "A Kocsis Mehlmann Zénó egyéni vállalkozó egyéni vállalkozó tiszteletben tartja az internetes oldalt felkereső személyek személyes adatokhoz fűződő jogait. Jelen iránymutatás tájékoztatást ad arra vonatkozóan, hogy a cégünk milyen információkat tart nyilván, és azokat miként használja fel. Megtudhatja, hogy hogyan tudja ellenőrizni ezen adatok pontosságát, és miképp kérheti azok törlését a Kocsis Mehlmann Zénó egyéni vállalkozó egyéni vállalkozó nyilvántartásából. Az adatfelvétel, adatfeldolgozás, és adatfelhasználás a jogszabályi rendelkezéseknek megfelelően történik.",
+    "section1_p2": "Jelen nyilatkozat nem vonatkozik azon internetes oldalakra, amelyek a Kocsis Mehlmann Zénó egyéni vállalkozó egyéni vállalkozó honlapjáról hiperlinkkel érhetőek el.",
+    "section1_label": "Adatkezelő neve:",
+    "section1_value": "Kocsis Mehlmann Zénó egyéni vállalkozó egyéni vállalkozó",
+    "section2_title": "2. Személyes adatok felvétele, célja, tárolásának ideje, feldolgozása, felhasználása, módosítása, törlése",
+    "purpose_title": "Adatrögzítés célja:",
+    "purpose_text": "Az Ön személyes adatait azon céllal rögzítjük és kezeljük, hogy a közöttünk létrejövő kereskedelmi kapcsolat (Ön mint Vevő és mi mint Eladó) törvényben előírt adattartalmának megfelelő számlát/szállítólevelet előállítsunk.",
+    "legal_basis_title": "Az adatkezelés jogalapja:",
+    "legal_basis_text": "Adatait a 2011. évi CXII. törvény és a 2018.05.25.-én hatályba lépő az Európai Unió valamennyi tagállamában alkalmazandó általános adatvédelmi rendelet (GDPR, EU2016/679) alapján kezeljük.",
+    "categories_title": "Az érintett személyes adatok kategóriái magánszemélyeknél:",
+    "categories": [
+      "felhasználónév",
+      "jelszó",
+      "név (családi és utónév)",
+      "lakhely",
+      "email cím",
+      "telefonszám",
+      "nyelv",
+      "adatok megadásának dátuma"
+    ],
+    "voluntary_text": "Csak olyan személyes adatokat rögzítünk, amelyeket a látogató önkéntesen bocsát rendelkezésünkre, illetve ehhez az adatrögzítéshez, adatfeldolgozáshoz, illetve adatfelhasználáshoz a látogató kifejezetten hozzájárul. Ebben az esetben a látogató egyúttal elfogadja az alábbi feltételeket is.",
+    "retention_title": "A vállalkozás/szervezet mennyi ideig őrzi meg az adatokat:",
+    "retention_text": "Minimum a fenti törvényben előírt ideig.",
+    "share_title": "Milyen más adatkezelő kaphatja meg az adatokat:",
+    "share_text": "Amennyiben személyes adatokat bocsát a rendelkezésünkre, akkor azokat a törvényes kereteken túlmenően, illetőleg az Ön hozzájárulását meghaladva nem használjuk fel, és nem adjuk tovább harmadik személynek. Csak abban az esetben adjuk tovább az adatait az Ön hozzájárulása nélkül, ha azt jogszabály, hatóság, vagy bíróság elrendeli. Amennyiben a Kocsis Mehlmann Zénó egyéni vállalkozó az adatokat harmadik személy részére továbbítja, akkor az a személyes adatok védelméről szóló jogszabályi rendelkezéseknek megfelelően történik.",
+    "eu_title": "Továbbítjuk-e az EU-n kívülre az adatokat:",
+    "eu_text": "Adatokat EU-n kívülre csak Ön (mint Vevő) és mi (mint Eladó) között cserélünk, egyébként nem.",
+    "user_data_title": "Milyen adatokat adott meg és mit tehet Ön vele:",
+    "user_data_p1": "Megadott személyes adatait a bejelentkezés után személyes profiljában tekintheti meg.",
+    "user_data_p2": "A rögzített adatokat a Kocsis Mehlmann Zénó egyéni vállalkozó törli a nyilvántartásából, amennyiben a törvényes vagy más jogcímen történő adattárolás feltételei már nem állnak fenn. Természetesen Ön is bármikor kérheti személyes adatainak törlését a nyilvántartásból. Továbbá arra is jogosult, hogy bármikor visszavonja hozzájárulását személyes adatainak felhasználására, vagy feldolgozására a jövőre nézve. Ezekben az esetekben, illetve, ha személyes adataival kapcsolatban bármilyen kérdése merülne fel, forduljon hozzánk elektronikus vagy papíralapú levél formájában (info@primvol.hu). Kérjük akkor is lépjen kapcsolatba velünk, ha tudni szeretné, hogy szerepelnek-e adatok Önnel kapcsolatban nyilvántartásunkban, és ha igen, melyek ezek. Igyekszünk azonnal eleget tenni kéréseinek. Válaszunkat papír alapon és/vagy szóbeli tájékoztatásban kérheti.",
+    "section3_title": "3. Panaszkezelés",
+    "section3_p1": "Amennyiben elégtelennek érzi adatainak kezelését és védelmét panasszal élhet a következő hatóságnál:",
+    "section3_p2": "Nemzeti Adatvédelmi és Információszabadság Hatósághoz (1024 Budapest, Szilágyi Erzsébet fasor 22/C., www.naih.hu, ugyfelszolgalat@naih.hu, +36-1-391-1400)",
+    "section4_title": "4. Az automatikus adatkezelésen alapuló döntéshozatal létezése és logikája",
+    "section4_text": "A honlap meglátogatása során a szerver bizonyos adatokat automatikusan, rendszer-adminisztrációs, statisztikai vagy biztonsági okokból eltárol. Ezek az adatok a látogató Internet-szolgáltatója, néhány esetben a látogató IP-címe, a szoftverböngésző verziószáma, számítógépes operációs rendszerének típusa, a weboldal, ahonnan a honlapunkat elérte, azok az oldalak, amelyeket a honlapon meglátogatott, azok a keresőszavak, amelyeket a honlap eléréséhez használt. Ezen adatokból az oldal látogatottságára lehet következtetni, az adott gépekre lehet visszakövetkeztetni, személyes adatok felhasználására nem kerül sor. Az adatok kizárólag névtelenül kerülnek felhasználásra. Lásd még 6 \"Cookie\"-k kezelése pontot.",
+    "section5_title": "5. Biztonság",
+    "section5_text": "A Kocsis Mehlmann Zénó egyéni vállalkozó az Ön által szolgáltatott adatokat biztonságosan őrzi, valamint óvintézkedéseket tesz azok védelme érdekében – tehát elvesztésének, illetéktelen felhasználásának vagy módosításának megakadályozása érdekében. A Kocsis Mehlmann Zénó egyéni vállalkozó azon szerződéses partnerei, akik a Kocsis Mehlmann Zénó egyéni vállalkozó részére nyújtott szolgáltatásokon keresztül – az Ön hozzájárulása, vagy jogszabályi rendelkezés alapján – hozzáférhetnek az Ön adataihoz, kötelesek ezeket titokban tartani és a szerződéses szolgáltatásokon kívüli egyéb célokra nem használhatják fel azokat.",
+    "section6_title": "6. Gyermekek védelme",
+    "section6_text": "A Kocsis Mehlmann Zénó egyéni vállalkozó vállalja, hogy oldalain a gyermekek védelméről szóló törvényeknek megfelelő tartalmat talál.",
+    "section7_title": "7. \"Cookie-k\"",
+    "section7_p1": "A honlap használatának megkönnyítése céljából a Kocsis Mehlmann Zénó egyéni vállalkozó anonim látogatásazonosítót, ún. \"cookie\"-kat használ. A \"cookie-k\" kisméretű adatok, melyek ideiglenesen a böngészőprogramról az Ön számítógépének merevlemezére kerülnek az oldal látogatásával, és amelyek az oldal látogatásához szükségesek. Az általunk használt \"cookie-k\" a látogató személyes adatainak felismerésére nem alkalmasak. A legtöbb böngészőprogram automatikusan elfogadja az anonim látogatásazonosítókat. A böngészőprogram beállításával azonban kiküszöbölheti a látogatásazonosító telepítését a merevlemezre. A tárolt \"cookie-kat\" bármikor eltávolíthatja gépéről oly módon, hogy törli az átmeneti internet fájlokat.",
+    "section7_p2": "(Amennyiben a böngészőprogram e funkciójáról többet szeretne megtudni, tájékozódjon a böngészőprogram Súgó menüpontjában.)",
+    "section7_p3": "Jelen nyilatkozaton való bármely változtatást ezen a honlapon nyilvánossá teszünk. Így bármikor információt szerezhet arról, hogy mely adatokat tárolunk és miképp történik az adatfelvétel, adatfeldolgozás, és adatfelhasználás."
+  },
+  "disclaimer": {
+    "back": "Vissza a főoldalra",
+    "title": "Jogi nyilatkozat (Disclaimer)",
+    "last_updated": "Utolsó frissítés: 2025. november 30.",
+    "interpretation_title": "Értelmezés és fogalommeghatározások",
+    "interpretation_subtitle": "Értelmezés",
+    "interpretation_text": "Azok a szavak, amelyek nagy kezdőbetűvel szerepelnek, a következő feltételek alapján meghatározott jelentéssel bírnak. Ezek a definíciók ugyanazt a jelentést hordozzák, függetlenül attól, hogy egyes vagy többes számban kerülnek felhasználásra.",
+    "definitions_title": "Fogalommeghatározások",
+    "definitions_intro": "A jelen Jogi nyilatkozat alkalmazásában:",
+    "company_label": "Vállalat",
+    "company_text": "(a továbbiakban: „a Vállalat\", „Mi\", „Minket\" vagy „Miénk\") a Kocsis Mehlmann Zénó-ra utal.",
+    "service_label": "Szolgáltatás",
+    "service_text": "a Weboldalt jelenti.",
+    "you_label": "Ön / Te",
+    "you_text": "az a személy, aki hozzáfér a Szolgáltatáshoz, vagy az a vállalat / jogi személy, amely nevében az adott személy a SzolgáLtatást használja.",
+    "website_label": "Weboldal",
+    "website_text": "a Kocsis Mehlmann Zénó-ra utal, amely elérhető a következő címen: www.adyflow.com",
+    "disclaimer_title": "Jogi nyilatkozat",
+    "disclaimer_p1": "A Szolgáltatáson található információk kizárólag tájékoztató jellegűek.",
+    "disclaimer_p2": "A Vállalat nem vállal felelősséget a Szolgáltatás tartalmában található hibákért vagy hiányosságokért.",
+    "disclaimer_p3": "A Vállalat semmilyen esetben sem felel különleges, közvetlen, közvetett, következményes vagy véletlen károkért, semmilyen kártérítésért – akár szerződéses, gondatlanságból fakadó vagy más jogi eljárás során –, amelyek a Szolgáltatás vagy annak tartalma használatából erednek. A Vállalat fenntartja a jogot arra, hogy a Szolgáltatás tartalmát bármikor, előzetes értesítés nélkül módosítsa, törölje vagy frissítse.",
+    "disclaimer_p4": "A Vállalat nem garantálja, hogy a Szolgáltatás vírusoktól vagy más káros komponensektől mentes.",
+    "external_title": "Külső hivatkozásokra vonatkozó nyilatkozat",
+    "external_p1": "A Szolgáltatás tartalmazhat olyan külső weboldalakra mutató linkeket, amelyeket nem a Vállalat üzemeltet, tart fenn vagy támogat.",
+    "external_p2": "Kérjük, vegye figyelembe, hogy a Vállalat nem garantálja ezen külső weboldalak tartalmának pontosságát, relevanciáját, aktualitását vagy teljességét.",
+    "errors_title": "Hibák és hiányosságok nyilatkozata",
+    "errors_p1": "A Szolgáltatásban szereplő információk kizárólag általános tájékoztatásra szolgálnak. Bár a Vállalat mindent megtesz annak érdekében, hogy a tartalom naprakész és pontos legyen, előfordulhatnak hibák. A jogszabályok és előírások folyamatos változása miatt az információk tartalmazhatnak késéseket, elírásokat vagy pontatlanságokat.",
+    "errors_p2": "A Vállalat nem felelős az ilyen hibákért vagy hiányosságokért, illetve az ezekből eredő következményekért.",
+    "fairuse_title": "Méltányos felhasználásra vonatkozó nyilatkozat",
+    "fairuse_p1": "A Vállalat felhasználhat olyan szerzői jogvédelem alatt álló anyagokat, amelyek használatához nem minden esetben kért engedélyt a jogtulajdonostól. Ezeket az anyagokat kritika, véleményezés, híradás, oktatás, kutatás vagy szemléltetés céljából tesszük közzé.",
+    "fairuse_p2": "A Vállalat úgy véli, hogy ez a gyakorlat megfelel az Amerikai Egyesült Államok szerzői jogi törvényének 107. szakaszában foglalt „fair use\" (méltányos felhasználás) elvének.",
+    "fairuse_p3": "Ha Ön szerzői joggal védett anyagot kíván felhasználni, amely túlmutat a méltányos felhasználás keretein, köteles engedélyt kérni a jogtulajdonostól.",
+    "views_title": "Véleményekre vonatkozó nyilatkozat",
+    "views_p1": "A Szolgáltatás tartalmazhat olyan nézeteket vagy véleményeket, amelyek kizárólag a szerzők álláspontját tükrözik, és nem feltétlenül képviselik a Vállalat vagy bármely más szervezet hivatalos álláspontját.",
+    "views_p2": "A felhasználók által közzétett kommentek kizárólag az adott felhasználó felelőssége alá tartoznak — a Vállalat nem vállal felelősséget ezek tartalmáért, és fenntartja a jogot azok törlésére bármely okból.",
+    "liability_title": "Felelősség kizárása",
+    "liability_p1": "A Szolgáltatásban található információk nem minősülnek jogi, adózási, könyvelési vagy egyéb szakmai tanácsadásnak. Ezért nem helyettesítik szakképzett szakemberrel való konzultációt.",
+    "liability_p2": "A Vállalat és beszállítói semmilyen esetben sem felelnek speciális, közvetett vagy következményes károkért, amelyek a Szolgáltatás használatával vagy annak elérhetetlenségével összefüggésben keletkeznek.",
+    "asis_title": "„Saját felelősségre történő használat\" nyilatkozat",
+    "asis_p1": "A Szolgáltatás tartalma „ahogy van\" alapon kerül rendelkezésre bocsátásra. Nem garantáljuk annak teljességét, pontosságát vagy naprakészségét, sem az adatfelhasználás eredményét. Sem kifejezett, sem hallgatólagos garanciát nem vállalunk — beleértve az adott célra való alkalmasságot vagy teljesítményt.",
+    "asis_p2": "A Vállalat nem vállal felelősséget az ezen információk alapján hozott döntésekért vagy azok következményeiért — még akkor sem, ha előzetesen figyelmeztettük a lehetséges károkra.",
+    "contact_title": "Kapcsolatfelvétel",
+    "contact_intro": "Ha kérdése van a jelen Jogi nyilatkozattal kapcsolatban, az alábbi módokon léphet velünk kapcsolatba:",
+    "contact_email": "• E-mail: contact@adyflow.com",
+    "contact_web": "• Weboldal: www.adyflow.com",
+    "contact_phone": "• Telefon: +36 20 437 8880, +36 70 241 0378"
+  },
+  "weboldal_page": {
+    "eyebrow": "Egyedi weboldal készítés",
+    "hero_title_part1": "Weboldal,",
+    "hero_title_highlight": "ami dolgozik érted",
+    "hero_title_part2": "nem csak szépen néz ki.",
+    "hero_subtitle": "Élő, mobilra optimalizált, gyors és konverzióra kihegyezett oldalak — a brandtől a domainig egy kézben.",
+    "float_palette": "Brand színek",
+    "cta_primary": "Kérek egy weboldalt",
+    "cta_secondary": "Mit kapsz",
+    "cta_bullet_1": "Ingyenes konzultáció",
+    "cta_bullet_2": "Egyedi design",
+    "cta_bullet_3": "Domain & hosting kézben",
+    "float_components": "komponens",
+    "float_components_sub": "Komponens könyvtár",
+    "float_responsive": "Reszponzív"
+  },
+  "website": {
+    "section_label": "Weboldal készítés",
+    "title": "Weboldal",
+    "subtitle": "Professzionális, egyedi weboldalak, amelyek nem csak szépek, hanem ügyfeleket is hoznak.",
+    "features": {
+      "design": {
+        "title": "Egyedi design",
+        "description": "Teljesen egyedi megjelenés, a márkádhoz igazítva.",
+        "promise": "100% márkára szabva"
+      },
+      "conversion": {
+        "title": "Konverzióra hangolva",
+        "description": "Stratégia, felépítés és szövegezés a több érdeklődőért.",
+        "promise": "Több érdeklődőre optimalizálva"
+      },
+      "fast": {
+        "title": "24 órás első terv",
+        "description": "Az első látványterv 24 órán belül elkészül.",
+        "promise": "Az első látványterv 24 órán belül"
+      },
+      "mobile": {
+        "title": "Mobilra optimalizált",
+        "description": "Minden kijelzőn tökéletes élmény.",
+        "bullet": "Minden kijelzőn tökéletes"
+      },
+      "domain": {
+        "title": "Domain & hosting kézben",
+        "description": "Domain, tárhely és SSL beállítás egy helyen, gond nélkül.",
+        "bullet": "Technikai beállítások egy helyen"
+      },
+      "auto": {
+        "title": "Automata kapcsolatfelvétel",
+        "description": "Az űrlapok és leadek automatikusan rögzítésre kerülnek.",
+        "bullet": "Az érdeklődők azonnal rögzítésre kerülnek"
+      }
+    },
+    "portfolio": {
+      "label": "Referenciák",
+      "title": "Munkáink közül néhány",
+      "subtitle": "Ízelítő az általunk készített weboldalakból.",
+      "view": "Megnézem"
+    },
+    "feature_cta": {
+      "headline": "Készen állsz az első látványtervre?",
+      "description": "Kérd el az első weboldal tervezetet, és 24 órán belül megmutatjuk az irányt.",
+      "primary": "Kérem a tervezetet",
+      "secondary": "Ingyenes konzultáció"
+    },
+    "cta_button": "Szeretnék egy weboldalt",
+    "cta_subtitle": "Ingyenes konzultáció — válasz 24 órán belül."
+  },
+  "meta": {
+    "home": {
+      "title": "AdyFlow – AI-vezérelt ügyfélszerző rendszerek",
+      "description": "Teljesítményalapú ügyfélszerző rendszerek a hirdetéstől a fizető ügyfélig. Stratégiai kampánykezeléssel és automatizált folyamatokkal kiszámítható, mérhető növekedést építünk."
+    },
+    "eredmenyek": {
+      "title": "Eredmények – AdyFlow",
+      "description": "Valós ügyféleredmények és mérhető kampányteljesítmény az AdyFlow-tól: ROAS, konverziós ráta, ügyfélszerzési költség és kiemelt esettanulmányok."
+    },
+    "weboldal": {
+      "title": "Weboldal készítés – AdyFlow",
+      "description": "Egyedi designú, mobilra optimalizált, konverzióra hangolt weboldalak az AdyFlow-tól. Domain, SEO, automata kapcsolatfelvétel egy kézben."
+    },
+    "partners": {
+      "title": "Partnereink – AdyFlow",
+      "description": "Vállalkozások, akikkel együtt dolgozunk a mérhető növekedésért. Ismerd meg az AdyFlow partnereit és sikertörténeteit."
+    },
+    "aszf": {
+      "title": "Általános Szerződési Feltételek – AdyFlow",
+      "description": "Az AdyFlow általános szerződési feltételei és szolgáltatási rendelkezései."
+    },
+    "privacy": {
+      "title": "Adatvédelmi nyilatkozat – AdyFlow",
+      "description": "Az AdyFlow adatvédelmi nyilatkozata és a személyes adatok kezelésének részletei."
+    },
+    "disclaimer": {
+      "title": "Jogi nyilatkozat – AdyFlow",
+      "description": "Az AdyFlow jogi nyilatkozata, felelősségi és felhasználási feltételek."
+    }
+  }
+}
