@@ -2,16 +2,12 @@
 <html lang="hu">
   <head>
     <meta charset="UTF-8" />
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MRFWWQZR');</script>
-    <!-- End Google Tag Manager -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet" /></noscript>
+    <link rel="preload" as="image" href="/telegram-cloud-photo-size-4-5787284925047311773-y.jpg" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AdyFlow – AI-vezérelt ügyfélszerző rendszerek</title>
@@ -37,18 +33,22 @@
     <meta name="twitter:description" content="Teljesítményalapú ügyfélszerző rendszerek a hirdetéstől a fizető ügyfélig. Kiszámítható, mérhető növekedés." />
     <meta name="twitter:image" content="https://adyflow.hu/og/og-image.png?v=1" />
 
-    <!-- Meta Pixel Code -->
+    <!-- Meta Pixel Code - deferred -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1624464285492072');
-    fbq('track', 'PageView');
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1624464285492072');
+        fbq('track', 'PageView');
+      }, 2000);
+    });
     </script>
     <!-- End Meta Pixel Code -->
   </head>
@@ -64,5 +64,17 @@
     <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Google Tag Manager - deferred -->
+    <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MRFWWQZR');
+      }, 2000);
+    });
+    </script>
   </body>
 </html>

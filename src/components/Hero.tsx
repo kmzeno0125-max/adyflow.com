@@ -67,9 +67,9 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-20 bg-gradient-to-b from-white via-slate-50/50 to-white">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-purple-100/60 rounded-full filter blur-[140px]" />
-        <div className="absolute top-40 right-1/4 w-[400px] h-[400px] bg-blue-100/50 rounded-full filter blur-[120px]" />
-        <div className="absolute bottom-20 left-1/2 w-[350px] h-[350px] bg-pink-100/40 rounded-full filter blur-[120px]" />
+        <div className="absolute top-20 left-1/4 w-[250px] h-[250px] sm:w-[500px] sm:h-[500px] bg-purple-100/60 rounded-full filter blur-[80px] sm:blur-[140px]" />
+        <div className="absolute top-40 right-1/4 w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] bg-blue-100/50 rounded-full filter blur-[60px] sm:blur-[120px]" />
+        <div className="absolute bottom-20 left-1/2 w-[175px] h-[175px] sm:w-[350px] sm:h-[350px] bg-pink-100/40 rounded-full filter blur-[60px] sm:blur-[120px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
@@ -174,6 +174,10 @@ export default function Hero() {
                     src="/telegram-cloud-photo-size-4-5787284925047311773-y.jpg"
                     alt="AdyFlow Team"
                     className="w-full h-full object-cover"
+                    fetchPriority="high"
+                    decoding="async"
+                    width={800}
+                    height={600}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/10 to-slate-900/20" />
                 </div>

@@ -16,7 +16,7 @@ function useScrollReveal(threshold = 0.15) {
           observer.disconnect()
         }
       },
-      { threshold }
+      { threshold, rootMargin: '100px 0px' }
     )
     observer.observe(el)
     return () => observer.disconnect()
@@ -89,8 +89,8 @@ export default function FlowSection() {
   return (
     <section id="megoldas" className="relative py-24 lg:py-32 bg-gradient-to-b from-slate-50/80 to-white overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-blue-50/60 rounded-full filter blur-[160px]" />
-        <div className="absolute bottom-40 right-1/4 w-[400px] h-[400px] bg-purple-50/50 rounded-full filter blur-[140px]" />
+        <div className="absolute top-20 left-1/4 w-[250px] h-[250px] sm:w-[500px] sm:h-[500px] bg-blue-50/60 rounded-full filter blur-[80px] sm:blur-[160px]" />
+        <div className="absolute bottom-40 right-1/4 w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] bg-purple-50/50 rounded-full filter blur-[70px] sm:blur-[140px]" />
       </div>
 
       <div className="relative max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-10">

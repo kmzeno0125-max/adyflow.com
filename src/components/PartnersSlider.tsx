@@ -72,6 +72,10 @@ export default function PartnersSlider() {
                       alt={partner.alt}
                       className="max-h-16 sm:max-h-20 w-full object-contain"
                       draggable={false}
+                      loading="lazy"
+                      decoding="async"
+                      width={200}
+                      height={80}
                     />
                   </div>
                 ) : (
@@ -80,6 +84,10 @@ export default function PartnersSlider() {
                     alt={partner.alt}
                     className="max-h-20 sm:max-h-24 w-full object-contain filter brightness-90 transition-all duration-300"
                     draggable={false}
+                    loading="lazy"
+                    decoding="async"
+                    width={200}
+                    height={96}
                   />
                 )}
               </div>

@@ -77,7 +77,7 @@ export default function SocialProof() {
           observer.disconnect()
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.1, rootMargin: '100px 0px' }
     )
     if (statsRef.current) observer.observe(statsRef.current)
     return () => observer.disconnect()
@@ -127,7 +127,7 @@ function TransparencySection() {
           setIsVisible(true)
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.1, rootMargin: '80px 0px' }
     )
 
     if (sectionRef.current) {

@@ -65,12 +65,16 @@ export default function Team() {
             <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 blur-3xl rounded-3xl"></div>
             <div
               className="relative border-2 border-slate-200 rounded-3xl p-8 lg:p-12 overflow-hidden"
-              style={{
-                backgroundImage: 'url(/Office_4.jpg)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
             >
+              <img
+                src="/Office_4.jpg"
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                width={800}
+                height={600}
+              />
               <div className="absolute inset-0 bg-slate-900/85 backdrop-blur-[2px]"></div>
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold text-white mb-6">{t('team.why_us_title')}</h3>

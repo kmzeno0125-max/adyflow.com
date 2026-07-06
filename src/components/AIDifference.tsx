@@ -7,8 +7,8 @@ const AIDifference = () => {
   return (
     <section className="relative py-24 bg-white overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 right-1/4 w-[400px] h-[400px] bg-purple-50/80 rounded-full filter blur-[120px]" />
-        <div className="absolute bottom-20 left-1/4 w-[400px] h-[400px] bg-blue-50/80 rounded-full filter blur-[120px]" />
+        <div className="absolute top-20 right-1/4 w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] bg-purple-50/80 rounded-full filter blur-[60px] sm:blur-[120px]" />
+        <div className="absolute bottom-20 left-1/4 w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] bg-blue-50/80 rounded-full filter blur-[60px] sm:blur-[120px]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

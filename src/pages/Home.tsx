@@ -1,17 +1,18 @@
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import Hero from '../components/Hero';
-import FlowSection from '../components/FlowSection';
-import AIDifference from '../components/AIDifference';
-import Problem from '../components/Problem';
-import Audience from '../components/Audience';
-import Team from '../components/Team';
-import SocialProof from '../components/SocialProof';
-import PartnersSlider from '../components/PartnersSlider';
-import FAQ from '../components/FAQ';
-import CTA from '../components/CTA';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+
+const Audience = lazy(() => import('../components/Audience'));
+const Problem = lazy(() => import('../components/Problem'));
+const FlowSection = lazy(() => import('../components/FlowSection'));
+const AIDifference = lazy(() => import('../components/AIDifference'));
+const Team = lazy(() => import('../components/Team'));
+const SocialProof = lazy(() => import('../components/SocialProof'));
+const PartnersSlider = lazy(() => import('../components/PartnersSlider'));
+const FAQ = lazy(() => import('../components/FAQ'));
+const CTA = lazy(() => import('../components/CTA'));
+const Footer = lazy(() => import('../components/Footer'));
 
 const Home = () => {
   const { t, i18n } = useTranslation();
@@ -28,16 +29,18 @@ const Home = () => {
     <>
       <Navigation />
       <Hero />
-      <Audience />
-      <Problem />
-      <FlowSection />
-      <AIDifference />
-      <Team />
-      <SocialProof />
-      <PartnersSlider />
-      <FAQ />
-      <CTA />
-      <Footer />
+      <Suspense fallback={null}>
+        <Audience />
+        <Problem />
+        <FlowSection />
+        <AIDifference />
+        <Team />
+        <SocialProof />
+        <PartnersSlider />
+        <FAQ />
+        <CTA />
+        <Footer />
+      </Suspense>
     </>
   );
 };
