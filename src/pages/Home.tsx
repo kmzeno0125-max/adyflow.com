@@ -1,5 +1,7 @@
 import { useEffect, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
+import Hero from '../components/Hero';
+import Navigation from '../components/Navigation';
 import ScrollLanding from './ScrollLanding';
 
 const Team = lazy(() => import('../components/Team'));
@@ -20,6 +22,8 @@ const Home = () => {
 
   return (
     <>
+      <Navigation />
+      <Hero />
       <ScrollLanding />
       <Suspense fallback={null}>
         <Team />

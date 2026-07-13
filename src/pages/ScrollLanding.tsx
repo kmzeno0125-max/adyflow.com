@@ -5,7 +5,6 @@ const CHAOS_WORDS = ['Meta','Google Ads','poszt','story','reel','email','blog','
 const STATION_LABELS = ['Kattintás','Lead','CRM-ben','Nurtured','Ügyfél']
 
 export default function ScrollLanding() {
-  const [heroPlay, setHeroPlay] = useState(false)
   const [audCur, setAudCur] = useState(0)
   const [vsRevealed, setVsRevealed] = useState(false)
   const [chartDrawn, setChartDrawn] = useState(false)
@@ -23,7 +22,6 @@ export default function ScrollLanding() {
 
   useEffect(() => {
     reduceMotion.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    requestAnimationFrame(() => setHeroPlay(true))
   }, [])
 
   // IntersectionObserver for reveal animations
@@ -165,41 +163,6 @@ export default function ScrollLanding() {
       <div className="sl-progress">
         <i style={{ transform: `scaleX(${scrollProgress})` }} />
       </div>
-
-      {/* Navbar */}
-      <nav className="sl-nav">
-        <div className="sl-navbar">
-          <div className="sl-logo"><span className="a">Ady</span><span className="b">Flow</span></div>
-          <div className="sl-navlinks">
-            <a href="#hero">Főoldal</a><a href="#aud">Weboldal</a><a href="#prob">Rólunk</a>
-            <a href="#proc">Eredmények</a><a href="#cmp">Partnereink</a><a href="#final">Kapcsolat</a>
-          </div>
-          <div className="sl-navright">
-            <div className="sl-lang"><span className="on">HU</span><span>EN</span><span>DE</span></div>
-            <button className="sl-cta">Ingyenes konzultáció</button>
-          </div>
-        </div>
-      </nav>
-
-      {/* 1. HERO */}
-      <header className={`sl-hero${heroPlay ? ' play' : ''}`} id="hero">
-        <div className="sl-mesh">
-          <span className="sl-blob a" /><span className="sl-blob b" /><span className="sl-blob c" />
-        </div>
-        <div className="sl-hero-inner">
-          <span className="sl-eyebrow">AI-alapú növekedési rendszer</span>
-          <h1>
-            <span className="w" style={{ animationDelay: '0.15s' }}>Nem</span>{' '}
-            <span className="w" style={{ animationDelay: '0.25s' }}>hirdetést</span>{' '}
-            <span className="w" style={{ animationDelay: '0.35s' }}>építünk.</span>
-            <br />
-            <span className="w sl-grad" style={{ animationDelay: '0.5s' }}>Rendszert.</span>
-          </h1>
-          <p>Egy adatvezérelt, AI-vezérelt ügyfélszerző rendszert, ami kiszámítható növekedést hoz.</p>
-          <div className="sl-hero-cta"><button className="sl-cta">Ingyenes konzultáció</button></div>
-        </div>
-        <div className="sl-scrollcue">Görgess<span className="arr" /></div>
-      </header>
 
       {/* 2. AUDIENCE */}
       <section className="sl-aud" id="aud">
