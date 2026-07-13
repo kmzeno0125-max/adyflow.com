@@ -68,6 +68,32 @@ export default function ScrollLanding() {
     }
   }, [chartDrawn])
 
+  // Process section height for pin — must run before scroll handler
+  useEffect(() => {
+    const sizeProc = () => {
+      if (!procRef.current || !ptrackRef.current) return
+      if (window.innerWidth > 920 && !reduceMotion.current) {
+        const viewport = ptrackRef.current.parentElement
+        if (viewport) {
+          const overflow = ptrackRef.current.scrollWidth - viewport.clientWidth
+          if (overflow > 0) {
+            procRef.current.style.height = (overflow + window.innerHeight) + 'px'
+          }
+        }
+      } else {
+        procRef.current.style.height = 'auto'
+      }
+    }
+    // Run after a frame to ensure layout is stable
+    const raf = requestAnimationFrame(() => {
+      sizeProc()
+      // Run again after fonts/images settle
+      setTimeout(sizeProc, 300)
+    })
+    window.addEventListener('resize', sizeProc)
+    return () => { cancelAnimationFrame(raf); window.removeEventListener('resize', sizeProc) }
+  }, [])
+
   // Scroll handler: progress bar + process section
   useEffect(() => {
     let ticking = false
@@ -79,10 +105,13 @@ export default function ScrollLanding() {
         setScrollProgress(h > 0 ? Math.min(1, Math.max(0, window.scrollY / h)) : 0)
 
         if (procRef.current && window.innerWidth > 920 && !reduceMotion.current) {
-          const r = procRef.current.getBoundingClientRect()
-          const scrollable = procRef.current.offsetHeight - window.innerHeight
-          const prog = Math.min(1, Math.max(0, -r.top / scrollable))
-          setProcProgress(prog)
+          const rect = procRef.current.getBoundingClientRect()
+          const sectionHeight = procRef.current.offsetHeight
+          const scrollable = sectionHeight - window.innerHeight
+          if (scrollable > 0) {
+            const prog = Math.min(1, Math.max(0, -rect.top / scrollable))
+            setProcProgress(prog)
+          }
         }
         ticking = false
       })
@@ -90,24 +119,6 @@ export default function ScrollLanding() {
     window.addEventListener('scroll', onScroll, { passive: true })
     onScroll()
     return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
-  // Process section height for pin
-  useEffect(() => {
-    const sizeProc = () => {
-      if (!procRef.current || !ptrackRef.current) return
-      if (window.innerWidth > 920 && !reduceMotion.current) {
-        const viewport = ptrackRef.current.parentElement
-        if (viewport) {
-          procRef.current.style.height = (ptrackRef.current.scrollWidth - viewport.clientWidth + window.innerHeight + 200) + 'px'
-        }
-      } else {
-        procRef.current.style.height = 'auto'
-      }
-    }
-    sizeProc()
-    window.addEventListener('resize', sizeProc)
-    return () => window.removeEventListener('resize', sizeProc)
   }, [])
 
   // Audience auto-advance
@@ -153,9 +164,15 @@ export default function ScrollLanding() {
 
   // Process computed values
   const procActive = Math.min(4, Math.max(0, Math.floor(procProgress * 5 - 0.0001)))
-  const ptrackTranslate = ptrackRef.current
-    ? -(procProgress * (ptrackRef.current.scrollWidth - (ptrackRef.current.parentElement?.clientWidth || 0)))
-    : 0
+  const getTrackTranslate = () => {
+    if (!ptrackRef.current) return 0
+    const viewport = ptrackRef.current.parentElement
+    if (!viewport) return 0
+    const overflow = ptrackRef.current.scrollWidth - viewport.clientWidth
+    if (overflow <= 0) return 0
+    return -(procProgress * overflow)
+  }
+  const ptrackTranslate = getTrackTranslate()
 
   return (
     <div className="sl-page">
