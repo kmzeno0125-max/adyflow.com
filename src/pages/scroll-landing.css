@@ -159,7 +159,7 @@
 .sl-proc-top h2 .sl-grad { background: linear-gradient(100deg, #7db4ff, #c4a0ff, #ff9ecf); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .sl-proc-top .sub { font-family: var(--man); font-weight: 600; color: #a49ec6; margin-top: 12px; font-size: 0.98rem; }
 .sl-proc-viewport { overflow: hidden; padding: 0 max(24px, calc((100vw - 980px) / 2)); }
-.sl-ptrack { display: flex; gap: 26px; align-items: stretch; will-change: transform; }
+.sl-ptrack { display: flex; gap: 26px; align-items: stretch; will-change: transform; padding-right: max(24px, calc((100vw - 980px) / 2)); }
 .sl-pstep { flex: 0 0 340px; position: relative; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10); border-radius: 24px; padding: 32px 30px; backdrop-filter: blur(8px); display: flex; flex-direction: column; transition: transform 0.5s, box-shadow 0.5s, border-color 0.5s, background 0.5s; }
 .sl-pstep.on { background: rgba(255,255,255,0.09); border-color: rgba(196,160,255,0.55); box-shadow: 0 26px 60px rgba(139,92,246,0.3); transform: translateY(-6px); }
 .sl-pstep .num { font-family: var(--sora); font-weight: 800; font-size: 3.4rem; line-height: 1; background: linear-gradient(120deg, #7db4ff, #ff9ecf); -webkit-background-clip: text; background-clip: text; color: transparent; opacity: 0.5; transition: 0.5s; }
