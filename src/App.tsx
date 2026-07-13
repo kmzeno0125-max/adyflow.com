@@ -8,6 +8,7 @@ const Disclaimer = lazy(() => import('./pages/Disclaimer'));
 const Partners = lazy(() => import('./pages/Partners'));
 const Eredmenyek = lazy(() => import('./pages/Eredmenyek'));
 const Weboldal = lazy(() => import('./pages/Weboldal'));
+const ScrollLanding = lazy(() => import('./pages/ScrollLanding'));
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/aszf" element={<ASZF />} />
             <Route path="/adatvedelem" element={<Privacy />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/scroll" element={<ScrollLanding />} />
           </Routes>
         </Suspense>
       </Router>
