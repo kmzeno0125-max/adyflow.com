@@ -87,7 +87,7 @@ export default function FlowSection() {
   const cardKeys = ['ads', 'conversion', 'crm', 'automation', 'result'] as const
 
   return (
-    <section id="megoldas" className="relative py-24 lg:py-32 bg-gradient-to-b from-slate-50/80 to-white overflow-hidden">
+    <section id="megoldas" className="relative py-24 lg:py-32 bg-gradient-to-b from-slate-50/80 to-white overflow-hidden scroll-mt-20">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-1/4 w-[250px] h-[250px] sm:w-[500px] sm:h-[500px] bg-blue-50/60 rounded-full filter blur-[80px] sm:blur-[160px]" />
         <div className="absolute bottom-40 right-1/4 w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] bg-purple-50/50 rounded-full filter blur-[70px] sm:blur-[140px]" />

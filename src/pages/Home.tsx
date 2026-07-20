@@ -3,6 +3,9 @@ import { useTranslation } from 'react-i18next';
 import Hero from '../components/Hero';
 import Navigation from '../components/Navigation';
 import ScrollLanding from './ScrollLanding';
+import FlowSection from '../components/FlowSection';
+import CTA from '../components/CTA';
+import FloatingCallButton from '../components/FloatingCallButton';
 
 const Team = lazy(() => import('../components/Team'));
 const PartnersSlider = lazy(() => import('../components/PartnersSlider'));
@@ -25,12 +28,15 @@ const Home = () => {
       <Navigation />
       <Hero />
       <ScrollLanding />
+      <FlowSection />
       <Suspense fallback={null}>
         <Team />
+        <CTA />
         <PartnersSlider />
         <FAQ />
         <Footer />
       </Suspense>
+      <FloatingCallButton />
     </>
   );
 };

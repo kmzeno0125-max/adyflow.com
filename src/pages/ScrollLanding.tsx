@@ -363,7 +363,11 @@ export default function ScrollLanding() {
         <div className="inner">
           <h2 className="sl-rv">Építsük fel a te <span className="sl-grad">rendszeredet</span></h2>
           <p className="sl-rv">Ingyenes konzultáción megmutatjuk, hogy nézne ki nálad.</p>
-          <button className="sl-cta sl-rv">Ingyenes konzultáció</button>
+          <button
+            type="button"
+            className="sl-cta sl-rv"
+            onClick={() => document.getElementById('kapcsolat')?.scrollIntoView({ behavior: 'smooth' })}
+          >Ingyenes konzultáció</button>
         </div>
       </section>
     </div>

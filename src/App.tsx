@@ -11,7 +11,7 @@ const Weboldal = lazy(() => import('./pages/Weboldal'));
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-white">
       <Router>
         <Suspense fallback={null}>
           <Routes>
