@@ -18,6 +18,7 @@ import { useTranslation } from 'react-i18next';
 type PortfolioItem = {
   domain: string;
   fallbackLogo?: string;
+  localImage?: string;
 };
 
 const PORTFOLIO: PortfolioItem[] = [
@@ -28,7 +29,8 @@ const PORTFOLIO: PortfolioItem[] = [
   { domain: 'expresszablak.hu' },
   { domain: 'smoothskinpecs.hu', fallbackLogo: '/files_8595244-2026-02-19T16-05-40-810Z-files_8595244-2026-02-19T15-58-19-307Z-image.png' },
   { domain: 'alpakabakonya.hu', fallbackLogo: '/files_8595244-2026-02-18T08-07-05-592Z-image.png' },
-  { domain: 'mecsekszerviz.hu' }
+  { domain: 'mecsekszerviz.hu' },
+  { domain: 'pliszepro.hu', localImage: '/assets/partners/pliszepro-preview.jpg' }
 ];
 
 const screenshotSources = (domain: string) => [
@@ -141,7 +143,7 @@ function PortfolioCard({ item, viewLabel }: { item: PortfolioItem; viewLabel: st
   const sources = screenshotSources(item.domain);
   const [srcIdx, setSrcIdx] = useState(0);
   const [showLogo, setShowLogo] = useState(false);
-  const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState(item.localImage ? true : false);
 
   const handleError = () => {
     if (srcIdx < sources.length - 1) {
@@ -159,7 +161,7 @@ function PortfolioCard({ item, viewLabel }: { item: PortfolioItem; viewLabel: st
       className="group relative bg-white rounded-2xl border border-slate-200 overflow-hidden hover:border-pink-400/60 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/15 transition-all duration-300 motion-reduce:transform-none motion-reduce:transition-none"
     >
       <div className="aspect-[4/3] overflow-hidden bg-gradient-to-br from-slate-100 via-slate-50 to-slate-100 relative">
-        {!loaded && !showLogo && (
+        {!loaded && !showLogo && !item.localImage && (
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-10 h-10 rounded-full border-2 border-slate-300 border-t-pink-400 animate-spin motion-reduce:animate-none"></div>
           </div>
@@ -173,6 +175,14 @@ function PortfolioCard({ item, viewLabel }: { item: PortfolioItem; viewLabel: st
               loading="lazy"
             />
           </div>
+        ) : item.localImage ? (
+          <img
+            src={item.localImage}
+            alt={`A ${item.domain} weboldal kezdőoldalának előnézete`}
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover object-top group-hover:scale-105 transition-all duration-500 motion-reduce:transform-none"
+          />
         ) : (
           <img
             key={srcIdx}
