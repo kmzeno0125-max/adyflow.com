@@ -1,29 +1,10 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-
-// A főoldali logókat Bolt.new chatben töltöm fel – ide add hozzá az újakat (src + alt)
-const homePartnerLogos = [
-  { src: '/files_8595244-2026-02-18T08-07-05-592Z-image.png', alt: 'Alpaka Bakonya Vendégházak' },
-  { src: '/files_8595244-2026-02-18T08-07-40-587Z-image.webp', alt: 'Piccolo Italiano' },
-  { src: '/files_8595244-2026-02-18T09-19-07-295Z-image.png', alt: 'Fifteen Apartman Balatonföldvár' },
-  { src: '/files_8595244-2026-02-18T08-08-05-452Z-image.png', alt: 'Jaka Projekt GmbH' },
-  { src: '/files_8595244-2026-02-18T09-19-48-604Z-image.png', alt: 'Movemed Mozgásrehabilitáció' },
-  { src: '/files_8595244-2026-02-19T10-42-58-465Z-image.png', alt: 'Beauty BOX' },
-  { src: '/files_8595244-2026-02-19T10-43-41-800Z-image.png', alt: 'LDSZ Biztonságtechnika' },
-  { src: '/files_8595244-2026-02-19T16-05-40-810Z-files_8595244-2026-02-19T15-58-19-307Z-image.png', alt: 'SmoothSkin' },
-  { src: '/files_8595244-2026-04-20T09-34-29-822Z-image.png', alt: 'WBC Land Balaton' },
-  { src: '/files_8595244-2026-04-20T09-35-45-999Z-image.png', alt: 'Upgrade Zeitarbeit GmbH' },
-  { src: '/files_8595244-2026-05-14T14-42-14-170Z-image.webp', alt: 'Expresszablak.hu' },
-  { src: '/files_8595244-2026-05-14T14-42-45-409Z-image.png', alt: 'Mecsek Gyorsszerviz' },
-  { src: '/files_10287071-2026-06-03T14-57-17-584Z-image.png', alt: 'Kanapékirály', whiteBg: true },
-  { src: '/files_10287071-2026-06-03T14-57-41-343Z-image.png', alt: 'Euroexam International', whiteBg: true },
-  { src: '/image copy copy copy copy copy copy copy.png', alt: 'Gulyás Klíma', whiteBg: true },
-  { src: '/image copy copy copy copy copy copy copy copy.png', alt: 'SEC-CAM', whiteBg: true },
-]
+import { partners } from '../data/partners'
 
 export default function PartnersSlider() {
   const { t } = useTranslation()
-  const doubled = [...homePartnerLogos, ...homePartnerLogos]
+  const doubled = [...partners, ...partners]
   const [paused, setPaused] = useState(false)
 
   return (

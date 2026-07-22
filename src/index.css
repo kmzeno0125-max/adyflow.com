@@ -70,8 +70,17 @@
   }
 
   .animate-partners-scroll {
-    animation: partners-scroll 28s linear infinite;
+    animation: partners-scroll 45s linear infinite;
     will-change: transform;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-partners-scroll {
+      animation: none;
+      overflow-x: auto;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
   }
 
   @keyframes float {
