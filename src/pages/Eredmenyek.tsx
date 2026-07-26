@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { ArrowRight, TrendingUp, Target, DollarSign, ShieldCheck, CheckCircle2, Sparkles, BarChart3, RefreshCw, Crosshair } from 'lucide-react'
+import { ArrowRight, TrendingUp, Target, DollarSign, ShieldCheck, CheckCircle2, Sparkles, BarChart3, RefreshCw, Crosshair, X } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Navigation from '../components/Navigation'
@@ -513,11 +513,7 @@ function PliszéProCaseStudy() {
 
   const whyIcons = [Target, BarChart3, Crosshair, RefreshCw]
 
-  const images = [
-    '/files_10287071-2026-07-22T15-57-42-320Z-image.png',
-    '/files_10287071-2026-07-22T16-00-14-571Z-files_10287071-2026-07-22T15-57-42-320Z-image.png',
-    '/assets/partners/pliszepro-preview.jpg',
-  ]
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
 
   const handleCTA = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
@@ -598,31 +594,59 @@ function PliszéProCaseStudy() {
 
               {/* Image Gallery */}
               <div className="relative mt-8">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="relative col-span-2 rounded-2xl overflow-hidden shadow-lg group">
-                    <img
-                      src={images[0]}
-                      alt="PliszéPro kampány"
-                      className="w-full h-48 sm:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="flex flex-col">
+                    <button
+                      type="button"
+                      onClick={() => setLightboxSrc('/pliszepro-meta-kampany.jpg')}
+                      className="group rounded-2xl overflow-hidden shadow-md bg-white border border-slate-200 hover:shadow-lg transition-shadow duration-300 cursor-zoom-in"
+                    >
+                      <img
+                        src="/pliszepro-meta-kampany.jpg"
+                        alt="Pliszé Pro Meta Ads kampány eredményei"
+                        className="w-full h-auto object-contain"
+                      />
+                    </button>
+                    <p className="text-xs text-slate-400 mt-2 text-center">Meta Ads kampány</p>
                   </div>
-                  <div className="relative rounded-2xl overflow-hidden shadow-md group transform rotate-[-1deg] hover:rotate-0 transition-transform duration-300">
-                    <img
-                      src={images[1]}
-                      alt="PliszéPro hirdetés"
-                      className="w-full h-32 sm:h-40 object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="relative rounded-2xl overflow-hidden shadow-md group transform rotate-[1.5deg] hover:rotate-0 transition-transform duration-300">
-                    <img
-                      src={images[2]}
-                      alt="PliszéPro weboldal"
-                      className="w-full h-32 sm:h-40 object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
+                  <div className="flex flex-col">
+                    <button
+                      type="button"
+                      onClick={() => setLightboxSrc('/pliszepro-crm-eredmeny.jpg')}
+                      className="group rounded-2xl overflow-hidden shadow-md bg-white border border-slate-200 hover:shadow-lg transition-shadow duration-300 cursor-zoom-in"
+                    >
+                      <img
+                        src="/pliszepro-crm-eredmeny.jpg"
+                        alt="Pliszé Pro CRM pipeline és bevétel"
+                        className="w-full h-auto object-contain"
+                      />
+                    </button>
+                    <p className="text-xs text-slate-400 mt-2 text-center">CRM pipeline és bevétel</p>
                   </div>
                 </div>
               </div>
+
+              {/* Lightbox */}
+              {lightboxSrc && (
+                <div
+                  className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+                  onClick={() => setLightboxSrc(null)}
+                >
+                  <button
+                    type="button"
+                    onClick={() => setLightboxSrc(null)}
+                    className="absolute top-4 right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                  >
+                    <X className="text-white" size={24} />
+                  </button>
+                  <img
+                    src={lightboxSrc}
+                    alt=""
+                    className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+                    onClick={(e) => e.stopPropagation()}
+                  />
+                </div>
+              )}
             </div>
 
             {/* Right Column - Results */}
