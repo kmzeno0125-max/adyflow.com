@@ -592,61 +592,6 @@ function PliszéProCaseStudy() {
                 </ul>
               </div>
 
-              {/* Image Gallery */}
-              <div className="relative mt-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="flex flex-col">
-                    <button
-                      type="button"
-                      onClick={() => setLightboxSrc('/pliszepro-meta-kampany.jpg')}
-                      className="group rounded-2xl overflow-hidden shadow-md bg-white border border-slate-200 hover:shadow-lg transition-shadow duration-300 cursor-zoom-in"
-                    >
-                      <img
-                        src="/pliszepro-meta-kampany.jpg"
-                        alt="Pliszé Pro Meta Ads kampány eredményei"
-                        className="w-full h-auto object-contain"
-                      />
-                    </button>
-                    <p className="text-xs text-slate-400 mt-2 text-center">Meta Ads kampány</p>
-                  </div>
-                  <div className="flex flex-col">
-                    <button
-                      type="button"
-                      onClick={() => setLightboxSrc('/pliszepro-crm-eredmeny.jpg')}
-                      className="group rounded-2xl overflow-hidden shadow-md bg-white border border-slate-200 hover:shadow-lg transition-shadow duration-300 cursor-zoom-in"
-                    >
-                      <img
-                        src="/pliszepro-crm-eredmeny.jpg"
-                        alt="Pliszé Pro CRM pipeline és bevétel"
-                        className="w-full h-auto object-contain"
-                      />
-                    </button>
-                    <p className="text-xs text-slate-400 mt-2 text-center">CRM pipeline és bevétel</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Lightbox */}
-              {lightboxSrc && (
-                <div
-                  className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
-                  onClick={() => setLightboxSrc(null)}
-                >
-                  <button
-                    type="button"
-                    onClick={() => setLightboxSrc(null)}
-                    className="absolute top-4 right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-                  >
-                    <X className="text-white" size={24} />
-                  </button>
-                  <img
-                    src={lightboxSrc}
-                    alt=""
-                    className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
-                    onClick={(e) => e.stopPropagation()}
-                  />
-                </div>
-              )}
             </div>
 
             {/* Right Column - Results */}
@@ -705,6 +650,62 @@ function PliszéProCaseStudy() {
               </div>
             </div>
           </div>
+
+          {/* Full-width Image Gallery */}
+          <div className="relative z-10 px-8 sm:px-10 lg:px-14 pt-10 lg:pt-14">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="flex flex-col">
+                <button
+                  type="button"
+                  onClick={() => setLightboxSrc('/pliszepro-meta-kampany.jpg')}
+                  className="group rounded-2xl overflow-hidden shadow-lg bg-white border border-slate-200 hover:shadow-xl transition-all duration-300 cursor-zoom-in hover:scale-[1.01]"
+                >
+                  <img
+                    src="/pliszepro-meta-kampany.jpg"
+                    alt="Pliszé Pro Meta Ads kampány eredményei"
+                    className="w-full h-auto object-contain p-3"
+                  />
+                </button>
+                <p className="text-sm text-slate-400 mt-3 text-center">Meta Ads kampány</p>
+              </div>
+              <div className="flex flex-col">
+                <button
+                  type="button"
+                  onClick={() => setLightboxSrc('/pliszepro-crm-eredmeny.jpg')}
+                  className="group rounded-2xl overflow-hidden shadow-lg bg-white border border-slate-200 hover:shadow-xl transition-all duration-300 cursor-zoom-in hover:scale-[1.01]"
+                >
+                  <img
+                    src="/pliszepro-crm-eredmeny.jpg"
+                    alt="Pliszé Pro CRM pipeline és bevétel"
+                    className="w-full h-auto object-contain p-3"
+                  />
+                </button>
+                <p className="text-sm text-slate-400 mt-3 text-center">CRM pipeline és bevétel</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Lightbox */}
+          {lightboxSrc && (
+            <div
+              className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+              onClick={() => setLightboxSrc(null)}
+            >
+              <button
+                type="button"
+                onClick={() => setLightboxSrc(null)}
+                className="absolute top-4 right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              >
+                <X className="text-white" size={24} />
+              </button>
+              <img
+                src={lightboxSrc}
+                alt=""
+                className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
+          )}
 
           {/* Why It Worked Section */}
           <div className="relative z-10 px-8 sm:px-10 lg:px-14 pb-10 lg:pb-14">
