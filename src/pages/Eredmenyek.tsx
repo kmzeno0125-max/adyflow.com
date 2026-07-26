@@ -478,6 +478,277 @@ function CaseStudy() {
   )
 }
 
+function PliszéProCaseStudy() {
+  const { ref, inView } = useInView(0.15)
+  const navigate = useNavigate()
+
+  const tasks = [
+    'Többrétegű Meta Ads kampánystruktúra kialakítása',
+    'Országos és területi célzások tesztelése',
+    'Többféle hirdetési kreatív és szöveg A/B tesztelése',
+    'Automatikus árkalkulátorhoz vezető kampányfolyamat kialakítása',
+    'Érdeklődő- és remarketingközönségek létrehozása',
+    'Konverziómérés és ajánlatkérések pontos követése',
+    'Folyamatos kampányoptimalizálás és napi monitoring',
+  ]
+
+  const whyItems = [
+    {
+      title: 'Azonnali árkalkuláció',
+      text: 'Az érdeklődők már az első lépésben személyre szabott, méretalapú kalkulációt kaphattak, így jelentősen csökkent a bizonytalanság és a felesleges érdeklődések száma.',
+    },
+    {
+      title: 'Magas vásárlási szándék',
+      text: 'A kampány nem általános weboldal-látogatókat gyűjtött. Az érdeklődők konkrét méreteket adtak meg, ezért jóval közelebb álltak a vásárlási döntéshez.',
+    },
+    {
+      title: 'Célzott kreatívok',
+      text: 'A hirdetések egyértelműen bemutatták a termék legfontosabb előnyeit: az egyedi méretet, az átlátható árképzést, a prémium kialakítást és a gyors ajánlatkérést.',
+    },
+    {
+      title: 'Összekapcsolt rendszer',
+      text: 'A hirdetés, a kalkulátor, az ajánlatkérés és az utánkövetés egyetlen egységes folyamatként működött, így az érdeklődők nem vesztek el a különböző lépések között.',
+    },
+  ]
+
+  const whyIcons = [Target, BarChart3, Crosshair, RefreshCw]
+
+  const images = [
+    '/files_10287071-2026-07-22T15-57-42-320Z-image.png',
+    '/files_10287071-2026-07-22T16-00-14-571Z-files_10287071-2026-07-22T15-57-42-320Z-image.png',
+    '/assets/partners/pliszepro-preview.jpg',
+  ]
+
+  const handleCTA = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    navigate('/')
+    setTimeout(() => {
+      const el = document.getElementById('kapcsolat')
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 100)
+  }
+
+  return (
+    <section
+      ref={ref}
+      className="relative py-20 lg:py-28 bg-slate-50"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative rounded-3xl overflow-hidden border border-slate-200 bg-gradient-to-br from-white via-slate-50 to-white shadow-lg">
+          <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-600/10 rounded-full blur-[140px] pointer-events-none" />
+          <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-pink-600/10 rounded-full blur-[140px] pointer-events-none" />
+
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 p-8 sm:p-10 lg:p-14">
+            {/* Left Column */}
+            <div>
+              <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-pink-100 border border-pink-300 mb-6">
+                <Sparkles className="text-pink-600" size={14} />
+                <span className="text-xs font-semibold uppercase tracking-widest text-pink-700">Kiemelt sikertörténet</span>
+              </div>
+
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4 leading-tight">
+                <span className="gradient-text">PliszéPro</span>
+              </h2>
+
+              <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm mb-6">
+                <div className="text-slate-600">
+                  <span className="text-slate-500">Iparág:</span>{' '}
+                  <span className="text-slate-900 font-medium">Egyedi méretre gyártott pliszé szúnyoghálók és árnyékolástechnika</span>
+                </div>
+                <div className="text-slate-600">
+                  <span className="text-slate-500">Időszak:</span>{' '}
+                  <span className="text-slate-900 font-medium">2026. július (3 hét)</span>
+                </div>
+              </div>
+
+              <p className="text-lg text-slate-700 leading-relaxed mb-8">
+                A PliszéPro egyedi méretre gyártott pliszé szúnyoghálókat kínál országosan. A kampány célja az volt, hogy ne egyszerű érdeklődéseket, hanem konkrét méretekkel és valós vásárlási szándékkal rendelkező ajánlatkérőket szerezzünk. Ehhez a fizetett hirdetéseket egy automatikus online kalkulátorral és célzott ajánlatkérési folyamattal kapcsoltuk össze.
+              </p>
+
+              <div className="mb-10">
+                <h3 className="text-sm font-semibold uppercase tracking-widest text-slate-500 mb-4">Mit csináltunk</h3>
+                <ul className="space-y-3">
+                  {tasks.map((task, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-start space-x-3"
+                      style={{
+                        opacity: inView ? 1 : 0,
+                        transform: inView ? 'translateX(0)' : 'translateX(-16px)',
+                        transition: 'opacity 600ms ease-out, transform 600ms ease-out',
+                        transitionDelay: inView ? `${idx * 90}ms` : '0ms',
+                      }}
+                    >
+                      <div className="flex-shrink-0 mt-0.5 p-1 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full">
+                        {inView ? (
+                          <CheckCircle2
+                            className="text-pink-600 animate-check-pop"
+                            size={18}
+                            style={{ animationDelay: `${idx * 90 + 150}ms` }}
+                          />
+                        ) : (
+                          <CheckCircle2 className="text-pink-600 opacity-0" size={18} />
+                        )}
+                      </div>
+                      <span className="text-slate-700 leading-relaxed">{task}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Image Gallery */}
+              <div className="relative mt-8">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="relative col-span-2 rounded-2xl overflow-hidden shadow-lg group">
+                    <img
+                      src={images[0]}
+                      alt="PliszéPro kampány"
+                      className="w-full h-48 sm:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+                  </div>
+                  <div className="relative rounded-2xl overflow-hidden shadow-md group transform rotate-[-1deg] hover:rotate-0 transition-transform duration-300">
+                    <img
+                      src={images[1]}
+                      alt="PliszéPro hirdetés"
+                      className="w-full h-32 sm:h-40 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="relative rounded-2xl overflow-hidden shadow-md group transform rotate-[1.5deg] hover:rotate-0 transition-transform duration-300">
+                    <img
+                      src={images[2]}
+                      alt="PliszéPro weboldal"
+                      className="w-full h-32 sm:h-40 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Results */}
+            <div className="space-y-5">
+              <ResultStat
+                target={1960000}
+                suffix={'\u00A0Ft'}
+                label="A kampány során kiküldött ajánlatok teljes értéke"
+                highlight
+                highlightLabel="Kiküldött árajánlatok összértéke"
+                triggered={inView}
+                thousands
+                inView={inView}
+                revealDelay="0ms"
+              />
+
+              <div
+                className="relative p-5 rounded-xl bg-white border border-emerald-300/40 overflow-hidden"
+                style={{
+                  opacity: inView ? 1 : 0,
+                  transform: inView ? 'translateY(0)' : 'translateY(24px)',
+                  transition: 'opacity 650ms ease-out, transform 650ms ease-out',
+                  transitionDelay: inView ? '110ms' : '0ms',
+                }}
+              >
+                <p className="relative z-10 text-sm sm:text-base text-emerald-700 font-medium leading-snug">
+                  Minden 1 forint hirdetési költésből{' '}
+                  <span className="font-bold bg-gradient-to-r from-emerald-600 via-emerald-500 to-cyan-600 bg-clip-text text-transparent animate-gradient-flow">
+                    23,06 forint ajánlati érték.
+                  </span>
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <ResultStat target={85000} suffix={'\u00A0Ft'} label="Hirdetési költés" triggered={inView} thousands inView={inView} revealDelay="220ms" />
+                <ResultStat target={15} suffix=" db" label="Beérkezett ajánlatkérés" triggered={inView} inView={inView} revealDelay="330ms" />
+                <ResultStat target={130667} suffix={'\u00A0Ft'} label="Átlagos ajánlati érték" triggered={inView} thousands inView={inView} revealDelay="440ms" />
+                <ResultStat target={940} suffix=" db" label="Kalkulátorkitöltés" triggered={inView} inView={inView} revealDelay="550ms" />
+                <ResultStat target={15} suffix=" db" label="Kiküldött árajánlat" triggered={inView} inView={inView} revealDelay="660ms" />
+                <ResultStat target={60000} prefix="" suffix="+ elérés" label="Célzott közönségben" triggered={inView} thousands inView={inView} revealDelay="770ms" />
+              </div>
+
+              {/* Extra context for lead quality */}
+              <div
+                className="p-4 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200/50"
+                style={{
+                  opacity: inView ? 1 : 0,
+                  transform: inView ? 'translateY(0)' : 'translateY(16px)',
+                  transition: 'opacity 650ms ease-out, transform 650ms ease-out',
+                  transitionDelay: inView ? '880ms' : '0ms',
+                }}
+              >
+                <p className="text-sm text-slate-700 leading-relaxed">
+                  <span className="font-semibold text-blue-700">Fontos:</span> minden ajánlatkérés konkrét méretekkel rendelkező érdeklődőtől érkezett.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Why It Worked Section */}
+          <div className="relative z-10 px-8 sm:px-10 lg:px-14 pb-10 lg:pb-14">
+            <div className="border-t border-slate-200 pt-10 lg:pt-14">
+              <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8 text-center">
+                Miért <span className="gradient-text">működött?</span>
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {whyItems.map((item, idx) => {
+                  const Icon = whyIcons[idx]
+                  return (
+                    <div
+                      key={idx}
+                      className="group p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300"
+                      style={{
+                        opacity: inView ? 1 : 0,
+                        transform: inView ? 'translateY(0)' : 'translateY(16px)',
+                        transition: 'opacity 650ms ease-out, transform 650ms ease-out',
+                        transitionDelay: inView ? `${900 + idx * 100}ms` : '0ms',
+                      }}
+                      onMouseOver={(e) => {
+                        const el = e.currentTarget as HTMLDivElement
+                        el.style.transform = 'translateY(-3px)'
+                        el.style.borderColor = 'rgba(192, 132, 252, 0.4)'
+                      }}
+                      onMouseOut={(e) => {
+                        const el = e.currentTarget as HTMLDivElement
+                        el.style.transform = 'translateY(0)'
+                        el.style.borderColor = 'rgba(226, 232, 240, 1)'
+                      }}
+                    >
+                      <div className="mb-4 inline-flex p-2.5 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full group-hover:from-purple-200 group-hover:to-pink-200 transition-all duration-300">
+                        <Icon className="text-purple-600 group-hover:scale-110 transition-transform duration-300" size={22} />
+                      </div>
+                      <h4 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h4>
+                      <p className="text-sm text-slate-600 leading-relaxed">{item.text}</p>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* CTA within case study */}
+          <div className="relative z-10 px-8 sm:px-10 lg:px-14 pb-10 lg:pb-14">
+            <div className="text-center p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border border-slate-700 shadow-xl">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">
+                Hasonló eredményeket szeretnél a vállalkozásodban?
+              </h3>
+              <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+                Megtervezzük és felépítjük azt a hirdetési és ügyfélszerző rendszert, amely nemcsak kattintásokat, hanem valódi üzleti lehetőségeket generál.
+              </p>
+              <a
+                href="/#kapcsolat"
+                onClick={handleCTA}
+                className="group inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold text-lg text-white hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300"
+              >
+                <span>Ingyenes konzultáció</span>
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function WhyItWorks() {
   const { t } = useTranslation()
   const { ref, inView } = useInView(0.2)
@@ -613,6 +884,7 @@ export default function Eredmenyek() {
       <Hero />
       <KpiRow />
       <CaseStudy />
+      <PliszéProCaseStudy />
       <WhyItWorks />
       <FinalCTA />
       <Footer />
