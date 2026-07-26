@@ -514,9 +514,9 @@ function PliszéProCaseStudy() {
   const whyIcons = [Target, BarChart3, Crosshair, RefreshCw]
 
   const images = [
-    '/files_10287071-2026-07-22T15-57-42-320Z-image.png',
-    '/files_10287071-2026-07-22T16-00-14-571Z-files_10287071-2026-07-22T15-57-42-320Z-image.png',
     '/assets/partners/pliszepro-preview.jpg',
+    '/files_8595244-2026-05-14T14-42-14-170Z-image.webp',
+    '/files_8595244-2026-05-14T14-42-45-409Z-image.png',
   ]
 
   const handleCTA = (e: React.MouseEvent<HTMLAnchorElement>) => {
