@@ -71,17 +71,30 @@ export default function CTA() {
         throw new Error('Service unavailable')
       }
 
-      const { error } = await supabase.from('leads').insert({
+      const lead = {
         name: formData.name.trim(),
         email: formData.email.trim(),
         phone: formData.phone.trim(),
         company_type: formData.company_type,
         message: formData.message.trim()
-      })
+      }
+
+      const { error } = await supabase.from('leads').insert(lead)
 
       if (error) {
         throw error
       }
+
+      fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-lead-webhook`, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(lead)
+      }).catch((webhookErr) => {
+        console.error('Webhook forwarding error:', webhookErr)
+      })
 
       setSubmitStatus('success')
       setFormData({ name: '', email: '', phone: '', company_type: '', message: '', honeypot: '' })
