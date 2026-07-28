@@ -137,8 +137,10 @@ export default function ScrollLanding() {
     const track = audTrackRef.current
     if (!track) return
     const slides = track.querySelectorAll<HTMLElement>('.sl-aud-slide')
-    if (slides[idx]) {
-      slides[idx].scrollIntoView({ behavior: reduceMotion.current ? 'auto' : 'smooth', inline: 'center', block: 'nearest' })
+    const slide = slides[idx]
+    if (slide) {
+      const left = slide.offsetLeft - (track.clientWidth - slide.offsetWidth) / 2
+      track.scrollTo({ left, behavior: reduceMotion.current ? 'auto' : 'smooth' })
     }
   }, [])
 

@@ -3,8 +3,11 @@ import { CheckCircle2, Mail, Phone, Send, Loader2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { supabase } from '../lib/supabase'
 
+const WEBHOOK_URL =
+  'https://services.leadconnectorhq.com/hooks/p9HVIy80i8mv3sNYEsxL/webhook-trigger/4d4e9001-a35d-46be-a094-918b123147dd'
+
 export default function CTA() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -59,6 +62,7 @@ export default function CTA() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    if (isSubmitting) return
     setSubmitStatus('idle')
 
     if (!validate()) return
@@ -66,34 +70,37 @@ export default function CTA() {
 
     setIsSubmitting(true)
 
+    const lead = {
+      name: formData.name.trim(),
+      email: formData.email.trim(),
+      phone: formData.phone.trim(),
+      company_type: formData.company_type,
+      message: formData.message.trim()
+    }
+
+    if (supabase) {
+      supabase.from('leads').insert(lead).then(({ error }) => {
+        if (error) console.error('Lead backup save error:', error)
+      })
+    }
+
     try {
-      if (!supabase) {
-        throw new Error('Service unavailable')
+      const payload = {
+        name: lead.name,
+        email: lead.email,
+        phone: lead.phone,
+        service: lead.company_type,
+        message: lead.message,
+        language: i18n.language,
+        source: 'adyflow.com - kapcsolati urlap',
+        page_url: window.location.href,
+        submitted_at: new Date().toISOString()
       }
 
-      const lead = {
-        name: formData.name.trim(),
-        email: formData.email.trim(),
-        phone: formData.phone.trim(),
-        company_type: formData.company_type,
-        message: formData.message.trim()
-      }
-
-      const { error } = await supabase.from('leads').insert(lead)
-
-      if (error) {
-        throw error
-      }
-
-      fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-lead-webhook`, {
+      await fetch(WEBHOOK_URL, {
         method: 'POST',
-        headers: {
-          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(lead)
-      }).catch((webhookErr) => {
-        console.error('Webhook forwarding error:', webhookErr)
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
       })
 
       setSubmitStatus('success')
@@ -256,7 +263,8 @@ export default function CTA() {
                 </button>
 
                 {submitStatus === 'success' && (
-                  <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
+                  <div className="p-4 bg-green-50 border border-green-200 rounded-lg flex items-start justify-center space-x-2">
+                    <CheckCircle2 className="text-green-600 flex-shrink-0 mt-0.5" size={20} />
                     <p className="text-green-700 text-center font-medium">{t('cta.success')}</p>
                   </div>
                 )}
