@@ -654,6 +654,8 @@
   "testimonials": {
     "eyebrow": "KUNDENERFAHRUNGEN",
     "title": "Echte Stimmen. Echte Ergebnisse.",
+    "title_part1": "Echte Stimmen.",
+    "title_highlight": "Echte Ergebnisse.",
     "description": "Erfahren Sie direkt von unseren Partnern, wie sie die Zusammenarbeit mit uns erlebt haben – vom ersten Gespräch bis zu messbaren Ergebnissen.",
     "video_subtitle": "Unsere Kunden erzählen von der Zusammenarbeit mit uns",
     "written_subtitle": "Schriftliche Kundenstimmen",

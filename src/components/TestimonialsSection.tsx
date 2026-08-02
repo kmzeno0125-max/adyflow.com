@@ -466,16 +466,52 @@ export default function TestimonialsSection() {
         }`}
       >
         {/* Section header */}
-        <div className="text-center mb-12 lg:mb-16">
-          <p className={`text-xs font-semibold uppercase tracking-widest mb-4 ${gradientText}`}>
-            {t('testimonials.eyebrow')}
-          </p>
-          <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 mb-5 leading-tight">
-            {t('testimonials.title')}
-          </h2>
-          <p className="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
-            {t('testimonials.description')}
-          </p>
+        <div className="relative text-center mb-12 lg:mb-16">
+          {/* Soft contained radial glow behind heading only */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div
+              className="w-[420px] h-[200px] rounded-full opacity-[0.06] blur-[80px]"
+              style={{
+                background:
+                  'radial-gradient(ellipse at center, #8b5cf6 0%, #ec4899 50%, transparent 70%)'
+              }}
+            />
+          </div>
+
+          <div className="relative z-10 flex flex-col items-center">
+            {/* Premium capsule eyebrow */}
+            <span
+              className="inline-flex items-center rounded-full px-4 py-1.5 mb-5 text-[11px] font-semibold uppercase tracking-widest bg-purple-50/60 backdrop-blur-sm"
+              style={{
+                border: '1px solid transparent',
+                backgroundImage:
+                  'linear-gradient(#ffffff, #ffffff), linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899)',
+                backgroundOrigin: 'border-box',
+                backgroundClip: 'padding-box, border-box'
+              }}
+            >
+              <span className={gradientText}>{t('testimonials.eyebrow')}</span>
+            </span>
+
+            {/* Split title: first phrase dark, second phrase gradient */}
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-5 leading-[1.15] max-w-3xl">
+              {t('testimonials.title_part1')}{' '}
+              <span className={gradientText}>{t('testimonials.title_highlight')}</span>
+            </h2>
+
+            {/* Subtle gradient stroke beneath heading */}
+            <div
+              className="h-[2px] w-16 rounded-full mb-6 opacity-40"
+              style={{
+                background:
+                  'linear-gradient(to right, transparent, #8b5cf6, #ec4899, transparent)'
+              }}
+            />
+
+            <p className="text-base sm:text-lg text-slate-500 max-w-xl mx-auto leading-relaxed">
+              {t('testimonials.description')}
+            </p>
+          </div>
         </div>
 
         {/* Carousel */}

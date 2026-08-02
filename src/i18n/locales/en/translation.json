@@ -654,6 +654,8 @@
   "testimonials": {
     "eyebrow": "CLIENT EXPERIENCES",
     "title": "Real feedback. Real results.",
+    "title_part1": "Real feedback.",
+    "title_highlight": "Real results.",
     "description": "Hear directly from our partners about working with us – from the first conversation to measurable outcomes.",
     "video_subtitle": "Our clients share what it is like to work with us",
     "written_subtitle": "Written client reviews",
