@@ -658,7 +658,13 @@
     "video_subtitle": "Unsere Kunden erzählen von der Zusammenarbeit mit uns",
     "written_subtitle": "Schriftliche Kundenstimmen",
     "play_aria": "Video abspielen",
-    "stars_aria": "5 von 5 Sterne Bewertung"
+    "stars_aria": "5 von 5 Sterne Bewertung",
+    "video_pill": "VIDEO-KUNDENSTIMME",
+    "written_pill": "SCHRIFTLICHE REFERENZ",
+    "prev_aria": "Vorherige Kundenstimme",
+    "next_aria": "Nächste Kundenstimme",
+    "dot_aria": "Zur Kundenstimme {{index}} springen",
+    "slide_label": "{{index}} / {{total}} — {{name}}"
   },
   "aszf": {
     "back": "Zurück zur Startseite",

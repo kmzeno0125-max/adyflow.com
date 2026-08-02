@@ -658,7 +658,13 @@
     "video_subtitle": "Ügyfeleink mondják el, milyen velünk dolgozni",
     "written_subtitle": "Írásos ügyfélvélemények",
     "play_aria": "Videó lejátszása",
-    "stars_aria": "5 csillagos értékelés"
+    "stars_aria": "5 csillagos értékelés",
+    "video_pill": "VIDEÓS VISSZAJELZÉS",
+    "written_pill": "ÍRÁSOS VISSZAJELZÉS",
+    "prev_aria": "Előző vélemény",
+    "next_aria": "Következő vélemény",
+    "dot_aria": "Ugrás a {{index}}. véleményre",
+    "slide_label": "{{index}} / {{total}} — {{name}}"
   },
   "aszf": {
     "back": "Vissza a főoldalra",

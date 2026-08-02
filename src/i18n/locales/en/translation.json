@@ -658,7 +658,13 @@
     "video_subtitle": "Our clients share what it is like to work with us",
     "written_subtitle": "Written client reviews",
     "play_aria": "Play video",
-    "stars_aria": "5 out of 5 star rating"
+    "stars_aria": "5 out of 5 star rating",
+    "video_pill": "VIDEO TESTIMONIAL",
+    "written_pill": "WRITTEN TESTIMONIAL",
+    "prev_aria": "Previous testimonial",
+    "next_aria": "Next testimonial",
+    "dot_aria": "Go to testimonial {{index}}",
+    "slide_label": "{{index}} / {{total}} — {{name}}"
   },
   "aszf": {
     "back": "Back to home",

@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Play, Star, Quote, Film } from 'lucide-react'
+import { Play, Star, Quote, Film, ChevronLeft, ChevronRight } from 'lucide-react'
 import {
   videoTestimonials,
   textTestimonials,
@@ -8,6 +8,33 @@ import {
   type VideoTestimonial,
   type TextTestimonial
 } from '../data/testimonials'
+
+/* ------------------------------------------------------------------ */
+/*  Types                                                              */
+/* ------------------------------------------------------------------ */
+
+type SlideType = 'video' | 'text'
+
+interface BaseSlide {
+  type: SlideType
+  name: string
+}
+
+interface VideoSlide extends BaseSlide {
+  type: 'video'
+  data: VideoTestimonial
+}
+
+interface TextSlide extends BaseSlide {
+  type: 'text'
+  data: TextTestimonial
+}
+
+type Slide = VideoSlide | TextSlide
+
+/* ------------------------------------------------------------------ */
+/*  Hook: scroll reveal                                                */
+/* ------------------------------------------------------------------ */
 
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null)
@@ -32,11 +59,9 @@ function useScrollReveal() {
   return { ref, visible }
 }
 
-const accentStyles: Record<TextTestimonial['accent'], { border: string; glow: string; star: string }> = {
-  purple: { border: 'hover:border-purple-400/40', glow: 'group-hover:shadow-purple-500/20', star: 'text-purple-400' },
-  blue: { border: 'hover:border-blue-400/40', glow: 'group-hover:shadow-blue-500/20', star: 'text-blue-400' },
-  orange: { border: 'hover:border-orange-400/40', glow: 'group-hover:shadow-orange-500/20', star: 'text-orange-400' }
-}
+/* ------------------------------------------------------------------ */
+/*  Constants                                                          */
+/* ------------------------------------------------------------------ */
 
 const posterLabels: Record<Lang, string> = {
   hu: 'Videós ügyfélvélemény',
@@ -44,10 +69,88 @@ const posterLabels: Record<Lang, string> = {
   de: 'Video-Kundenstimme'
 }
 
-function VideoPoster({ testimonial, lang, playLabel }: {
+const gradientText =
+  'bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent'
+
+const gradientBorder =
+  'bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500'
+
+/* ------------------------------------------------------------------ */
+/*  Build slides                                                       */
+/* ------------------------------------------------------------------ */
+
+function buildSlides(): Slide[] {
+  const vSlides: VideoSlide[] = videoTestimonials.map((v) => ({
+    type: 'video',
+    name: v.name,
+    data: v
+  }))
+  const tSlides: TextSlide[] = textTestimonials.map((t) => ({
+    type: 'text',
+    name: t.name,
+    data: t
+  }))
+  return [...vSlides, ...tSlides]
+}
+
+/* ------------------------------------------------------------------ */
+/*  Avatar                                                             */
+/* ------------------------------------------------------------------ */
+
+function getInitials(name: string): string {
+  const parts = name.trim().split(/\s+/)
+  if (parts.length >= 2) return (parts[0][0] + parts[1][0]).toUpperCase()
+  return parts[0].substring(0, 2).toUpperCase()
+}
+
+function Avatar({ name }: { name: string }) {
+  return (
+    <span className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 ring-1 ring-purple-200/60">
+      <span className="text-sm font-bold bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+        {getInitials(name)}
+      </span>
+    </span>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/*  Gradient pill                                                      */
+/* ------------------------------------------------------------------ */
+
+function GradientPill({ label }: { label: string }) {
+  return (
+    <span
+      className={`inline-flex items-center rounded-full px-4 py-1.5 text-[11px] font-semibold uppercase tracking-widest ${gradientText} border border-purple-200/70 bg-purple-50/50`}
+    >
+      {label}
+    </span>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/*  Quote icon                                                         */
+/* ------------------------------------------------------------------ */
+
+function GradientQuote() {
+  return (
+    <Quote
+      size={40}
+      className="mx-auto mb-6 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+      strokeWidth={1.5}
+    />
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/*  Video poster                                                       */
+/* ------------------------------------------------------------------ */
+
+function VideoPoster({
+  testimonial,
+  lang
+}: {
   testimonial: VideoTestimonial
   lang: Lang
-  playLabel: string
 }) {
   const [thumbError, setThumbError] = useState(false)
   const thumbUrl = `https://i.ytimg.com/vi/${testimonial.videoId}/hqdefault.jpg`
@@ -66,39 +169,63 @@ function VideoPoster({ testimonial, lang, playLabel }: {
       ) : (
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900">
           <Film className="text-white/20 mb-3" size={48} />
-          <p className="text-white/80 font-medium text-sm px-4 text-center">{posterLabels[lang]}</p>
-          <p className="text-white/50 text-xs mt-1 px-4 text-center">{testimonial.name}</p>
+          <p className="text-white/80 font-medium text-sm px-4 text-center">
+            {posterLabels[lang]}
+          </p>
+          <p className="text-white/50 text-xs mt-1 px-4 text-center">
+            {testimonial.name}
+          </p>
         </div>
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent" />
       <div className="absolute inset-0 flex items-center justify-center">
-        <span className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 shadow-lg shadow-purple-500/40 transition-transform duration-300 group-hover:scale-110">
-          <Play className="text-white ml-0.5" size={24} fill="white" />
+        <span className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 shadow-lg shadow-purple-500/30 transition-transform duration-300 group-hover:scale-110">
+          <Play className="text-white ml-0.5" size={28} fill="white" />
         </span>
       </div>
     </div>
   )
 }
 
-function VideoTestimonialCard({ testimonial, lang, playLabel }: {
-  testimonial: VideoTestimonial
+/* ------------------------------------------------------------------ */
+/*  Video slide                                                        */
+/* ------------------------------------------------------------------ */
+
+function VideoSlideContent({
+  slide,
+  lang,
+  isActive,
+  playLabel
+}: {
+  slide: VideoSlide
   lang: Lang
+  isActive: boolean
   playLabel: string
 }) {
   const [loaded, setLoaded] = useState(false)
+  const v = slide.data
 
-  const aspectClass = testimonial.orientation === 'portrait' ? 'aspect-[9/16]' : 'aspect-video'
-  const embedUrl = `https://www.youtube-nocookie.com/embed/${testimonial.videoId}?autoplay=1&rel=0`
+  useEffect(() => {
+    if (!isActive && loaded) setLoaded(false)
+  }, [isActive, loaded])
+  const isPortrait = v.orientation === 'portrait'
+  const embedUrl = `https://www.youtube-nocookie.com/embed/${v.videoId}?autoplay=1&rel=0`
 
   return (
-    <div className="group flex flex-col bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.05] hover:border-white/20 hover:shadow-2xl hover:shadow-purple-500/10 hover:-translate-y-1">
-      {testimonial.orientation === 'portrait' ? (
-        <div className="flex flex-col sm:flex-row gap-5 p-5 sm:p-6">
-          <div className={`relative ${aspectClass} w-full sm:w-[200px] sm:flex-shrink-0 rounded-xl overflow-hidden bg-slate-800`}>
+    <div className="flex flex-col items-center text-center">
+      <GradientPill label={posterLabels[lang].toUpperCase()} />
+
+      {/* Video container */}
+      <div className="mt-6 w-full flex justify-center">
+        {isPortrait ? (
+          <div
+            className="group relative aspect-[9/16] w-[260px] sm:w-[280px] md:w-[300px] rounded-2xl overflow-hidden bg-slate-100 shadow-md ring-1 ring-slate-200/80"
+            style={{ maxHeight: '70vh' }}
+          >
             {loaded ? (
               <iframe
                 src={embedUrl}
-                title={`${testimonial.name} — ${testimonial.role[lang]}`}
+                title={`${v.name} — ${v.role[lang]}`}
                 className="absolute inset-0 w-full h-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -107,31 +234,19 @@ function VideoTestimonialCard({ testimonial, lang, playLabel }: {
             ) : (
               <button
                 onClick={() => setLoaded(true)}
-                className="absolute inset-0 w-full h-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                className="absolute inset-0 w-full h-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                 aria-label={playLabel}
               >
-                <VideoPoster testimonial={testimonial} lang={lang} playLabel={playLabel} />
+                <VideoPoster testimonial={v} lang={lang} />
               </button>
             )}
           </div>
-          <div className="flex-1 flex flex-col justify-center">
-            <Quote className="text-purple-400/40 mb-3" size={32} />
-            <p className="text-white font-medium text-lg leading-relaxed mb-4">
-              "{testimonial.quote[lang]}"
-            </p>
-            <div>
-              <p className="text-white font-semibold">{testimonial.name}</p>
-              <p className="text-slate-400 text-sm">{testimonial.role[lang]}</p>
-            </div>
-          </div>
-        </div>
-      ) : (
-        <div className="flex flex-col p-5 sm:p-6">
-          <div className={`relative ${aspectClass} w-full rounded-xl overflow-hidden bg-slate-800 mb-5`}>
+        ) : (
+          <div className="group relative aspect-video w-full max-w-[680px] sm:max-w-[720px] rounded-2xl overflow-hidden bg-slate-100 shadow-md ring-1 ring-slate-200/80">
             {loaded ? (
               <iframe
                 src={embedUrl}
-                title={`${testimonial.name} — ${testimonial.role[lang]}`}
+                title={`${v.name} — ${v.role[lang]}`}
                 className="absolute inset-0 w-full h-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -140,146 +255,312 @@ function VideoTestimonialCard({ testimonial, lang, playLabel }: {
             ) : (
               <button
                 onClick={() => setLoaded(true)}
-                className="absolute inset-0 w-full h-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                className="absolute inset-0 w-full h-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                 aria-label={playLabel}
               >
-                <VideoPoster testimonial={testimonial} lang={lang} playLabel={playLabel} />
+                <VideoPoster testimonial={v} lang={lang} />
               </button>
             )}
           </div>
-          <Quote className="text-purple-400/40 mb-3" size={32} />
-          <p className="text-white font-medium text-lg leading-relaxed mb-4">
-            "{testimonial.quote[lang]}"
-          </p>
-          <div>
-            <p className="text-white font-semibold">{testimonial.name}</p>
-            <p className="text-slate-400 text-sm">{testimonial.role[lang]}</p>
+        )}
+      </div>
+
+      {/* Quote + customer info */}
+      <div className="mt-8 flex flex-col items-center max-w-[760px]">
+        <GradientQuote />
+        <p className="text-lg sm:text-xl italic leading-relaxed text-slate-700 font-medium">
+          &ldquo;{v.quote[lang]}&rdquo;
+        </p>
+        <div className="mt-6 flex items-center gap-3">
+          <Avatar name={v.name} />
+          <div className="text-left">
+            <p className="font-semibold text-slate-900">{v.name}</p>
+            <p className="text-sm text-slate-500">{v.role[lang]}</p>
           </div>
         </div>
-      )}
+      </div>
     </div>
   )
 }
 
-function TextTestimonialCard({ testimonial, lang, starsAria }: {
-  testimonial: TextTestimonial
+/* ------------------------------------------------------------------ */
+/*  Text slide                                                         */
+/* ------------------------------------------------------------------ */
+
+function TextSlideContent({
+  slide,
+  lang,
+  starsAria
+}: {
+  slide: TextSlide
   lang: Lang
   starsAria: string
 }) {
-  const accent = accentStyles[testimonial.accent]
-  const scale = testimonial.logoScale ?? 1
+  const t = slide.data
+  const scale = t.logoScale ?? 1
 
   return (
-    <div className={`group flex flex-col bg-white/[0.03] border border-white/10 rounded-2xl p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.05] ${accent.border} hover:shadow-2xl ${accent.glow} hover:-translate-y-1`}>
-      <div className="flex items-center justify-center bg-white rounded-xl p-4 mb-5 h-24 flex-shrink-0 overflow-hidden">
+    <div className="flex flex-col items-center text-center">
+      {/* Logo stage */}
+      <div className="flex items-center justify-center bg-gray-50 rounded-2xl p-5 h-[88px] w-[88px] sm:h-[96px] sm:w-[96px] flex-shrink-0 overflow-hidden ring-1 ring-gray-200/80 shadow-sm">
         <img
-          src={testimonial.logo}
-          alt={`${testimonial.name} logo`}
+          src={t.logo}
+          alt={`${t.name} logo`}
           className="max-w-full max-h-full object-contain"
           style={{ transform: `scale(${scale})` }}
           loading="lazy"
           decoding="async"
         />
       </div>
-      <Quote className="text-white/20 mb-3" size={28} />
-      <p className="text-slate-200 leading-relaxed text-sm mb-5 flex-1">
-        {testimonial.text[lang]}
-      </p>
-      <div className="flex items-center gap-1 mb-4" role="img" aria-label={starsAria}>
-        {Array.from({ length: 5 }).map((_, i) => (
-          <Star key={i} size={16} className="text-amber-400" fill="currentColor" />
-        ))}
+
+      <div className="mt-5">
+        <GradientPill label={lang === 'hu' ? 'ÍRÁSOS VISSZAJELZÉS' : lang === 'en' ? 'WRITTEN TESTIMONIAL' : 'SCHRIFTLICHE REFERENZ'} />
       </div>
-      <div className="border-t border-white/10 pt-4">
-        <p className="text-white font-semibold text-sm">{testimonial.name}</p>
-        <p className="text-slate-400 text-xs mt-1">{testimonial.role[lang]}</p>
-        <p className="text-slate-500 text-xs mt-0.5">{testimonial.industry[lang]}</p>
+
+      {/* Quote */}
+      <div className="mt-6 flex flex-col items-center max-w-[800px]">
+        <GradientQuote />
+        <p className="text-lg sm:text-xl lg:text-[22px] italic leading-relaxed text-slate-700 font-medium">
+          {t.text[lang]}
+        </p>
+
+        {/* Stars */}
+        <div className="flex items-center gap-1 mt-6" role="img" aria-label={starsAria}>
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Star key={i} size={20} className="text-amber-400" fill="currentColor" />
+          ))}
+        </div>
+
+        {/* Customer info */}
+        <div className="mt-6 flex items-center gap-3">
+          <Avatar name={t.name} />
+          <div className="text-left">
+            <p className="font-semibold text-slate-900">{t.name}</p>
+            <p className="text-sm text-slate-500">{t.role[lang]}</p>
+            <p className="text-xs text-slate-400 mt-0.5">{t.industry[lang]}</p>
+          </div>
+        </div>
       </div>
     </div>
   )
 }
+
+/* ------------------------------------------------------------------ */
+/*  Arrow button                                                        */
+/* ------------------------------------------------------------------ */
+
+function ArrowButton({
+  direction,
+  onClick,
+  ariaLabel,
+  hidden
+}: {
+  direction: 'left' | 'right'
+  onClick: () => void
+  ariaLabel: string
+  hidden: boolean
+}) {
+  return (
+    <button
+      onClick={onClick}
+      aria-label={ariaLabel}
+      className={`flex items-center justify-center w-11 h-11 rounded-full bg-white ring-1 ring-slate-200 shadow-sm hover:ring-purple-300 hover:shadow-md transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white ${
+        hidden ? 'hidden' : ''
+      } text-slate-600 hover:text-purple-600`}
+    >
+      {direction === 'left' ? <ChevronLeft size={22} /> : <ChevronRight size={22} />}
+    </button>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/*  Main component                                                     */
+/* ------------------------------------------------------------------ */
 
 export default function TestimonialsSection() {
   const { t, i18n } = useTranslation()
   const { ref, visible } = useScrollReveal()
   const lang = (i18n.language?.substring(0, 2) || 'hu') as Lang
 
+  const slides = useRef<Slide[]>(buildSlides()).current
+  const total = slides.length
+  const [current, setCurrent] = useState(0)
+  const touchStartX = useRef<number | null>(null)
+  const touchStartY = useRef<number | null>(null)
+
+  const goTo = useCallback(
+    (index: number) => {
+      const clamped = ((index % total) + total) % total
+      setCurrent(clamped)
+    },
+    [total]
+  )
+
+  const next = useCallback(() => goTo(current + 1), [current, goTo])
+  const prev = useCallback(() => goTo(current - 1), [current, goTo])
+
+  /* Keyboard navigation */
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault()
+        prev()
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault()
+        next()
+      }
+    }
+    window.addEventListener('keydown', handleKey)
+    return () => window.removeEventListener('keydown', handleKey)
+  }, [prev, next])
+
+  const goToDot = (index: number) => {
+    setCurrent(index)
+  }
+
+  /* Touch / swipe */
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX
+    touchStartY.current = e.touches[0].clientY
+  }
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null || touchStartY.current === null) return
+    const dx = e.changedTouches[0].clientX - touchStartX.current
+    const dy = e.changedTouches[0].clientY - touchStartY.current
+    touchStartX.current = null
+    touchStartY.current = null
+    // Only trigger if horizontal swipe is dominant and large enough
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.3) {
+      if (dx < 0) next()
+      else prev()
+    }
+  }
+
   return (
-    <section id="ugyfelvelemenyek" className="relative py-20 lg:py-28 overflow-hidden bg-slate-900">
+    <section
+      id="ugyfelvelemenyek"
+      className="relative py-20 lg:py-28 overflow-hidden bg-white"
+    >
+      {/* Very subtle radial glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full filter blur-[160px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-purple-600/10 rounded-full filter blur-[140px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-pink-600/5 rounded-full filter blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-blue-100/30 rounded-full filter blur-[180px]" />
       </div>
 
-      <div ref={ref} className={`relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-        <div className="text-center mb-14">
-          <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-4">
+      <div
+        ref={ref}
+        className={`relative z-10 max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${
+          visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
+        {/* Section header */}
+        <div className="text-center mb-12 lg:mb-16">
+          <p className={`text-xs font-semibold uppercase tracking-widest mb-4 ${gradientText}`}>
             {t('testimonials.eyebrow')}
           </p>
-          <h2 className="text-3xl lg:text-5xl font-bold text-white mb-5 leading-tight">
+          <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 mb-5 leading-tight">
             {t('testimonials.title')}
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
             {t('testimonials.description')}
           </p>
         </div>
 
-        <div className="mb-16">
-          <h3 className="text-xl font-semibold text-white mb-8 text-center">
-            {t('testimonials.video_subtitle')}
-          </h3>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
-            {videoTestimonials.map((vt) => (
-              <VideoTestimonialCard
-                key={vt.videoId}
-                testimonial={vt}
-                lang={lang}
-                playLabel={t('testimonials.play_aria')}
-              />
-            ))}
+        {/* Carousel */}
+        <div
+          className="relative"
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+        >
+          {/* Desktop side arrows */}
+          <div className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-20">
+            <ArrowButton direction="left" onClick={prev} ariaLabel={t('testimonials.prev_aria')} hidden={false} />
+          </div>
+          <div className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-20">
+            <ArrowButton direction="right" onClick={next} ariaLabel={t('testimonials.next_aria')} hidden={false} />
+          </div>
+
+          {/* Slide viewport */}
+          <div
+            className="overflow-hidden mx-auto md:mx-16"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            <div
+              className="flex transition-transform ease-out motion-reduce:transition-none"
+              style={{
+                transform: `translateX(-${current * 100}%)`,
+                transitionDuration: '400ms'
+              }}
+            >
+              {slides.map((slide, idx) => (
+                <div
+                  key={idx}
+                  className="w-full flex-shrink-0"
+                  aria-hidden={idx !== current}
+                  aria-label={t('testimonials.slide_label', {
+                    index: idx + 1,
+                    total,
+                    name: slide.name
+                  })}
+                >
+                  <div className="max-w-[800px] mx-auto px-2 sm:px-4 py-4">
+                    {slide.type === 'video' ? (
+                      <VideoSlideContent
+                        slide={slide}
+                        lang={lang}
+                        isActive={idx === current}
+                        playLabel={t('testimonials.play_aria')}
+                      />
+                    ) : (
+                      <TextSlideContent
+                        slide={slide}
+                        lang={lang}
+                        starsAria={t('testimonials.stars_aria')}
+                      />
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        <div>
-          <h3 className="text-xl font-semibold text-white mb-8 text-center">
-            {t('testimonials.written_subtitle')}
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:items-start">
-            {textTestimonials.map((tt, idx) => (
-              <div
-                key={tt.name}
-                className={idx === 2 ? 'md:col-span-2 lg:col-span-1 md:flex md:justify-center' : ''}
-              >
-                <div className={`group flex flex-col bg-white/[0.03] border border-white/10 rounded-2xl p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.05] ${accentStyles[tt.accent].border} hover:shadow-2xl ${accentStyles[tt.accent].glow} hover:-translate-y-1 w-full md:max-w-sm lg:max-w-none`}>
-                  <div className="flex items-center justify-center bg-white rounded-xl p-4 mb-5 h-24 flex-shrink-0 overflow-hidden">
-                    <img
-                      src={tt.logo}
-                      alt={`${tt.name} logo`}
-                      className="max-w-full max-h-full object-contain"
-                      style={{ transform: `scale(${tt.logoScale ?? 1})` }}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <Quote className="text-white/20 mb-3" size={28} />
-                  <p className="text-slate-200 leading-relaxed text-sm mb-5 flex-1">
-                    {tt.text[lang]}
-                  </p>
-                  <div className="flex items-center gap-1 mb-4" role="img" aria-label={t('testimonials.stars_aria')}>
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} size={16} className="text-amber-400" fill="currentColor" />
-                    ))}
-                  </div>
-                  <div className="border-t border-white/10 pt-4">
-                    <p className="text-white font-semibold text-sm">{tt.name}</p>
-                    <p className="text-slate-400 text-xs mt-1">{tt.role[lang]}</p>
-                    <p className="text-slate-500 text-xs mt-0.5">{tt.industry[lang]}</p>
-                  </div>
-                </div>
-              </div>
+        {/* Mobile arrows + pagination */}
+        <div className="flex items-center justify-center gap-4 mt-8 md:hidden">
+          <ArrowButton direction="left" onClick={prev} ariaLabel={t('testimonials.prev_aria')} hidden={false} />
+          {/* Pagination dots */}
+          <div className="flex items-center gap-2">
+            {slides.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => goToDot(idx)}
+                aria-label={t('testimonials.dot_aria', { index: idx + 1 })}
+                className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white ${
+                  idx === current
+                    ? `w-7 ${gradientBorder}`
+                    : 'w-2.5 bg-slate-300 hover:bg-slate-400'
+                }`}
+              />
             ))}
           </div>
+          <ArrowButton direction="right" onClick={next} ariaLabel={t('testimonials.next_aria')} hidden={false} />
+        </div>
+
+        {/* Desktop pagination dots */}
+        <div className="hidden md:flex items-center justify-center gap-2.5 mt-10">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => goToDot(idx)}
+              aria-label={t('testimonials.dot_aria', { index: idx + 1 })}
+              className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white ${
+                idx === current
+                  ? `w-8 ${gradientBorder}`
+                  : 'w-2.5 bg-slate-300 hover:bg-slate-400'
+              }`}
+            />
+          ))}
         </div>
       </div>
     </section>
