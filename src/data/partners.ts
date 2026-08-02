@@ -7,10 +7,10 @@ export interface Partner {
 
 export const partners: Partner[] = [
   { src: '/files_8595244-2026-02-18T09-30-44-717Z-files_8595244-2026-02-18T08-07-05-592Z-image.png', alt: 'Alpaka Bakonya Vendégházak' },
-  { src: '/files_8595244-2026-02-18T08-07-40-587Z-image.webp', alt: 'Fifteen Apartman Balatonföldvár' },
+  { src: '/files_8595244-2026-02-18T08-07-40-587Z-image.webp', alt: 'Piccolo Italiano' },
+  { src: '/files_8595244-2026-02-18T09-30-51-530Z-files_8595244-2026-02-18T09-19-07-295Z-image.png', alt: 'Fifteen Apartman Balatonföldvár' },
   { src: '/assets/partners/jaka-projekt-logo.png', alt: 'Jaka Projekt GmbH', whiteBg: true, logoScale: 1.6 },
-  { src: '/files_8595244-2026-02-18T09-30-52-342Z-files_8595244-2026-02-18T08-08-05-452Z-image.png', alt: 'Movemed Mozgásrehabilitáció' },
-  { src: '/files_8595244-2026-02-18T09-19-48-604Z-image.png', alt: 'Piccolo Italiano' },
+  { src: '/files_8595244-2026-02-18T09-19-48-604Z-image.png', alt: 'Movemed Mozgásrehabilitáció' },
   { src: '/files_8595244-2026-02-19T10-42-58-465Z-image.png', alt: 'Beauty BOX' },
   { src: '/files_8595244-2026-02-19T10-48-30-841Z-files_8595244-2026-02-19T10-43-41-800Z-image.png', alt: 'LDSZ Biztonságtechnika' },
   { src: '/files_8595244-2026-02-19T16-11-19-555Z-files_8595244-2026-02-19T16-06-16-708Z-files_8595244-2026-02-19T16-05-40-810Z-files_8595244-2026-02-19T15-58-19-307Z-image.png', alt: 'SmoothSkin' },
