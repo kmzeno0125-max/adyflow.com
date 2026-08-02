@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Play, Star, Quote } from 'lucide-react'
+import { Play, Star, Quote, Film } from 'lucide-react'
 import {
   videoTestimonials,
   textTestimonials,
@@ -38,17 +38,57 @@ const accentStyles: Record<TextTestimonial['accent'], { border: string; glow: st
   orange: { border: 'hover:border-orange-400/40', glow: 'group-hover:shadow-orange-500/20', star: 'text-orange-400' }
 }
 
+const posterLabels: Record<Lang, string> = {
+  hu: 'Videós ügyfélvélemény',
+  en: 'Video testimonial',
+  de: 'Video-Kundenstimme'
+}
+
+function VideoPoster({ testimonial, lang, playLabel }: {
+  testimonial: VideoTestimonial
+  lang: Lang
+  playLabel: string
+}) {
+  const [thumbError, setThumbError] = useState(false)
+  const thumbUrl = `https://i.ytimg.com/vi/${testimonial.videoId}/hqdefault.jpg`
+
+  return (
+    <div className="absolute inset-0">
+      {!thumbError ? (
+        <img
+          src={thumbUrl}
+          alt={`${testimonial.name} video thumbnail`}
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+          onError={() => setThumbError(true)}
+        />
+      ) : (
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900">
+          <Film className="text-white/20 mb-3" size={48} />
+          <p className="text-white/80 font-medium text-sm px-4 text-center">{posterLabels[lang]}</p>
+          <p className="text-white/50 text-xs mt-1 px-4 text-center">{testimonial.name}</p>
+        </div>
+      )}
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 shadow-lg shadow-purple-500/40 transition-transform duration-300 group-hover:scale-110">
+          <Play className="text-white ml-0.5" size={24} fill="white" />
+        </span>
+      </div>
+    </div>
+  )
+}
+
 function VideoTestimonialCard({ testimonial, lang, playLabel }: {
   testimonial: VideoTestimonial
   lang: Lang
   playLabel: string
 }) {
   const [loaded, setLoaded] = useState(false)
-  const thumbRef = useRef<HTMLButtonElement>(null)
 
   const aspectClass = testimonial.orientation === 'portrait' ? 'aspect-[9/16]' : 'aspect-video'
   const embedUrl = `https://www.youtube-nocookie.com/embed/${testimonial.videoId}?autoplay=1&rel=0`
-  const thumbUrl = `https://i.ytimg.com/vi/${testimonial.videoId}/${testimonial.orientation === 'portrait' ? 'hqdefault' : 'hqdefault'}.jpg`
 
   return (
     <div className="group flex flex-col bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.05] hover:border-white/20 hover:shadow-2xl hover:shadow-purple-500/10 hover:-translate-y-1">
@@ -66,27 +106,11 @@ function VideoTestimonialCard({ testimonial, lang, playLabel }: {
               />
             ) : (
               <button
-                ref={thumbRef}
                 onClick={() => setLoaded(true)}
                 className="absolute inset-0 w-full h-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                 aria-label={playLabel}
               >
-                <img
-                  src={thumbUrl}
-                  alt={`${testimonial.name} video thumbnail`}
-                  className="absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none'
-                  }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 shadow-lg shadow-purple-500/40 transition-transform duration-300 group-hover:scale-110">
-                    <Play className="text-white ml-0.5" size={24} fill="white" />
-                  </span>
-                </div>
+                <VideoPoster testimonial={testimonial} lang={lang} playLabel={playLabel} />
               </button>
             )}
           </div>
@@ -115,27 +139,11 @@ function VideoTestimonialCard({ testimonial, lang, playLabel }: {
               />
             ) : (
               <button
-                ref={thumbRef}
                 onClick={() => setLoaded(true)}
                 className="absolute inset-0 w-full h-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                 aria-label={playLabel}
               >
-                <img
-                  src={thumbUrl}
-                  alt={`${testimonial.name} video thumbnail`}
-                  className="absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none'
-                  }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 shadow-lg shadow-purple-500/40 transition-transform duration-300 group-hover:scale-110">
-                    <Play className="text-white ml-0.5" size={24} fill="white" />
-                  </span>
-                </div>
+                <VideoPoster testimonial={testimonial} lang={lang} playLabel={playLabel} />
               </button>
             )}
           </div>
@@ -159,14 +167,16 @@ function TextTestimonialCard({ testimonial, lang, starsAria }: {
   starsAria: string
 }) {
   const accent = accentStyles[testimonial.accent]
+  const scale = testimonial.logoScale ?? 1
 
   return (
     <div className={`group flex flex-col bg-white/[0.03] border border-white/10 rounded-2xl p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.05] ${accent.border} hover:shadow-2xl ${accent.glow} hover:-translate-y-1`}>
-      <div className="flex items-center justify-center bg-white rounded-xl p-4 mb-5 h-24 flex-shrink-0">
+      <div className="flex items-center justify-center bg-white rounded-xl p-4 mb-5 h-24 flex-shrink-0 overflow-hidden">
         <img
           src={testimonial.logo}
           alt={`${testimonial.name} logo`}
-          className="max-h-full max-w-full object-contain"
+          className="max-w-full max-h-full object-contain"
+          style={{ transform: `scale(${scale})` }}
           loading="lazy"
           decoding="async"
         />
@@ -235,14 +245,39 @@ export default function TestimonialsSection() {
           <h3 className="text-xl font-semibold text-white mb-8 text-center">
             {t('testimonials.written_subtitle')}
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {textTestimonials.map((tt) => (
-              <TextTestimonialCard
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:items-start">
+            {textTestimonials.map((tt, idx) => (
+              <div
                 key={tt.name}
-                testimonial={tt}
-                lang={lang}
-                starsAria={t('testimonials.stars_aria')}
-              />
+                className={idx === 2 ? 'md:col-span-2 lg:col-span-1 md:flex md:justify-center' : ''}
+              >
+                <div className={`group flex flex-col bg-white/[0.03] border border-white/10 rounded-2xl p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.05] ${accentStyles[tt.accent].border} hover:shadow-2xl ${accentStyles[tt.accent].glow} hover:-translate-y-1 w-full md:max-w-sm lg:max-w-none`}>
+                  <div className="flex items-center justify-center bg-white rounded-xl p-4 mb-5 h-24 flex-shrink-0 overflow-hidden">
+                    <img
+                      src={tt.logo}
+                      alt={`${tt.name} logo`}
+                      className="max-w-full max-h-full object-contain"
+                      style={{ transform: `scale(${tt.logoScale ?? 1})` }}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <Quote className="text-white/20 mb-3" size={28} />
+                  <p className="text-slate-200 leading-relaxed text-sm mb-5 flex-1">
+                    {tt.text[lang]}
+                  </p>
+                  <div className="flex items-center gap-1 mb-4" role="img" aria-label={t('testimonials.stars_aria')}>
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} size={16} className="text-amber-400" fill="currentColor" />
+                    ))}
+                  </div>
+                  <div className="border-t border-white/10 pt-4">
+                    <p className="text-white font-semibold text-sm">{tt.name}</p>
+                    <p className="text-slate-400 text-xs mt-1">{tt.role[lang]}</p>
+                    <p className="text-slate-500 text-xs mt-0.5">{tt.industry[lang]}</p>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>

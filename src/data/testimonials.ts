@@ -10,6 +10,7 @@ export interface VideoTestimonial {
 
 export interface TextTestimonial {
   logo: string
+  logoScale?: number
   accent: 'purple' | 'blue' | 'orange'
   name: string
   role: Record<Lang, string>
@@ -53,6 +54,7 @@ export const videoTestimonials: VideoTestimonial[] = [
 export const textTestimonials: TextTestimonial[] = [
   {
     logo: '/assets/partners/jaka-projekt-logo.png',
+    logoScale: 1.85,
     accent: 'purple',
     name: 'Jakab Elias',
     role: {
@@ -93,6 +95,7 @@ export const textTestimonials: TextTestimonial[] = [
   },
   {
     logo: '/assets/partners/pliszepro-logo.png',
+    logoScale: 1.85,
     accent: 'orange',
     name: 'Kari Zoltán',
     role: {

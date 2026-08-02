@@ -66,11 +66,12 @@ function LogoGrid() {
               }}
             >
               {logo.whiteBg ? (
-                <div className="flex items-center justify-center w-full h-full rounded-xl bg-white p-3">
+                <div className="flex items-center justify-center w-full h-full rounded-xl bg-white p-3 overflow-hidden">
                   <img
                     src={logo.src}
                     alt={logo.alt}
                     className="max-h-[88px] sm:max-h-[104px] w-full object-contain"
+                    style={{ transform: `scale(${logo.logoScale ?? 1})` }}
                     draggable={false}
                     loading="lazy"
                     decoding="async"

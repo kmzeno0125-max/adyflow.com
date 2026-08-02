@@ -2,13 +2,13 @@ export interface Partner {
   src: string
   alt: string
   whiteBg?: boolean
+  logoScale?: number
 }
 
 export const partners: Partner[] = [
   { src: '/files_8595244-2026-02-18T09-30-44-717Z-files_8595244-2026-02-18T08-07-05-592Z-image.png', alt: 'Alpaka Bakonya Vendégházak' },
   { src: '/files_8595244-2026-02-18T08-07-40-587Z-image.webp', alt: 'Piccolo Italiano' },
-  { src: '/files_8595244-2026-02-18T09-30-51-530Z-files_8595244-2026-02-18T09-19-07-295Z-image.png', alt: 'Fifteen Apartman Balatonföldvár' },
-  { src: '/assets/partners/jaka-projekt-logo.png', alt: 'Jaka Projekt GmbH', whiteBg: true },
+  { src: '/assets/partners/jaka-projekt-logo.png', alt: 'Jaka Projekt GmbH', whiteBg: true, logoScale: 1.6 },
   { src: '/files_8595244-2026-02-18T09-19-48-604Z-image.png', alt: 'Movemed Mozgásrehabilitáció' },
   { src: '/files_8595244-2026-02-19T10-42-58-465Z-image.png', alt: 'Beauty BOX' },
   { src: '/files_8595244-2026-02-19T10-48-30-841Z-files_8595244-2026-02-19T10-43-41-800Z-image.png', alt: 'LDSZ Biztonságtechnika' },
@@ -23,5 +23,5 @@ export const partners: Partner[] = [
   { src: '/image copy copy copy copy copy copy copy copy.png', alt: 'SEC-CAM', whiteBg: true },
   { src: '/assets/partners/files_10287071-2026-07-22T14-13-38-445Z-image.png', alt: 'ELTE Origó Nyelvi Centrum logó', whiteBg: true },
   { src: '/assets/partners/files_10287071-2026-07-22T14-13-18-563Z-image.webp', alt: 'Examcenter logó', whiteBg: true },
-  { src: '/assets/partners/pliszepro-logo.png', alt: 'PliszéPro logó', whiteBg: true },
+  { src: '/assets/partners/pliszepro-logo.png', alt: 'PliszéPro logó', whiteBg: true, logoScale: 1.6 },
 ]
