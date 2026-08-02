@@ -69,6 +69,18 @@ const posterLabels: Record<Lang, string> = {
   de: 'Video-Kundenstimme'
 }
 
+const videoPillLabels: Record<Lang, string> = {
+  hu: 'VIDEÓS VISSZAJELZÉS',
+  en: 'VIDEO TESTIMONIAL',
+  de: 'VIDEO-KUNDENSTIMME'
+}
+
+const writtenPillLabels: Record<Lang, string> = {
+  hu: 'ÍRÁSOS VISSZAJELZÉS',
+  en: 'WRITTEN TESTIMONIAL',
+  de: 'SCHRIFTLICHE REFERENZ'
+}
+
 const gradientText =
   'bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent'
 
@@ -213,7 +225,7 @@ function VideoSlideContent({
 
   return (
     <div className="flex flex-col items-center text-center">
-      <GradientPill label={posterLabels[lang].toUpperCase()} />
+      <GradientPill label={videoPillLabels[lang]} />
 
       {/* Video container */}
       <div className="mt-6 w-full flex justify-center">
@@ -314,7 +326,7 @@ function TextSlideContent({
       </div>
 
       <div className="mt-5">
-        <GradientPill label={lang === 'hu' ? 'ÍRÁSOS VISSZAJELZÉS' : lang === 'en' ? 'WRITTEN TESTIMONIAL' : 'SCHRIFTLICHE REFERENZ'} />
+        <GradientPill label={writtenPillLabels[lang]} />
       </div>
 
       {/* Quote */}
@@ -480,48 +492,35 @@ export default function TestimonialsSection() {
             <ArrowButton direction="right" onClick={next} ariaLabel={t('testimonials.next_aria')} hidden={false} />
           </div>
 
-          {/* Slide viewport */}
+          {/* Slide viewport — only active slide in flow */}
           <div
-            className="overflow-hidden mx-auto md:mx-16"
+            className="mx-auto md:mx-16"
             aria-live="polite"
             aria-atomic="true"
           >
             <div
-              className="flex transition-transform ease-out motion-reduce:transition-none"
-              style={{
-                transform: `translateX(-${current * 100}%)`,
-                transitionDuration: '400ms'
-              }}
+              key={current}
+              className="max-w-[800px] mx-auto px-2 sm:px-4 py-4 animate-[slide-in-left_0.4s_ease-out] motion-reduce:animate-none"
+              aria-label={t('testimonials.slide_label', {
+                index: current + 1,
+                total,
+                name: slides[current].name
+              })}
             >
-              {slides.map((slide, idx) => (
-                <div
-                  key={idx}
-                  className="w-full flex-shrink-0"
-                  aria-hidden={idx !== current}
-                  aria-label={t('testimonials.slide_label', {
-                    index: idx + 1,
-                    total,
-                    name: slide.name
-                  })}
-                >
-                  <div className="max-w-[800px] mx-auto px-2 sm:px-4 py-4">
-                    {slide.type === 'video' ? (
-                      <VideoSlideContent
-                        slide={slide}
-                        lang={lang}
-                        isActive={idx === current}
-                        playLabel={t('testimonials.play_aria')}
-                      />
-                    ) : (
-                      <TextSlideContent
-                        slide={slide}
-                        lang={lang}
-                        starsAria={t('testimonials.stars_aria')}
-                      />
-                    )}
-                  </div>
-                </div>
-              ))}
+              {slides[current].type === 'video' ? (
+                <VideoSlideContent
+                  slide={slides[current] as VideoSlide}
+                  lang={lang}
+                  isActive={true}
+                  playLabel={t('testimonials.play_aria')}
+                />
+              ) : (
+                <TextSlideContent
+                  slide={slides[current] as TextSlide}
+                  lang={lang}
+                  starsAria={t('testimonials.stars_aria')}
+                />
+              )}
             </div>
           </div>
         </div>
@@ -536,6 +535,7 @@ export default function TestimonialsSection() {
                 key={idx}
                 onClick={() => goToDot(idx)}
                 aria-label={t('testimonials.dot_aria', { index: idx + 1 })}
+                aria-current={idx === current ? 'true' : undefined}
                 className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white ${
                   idx === current
                     ? `w-7 ${gradientBorder}`
@@ -554,6 +554,7 @@ export default function TestimonialsSection() {
               key={idx}
               onClick={() => goToDot(idx)}
               aria-label={t('testimonials.dot_aria', { index: idx + 1 })}
+              aria-current={idx === current ? 'true' : undefined}
               className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white ${
                 idx === current
                   ? `w-8 ${gradientBorder}`
