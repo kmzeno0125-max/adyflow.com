@@ -493,10 +493,10 @@ export default function TestimonialsSection() {
               <span className={gradientText}>{t('testimonials.eyebrow')}</span>
             </span>
 
-            {/* Split title: first phrase dark, second phrase gradient */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-5 leading-[1.15] max-w-3xl">
-              {t('testimonials.title_part1')}{' '}
-              <span className={gradientText}>{t('testimonials.title_highlight')}</span>
+            {/* Split title: each phrase is an unbreakable inline-block */}
+            <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-slate-900 mb-5 leading-[1.15] max-w-4xl">
+              <span className="inline-block whitespace-nowrap">{t('testimonials.title_part1')}</span>{' '}
+              <span className={`inline-block whitespace-nowrap ${gradientText}`}>{t('testimonials.title_highlight')}</span>
             </h2>
 
             {/* Subtle gradient stroke beneath heading */}
