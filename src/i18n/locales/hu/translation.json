@@ -560,7 +560,7 @@
     "aszf": "Általános Szerződési Feltételek",
     "privacy": "Adatvédelmi nyilatkozat",
     "disclaimer": "Jogi nyilatkozat",
-    "copyright": "© 2025 AdyFlow. Minden jog fenntartva."
+    "copyright": "© 2026 AdyFlow. Minden jog fenntartva."
   },
   "eredmenyek": {
     "hero_label": "Valós eredmények, valós ügyfelektől",
@@ -641,7 +641,7 @@
     "hero_title": "Partnereink",
     "hero_subtitle": "Akikkel együtt dolgozunk a mérhető növekedésért.",
     "hero_description": "Olyan vállalkozások, akik nem próbálkoznak – hanem skáláznak.",
-    "hero_cta": "Ingyenes konzultáció",
+    "hero_cta": "Ügyfélvélemények megtekintése",
     "grid_label": "Akik már a növekedést választották",
     "grid_title": "Vállalkozások, akikkel büszkék vagyunk együtt dolgozni",
     "cta_label": "Következő lépés",
@@ -650,6 +650,15 @@
     "cta_title_part2": "?",
     "cta_subtitle": "Ha komoly céljaid vannak, komoly rendszert építünk hozzá.",
     "cta_button": "Időpontfoglalás"
+  },
+  "testimonials": {
+    "eyebrow": "ÜGYFELEINK TAPASZTALATAI",
+    "title": "Valódi vélemények. Valódi eredmények.",
+    "description": "Nézd meg, hogyan élték meg partnereink a közös munkát – az első egyeztetéstől a kézzelfogható eredményekig.",
+    "video_subtitle": "Ügyfeleink mondják el, milyen velünk dolgozni",
+    "written_subtitle": "Írásos ügyfélvélemények",
+    "play_aria": "Videó lejátszása",
+    "stars_aria": "5 csillagos értékelés"
   },
   "aszf": {
     "back": "Vissza a főoldalra",

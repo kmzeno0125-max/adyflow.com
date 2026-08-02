@@ -560,7 +560,7 @@
     "aszf": "AGB",
     "privacy": "Datenschutz",
     "disclaimer": "Impressum",
-    "copyright": "© 2025 AdyFlow. Alle Rechte vorbehalten."
+    "copyright": "© 2026 AdyFlow. Alle Rechte vorbehalten."
   },
   "eredmenyek": {
     "hero_label": "Echte Ergebnisse, von echten Kunden",
@@ -641,7 +641,7 @@
     "hero_title": "Unsere Partner",
     "hero_subtitle": "Diejenigen, mit denen wir für messbares Wachstum zusammenarbeiten.",
     "hero_description": "Unternehmen, die nicht nur ausprobieren – sie skalieren.",
-    "hero_cta": "Kostenlose Beratung",
+    "hero_cta": "Kundenstimmen ansehen",
     "grid_label": "Diejenigen, die sich bereits für Wachstum entschieden haben",
     "grid_title": "Unternehmen, mit denen wir stolz zusammenarbeiten",
     "cta_label": "Nächster Schritt",
@@ -650,6 +650,15 @@
     "cta_title_part2": "?",
     "cta_subtitle": "Wenn Sie ernsthafte Ziele haben, bauen wir ein passendes, ernsthaftes System dafür auf.",
     "cta_button": "Termin vereinbaren"
+  },
+  "testimonials": {
+    "eyebrow": "KUNDENERFAHRUNGEN",
+    "title": "Echte Stimmen. Echte Ergebnisse.",
+    "description": "Erfahren Sie direkt von unseren Partnern, wie sie die Zusammenarbeit mit uns erlebt haben – vom ersten Gespräch bis zu messbaren Ergebnissen.",
+    "video_subtitle": "Unsere Kunden erzählen von der Zusammenarbeit mit uns",
+    "written_subtitle": "Schriftliche Kundenstimmen",
+    "play_aria": "Video abspielen",
+    "stars_aria": "5 von 5 Sterne Bewertung"
   },
   "aszf": {
     "back": "Zurück zur Startseite",

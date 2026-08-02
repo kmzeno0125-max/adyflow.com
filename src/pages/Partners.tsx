@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import TestimonialsSection from '../components/TestimonialsSection'
 import { partners } from '../data/partners'
 
 
@@ -39,11 +40,11 @@ function LogoGrid() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
           {partners.map((logo, idx) => (
             <div
               key={idx}
-              className="group flex items-center justify-center bg-white backdrop-blur-sm rounded-2xl p-8 sm:p-10 border border-slate-200 shadow-sm min-h-[140px] sm:min-h-[160px]"
+              className="group flex items-center justify-center bg-white backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm min-h-[120px] sm:min-h-[140px]"
               style={{
                 transition: 'transform 280ms ease, border-color 280ms ease, box-shadow 280ms ease, opacity 600ms ease',
                 transitionDelay: visible ? `${idx * 60}ms` : '0ms',
@@ -146,13 +147,10 @@ export default function Partners() {
 
   const handleHeroCTAClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
-    navigate('/')
-    setTimeout(() => {
-      const element = document.getElementById('kapcsolat')
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }
-    }, 100)
+    const element = document.getElementById('ugyfelvelemenyek')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
   }
 
   useEffect(() => {
@@ -216,7 +214,7 @@ export default function Partners() {
             style={{ animationDelay: '0.5s', opacity: 0 }}
           >
             <a
-              href="/#kapcsolat"
+              href="#ugyfelvelemenyek"
               onClick={handleHeroCTAClick}
               className="group inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold text-white text-lg hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300"
             >
@@ -227,6 +225,7 @@ export default function Partners() {
         </div>
       </section>
 
+      <TestimonialsSection />
       <LogoGrid />
       <PartnersCTA />
 
