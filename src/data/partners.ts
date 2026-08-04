@@ -25,4 +25,5 @@ export const partners: Partner[] = [
   { src: '/assets/partners/files_10287071-2026-07-22T14-13-38-445Z-image.png', alt: 'ELTE Origó Nyelvi Centrum logó', whiteBg: true },
   { src: '/assets/partners/files_10287071-2026-07-22T14-13-18-563Z-image.webp', alt: 'Examcenter logó', whiteBg: true },
   { src: '/assets/partners/pliszepro-logo.png', alt: 'PliszéPro logó', whiteBg: true, logoScale: 1.6 },
+  { src: '/assets/partners/fakocka-apartman-logo.png', alt: 'Fakocka Apartman logó', whiteBg: true },
 ]

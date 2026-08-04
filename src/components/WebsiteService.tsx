@@ -30,7 +30,9 @@ const PORTFOLIO: PortfolioItem[] = [
   { domain: 'smoothskinpecs.hu', fallbackLogo: '/files_8595244-2026-02-19T16-05-40-810Z-files_8595244-2026-02-19T15-58-19-307Z-image.png' },
   { domain: 'alpakabakonya.hu', fallbackLogo: '/files_8595244-2026-02-18T08-07-05-592Z-image.png' },
   { domain: 'mecsekszerviz.hu' },
-  { domain: 'pliszepro.hu', localImage: '/assets/partners/pliszepro-preview.jpg' }
+  { domain: 'pliszepro.hu', localImage: '/assets/partners/pliszepro-preview.jpg' },
+  { domain: 'fakocka-apartman.hu', fallbackLogo: '/assets/partners/fakocka-apartman-logo.png' },
+  { domain: 'examcenter.hu', fallbackLogo: '/assets/partners/files_10287071-2026-07-22T14-13-18-563Z-image.webp' }
 ];
 
 const screenshotSources = (domain: string) => [
