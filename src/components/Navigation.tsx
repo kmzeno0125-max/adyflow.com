@@ -142,7 +142,7 @@ export default function Navigation() {
               <button
                 className="text-slate-700"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                aria-label="Menu"
+                aria-label={t('nav.menu_toggle')}
               >
                 {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
               </button>

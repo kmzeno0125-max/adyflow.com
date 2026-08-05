@@ -15,7 +15,8 @@
     "results": "Eredmények",
     "partners": "Partnereink",
     "contact": "Kapcsolat",
-    "free_consultation": "Ingyenes konzultáció"
+    "free_consultation": "Ingyenes konzultáció",
+    "menu_toggle": "Menü"
   },
   "hero": {
     "badge": "AI-vezérelt marketing és automatizáció",
@@ -37,7 +38,12 @@
     "benefit2_desc": "Hatékony folyamatok, kevesebb manuális munka, több idő az értékteremtésre.",
     "benefit3_title": "Kiszámítható növekedés",
     "benefit3_desc": "Mérhető eredmények, hosszú távú partnerként építjük a növekedésed.",
-    "badge_transparent": "100% átláthatóság"
+    "badge_transparent": "100% átláthatóság",
+    "badge_meta": "Meta Partner",
+    "badge_google": "Google Partner",
+    "badge_live": "LIVE • AdyFlow",
+    "badge_ai": "AI-alapú",
+    "team_alt": "AdyFlow csapat"
   },
   "partner_badges": {
     "meta": "Meta Business Partner",

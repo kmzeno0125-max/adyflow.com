@@ -15,7 +15,8 @@
     "results": "Results",
     "partners": "Partners",
     "contact": "Contact",
-    "free_consultation": "Free consultation"
+    "free_consultation": "Free consultation",
+    "menu_toggle": "Menu"
   },
   "hero": {
     "badge": "AI-driven marketing and automation",
@@ -37,7 +38,12 @@
     "benefit2_desc": "Efficient processes, less manual work, more time for value creation.",
     "benefit3_title": "Predictable growth",
     "benefit3_desc": "Measurable results; we build your growth as a long-term partner.",
-    "badge_transparent": "100% transparency"
+    "badge_transparent": "100% transparency",
+    "badge_meta": "Meta Partner",
+    "badge_google": "Google Partner",
+    "badge_live": "LIVE • AdyFlow",
+    "badge_ai": "AI-driven",
+    "team_alt": "AdyFlow Team"
   },
   "partner_badges": {
     "meta": "Meta Business Partner",
