@@ -479,37 +479,13 @@ function CaseStudy() {
 }
 
 function PliszéProCaseStudy() {
+  const { t } = useTranslation()
   const { ref, inView } = useInView(0.15)
   const navigate = useNavigate()
 
-  const tasks = [
-    'Többrétegű Meta Ads kampánystruktúra kialakítása',
-    'Országos és területi célzások tesztelése',
-    'Többféle hirdetési kreatív és szöveg A/B tesztelése',
-    'Automatikus árkalkulátorhoz vezető kampányfolyamat kialakítása',
-    'Érdeklődő- és remarketingközönségek létrehozása',
-    'Konverziómérés és ajánlatkérések pontos követése',
-    'Folyamatos kampányoptimalizálás és napi monitoring',
-  ]
-
-  const whyItems = [
-    {
-      title: 'Azonnali árkalkuláció',
-      text: 'Az érdeklődők már az első lépésben személyre szabott, méretalapú kalkulációt kaphattak, így jelentősen csökkent a bizonytalanság és a felesleges érdeklődések száma.',
-    },
-    {
-      title: 'Magas vásárlási szándék',
-      text: 'A kampány nem általános weboldal-látogatókat gyűjtött. Az érdeklődők konkrét méreteket adtak meg, ezért jóval közelebb álltak a vásárlási döntéshez.',
-    },
-    {
-      title: 'Célzott kreatívok',
-      text: 'A hirdetések egyértelműen bemutatták a termék legfontosabb előnyeit: az egyedi méretet, az átlátható árképzést, a prémium kialakítást és a gyors ajánlatkérést.',
-    },
-    {
-      title: 'Összekapcsolt rendszer',
-      text: 'A hirdetés, a kalkulátor, az ajánlatkérés és az utánkövetés egyetlen egységes folyamatként működött, így az érdeklődők nem vesztek el a különböző lépések között.',
-    },
-  ]
+  const tasks = t('eredmenyek.pliszepro.tasks', { returnObjects: true }) as string[]
+  const whyItems = t('eredmenyek.pliszepro.why_items', { returnObjects: true }) as { title: string; text: string }[]
+  const currencySuffix = t('eredmenyek.pliszepro.currency_suffix')
 
   const whyIcons = [Target, BarChart3, Crosshair, RefreshCw]
 
@@ -539,7 +515,7 @@ function PliszéProCaseStudy() {
             <div>
               <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-pink-100 border border-pink-300 mb-6">
                 <Sparkles className="text-pink-600" size={14} />
-                <span className="text-xs font-semibold uppercase tracking-widest text-pink-700">Kiemelt sikertörténet</span>
+                <span className="text-xs font-semibold uppercase tracking-widest text-pink-700">{t('eredmenyek.pliszepro.label')}</span>
               </div>
 
               <h2 className="text-4xl sm:text-5xl font-bold mb-4 leading-tight">
@@ -548,21 +524,21 @@ function PliszéProCaseStudy() {
 
               <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm mb-6">
                 <div className="text-slate-600">
-                  <span className="text-slate-500">Iparág:</span>{' '}
-                  <span className="text-slate-900 font-medium">Egyedi méretre gyártott pliszé szúnyoghálók és árnyékolástechnika</span>
+                  <span className="text-slate-500">{t('eredmenyek.pliszepro.industry_label')}</span>{' '}
+                  <span className="text-slate-900 font-medium">{t('eredmenyek.pliszepro.industry_value')}</span>
                 </div>
                 <div className="text-slate-600">
-                  <span className="text-slate-500">Időszak:</span>{' '}
-                  <span className="text-slate-900 font-medium">2026. július (3 hét)</span>
+                  <span className="text-slate-500">{t('eredmenyek.pliszepro.period_label')}</span>{' '}
+                  <span className="text-slate-900 font-medium">{t('eredmenyek.pliszepro.period_value')}</span>
                 </div>
               </div>
 
               <p className="text-lg text-slate-700 leading-relaxed mb-8">
-                A PliszéPro egyedi méretre gyártott pliszé szúnyoghálókat kínál országosan. A kampány célja az volt, hogy ne egyszerű érdeklődéseket, hanem konkrét méretekkel és valós vásárlási szándékkal rendelkező ajánlatkérőket szerezzünk. Ehhez a fizetett hirdetéseket egy automatikus online kalkulátorral és célzott ajánlatkérési folyamattal kapcsoltuk össze.
+                {t('eredmenyek.pliszepro.description')}
               </p>
 
               <div className="mb-10">
-                <h3 className="text-sm font-semibold uppercase tracking-widest text-slate-500 mb-4">Mit csináltunk</h3>
+                <h3 className="text-sm font-semibold uppercase tracking-widest text-slate-500 mb-4">{t('eredmenyek.pliszepro.what_we_did')}</h3>
                 <ul className="space-y-3">
                   {tasks.map((task, idx) => (
                     <li
@@ -598,10 +574,10 @@ function PliszéProCaseStudy() {
             <div className="space-y-5">
               <ResultStat
                 target={1960000}
-                suffix={'\u00A0Ft'}
-                label="A kampány során kiküldött ajánlatok teljes értéke"
+                suffix={currencySuffix}
+                label={t('eredmenyek.pliszepro.highlight_stat_label')}
                 highlight
-                highlightLabel="Kiküldött árajánlatok összértéke"
+                highlightLabel={t('eredmenyek.pliszepro.highlight_label')}
                 triggered={inView}
                 thousands
                 inView={inView}
@@ -618,20 +594,20 @@ function PliszéProCaseStudy() {
                 }}
               >
                 <p className="relative z-10 text-sm sm:text-base text-emerald-700 font-medium leading-snug">
-                  Minden 1 forint hirdetési költésből{' '}
+                  {t('eredmenyek.pliszepro.ratio_part1')}{' '}
                   <span className="font-bold bg-gradient-to-r from-emerald-600 via-emerald-500 to-cyan-600 bg-clip-text text-transparent animate-gradient-flow">
-                    23,06 forint ajánlati érték.
+                    {t('eredmenyek.pliszepro.ratio_part2')}
                   </span>
                 </p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <ResultStat target={85000} suffix={'\u00A0Ft'} label="Hirdetési költés" triggered={inView} thousands inView={inView} revealDelay="220ms" />
-                <ResultStat target={15} suffix=" db" label="Beérkezett ajánlatkérés" triggered={inView} inView={inView} revealDelay="330ms" />
-                <ResultStat target={130667} suffix={'\u00A0Ft'} label="Átlagos ajánlati érték" triggered={inView} thousands inView={inView} revealDelay="440ms" />
-                <ResultStat target={940} suffix=" db" label="Kalkulátorkitöltés" triggered={inView} inView={inView} revealDelay="550ms" />
-                <ResultStat target={15} suffix=" db" label="Kiküldött árajánlat" triggered={inView} inView={inView} revealDelay="660ms" />
-                <ResultStat target={60000} prefix="" suffix="+ elérés" label="Célzott közönségben" triggered={inView} thousands inView={inView} revealDelay="770ms" />
+                <ResultStat target={85000} suffix={currencySuffix} label={t('eredmenyek.pliszepro.stat_ad_spend')} triggered={inView} thousands inView={inView} revealDelay="220ms" />
+                <ResultStat target={15} suffix={t('eredmenyek.pliszepro.pcs_suffix')} label={t('eredmenyek.pliszepro.stat_requests')} triggered={inView} inView={inView} revealDelay="330ms" />
+                <ResultStat target={130667} suffix={currencySuffix} label={t('eredmenyek.pliszepro.stat_avg_value')} triggered={inView} thousands inView={inView} revealDelay="440ms" />
+                <ResultStat target={940} suffix={t('eredmenyek.pliszepro.pcs_suffix')} label={t('eredmenyek.pliszepro.stat_calculator')} triggered={inView} inView={inView} revealDelay="550ms" />
+                <ResultStat target={15} suffix={t('eredmenyek.pliszepro.pcs_suffix')} label={t('eredmenyek.pliszepro.stat_quotes_sent')} triggered={inView} inView={inView} revealDelay="660ms" />
+                <ResultStat target={60000} prefix="" suffix={t('eredmenyek.pliszepro.reach_suffix')} label={t('eredmenyek.pliszepro.stat_reach')} triggered={inView} thousands inView={inView} revealDelay="770ms" />
               </div>
 
               {/* Extra context for lead quality */}
@@ -645,7 +621,7 @@ function PliszéProCaseStudy() {
                 }}
               >
                 <p className="text-sm text-slate-700 leading-relaxed">
-                  <span className="font-semibold text-blue-700">Fontos:</span> minden ajánlatkérés konkrét méretekkel rendelkező érdeklődőtől érkezett.
+                  <span className="font-semibold text-blue-700">{t('eredmenyek.pliszepro.important_prefix')}</span>{t('eredmenyek.pliszepro.important_text')}
                 </p>
               </div>
             </div>
@@ -662,11 +638,11 @@ function PliszéProCaseStudy() {
                 >
                   <img
                     src="/pliszepro-meta-kampany.jpg"
-                    alt="Pliszé Pro Meta Ads kampány eredményei"
+                    alt={t('eredmenyek.pliszepro.gallery_meta_alt')}
                     className="w-full h-auto object-contain p-3"
                   />
                 </button>
-                <p className="text-sm text-slate-400 mt-3 text-center">Meta Ads kampány</p>
+                <p className="text-sm text-slate-400 mt-3 text-center">{t('eredmenyek.pliszepro.gallery_meta_caption')}</p>
               </div>
               <div className="flex flex-col">
                 <button
@@ -676,11 +652,11 @@ function PliszéProCaseStudy() {
                 >
                   <img
                     src="/pliszepro-crm-eredmeny.jpg"
-                    alt="Pliszé Pro CRM pipeline és bevétel"
+                    alt={t('eredmenyek.pliszepro.gallery_crm_alt')}
                     className="w-full h-auto object-contain p-3"
                   />
                 </button>
-                <p className="text-sm text-slate-400 mt-3 text-center">CRM pipeline és bevétel</p>
+                <p className="text-sm text-slate-400 mt-3 text-center">{t('eredmenyek.pliszepro.gallery_crm_caption')}</p>
               </div>
             </div>
           </div>
@@ -711,7 +687,7 @@ function PliszéProCaseStudy() {
           <div className="relative z-10 px-8 sm:px-10 lg:px-14 pb-10 lg:pb-14">
             <div className="border-t border-slate-200 pt-10 lg:pt-14">
               <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8 text-center">
-                Miért <span className="gradient-text">működött?</span>
+                {t('eredmenyek.pliszepro.why_title_part1')} <span className="gradient-text">{t('eredmenyek.pliszepro.why_title_highlight')}</span>
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {whyItems.map((item, idx) => {
@@ -753,17 +729,17 @@ function PliszéProCaseStudy() {
           <div className="relative z-10 px-8 sm:px-10 lg:px-14 pb-10 lg:pb-14">
             <div className="text-center p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border border-slate-700 shadow-xl">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">
-                Hasonló eredményeket szeretnél a vállalkozásodban?
+                {t('eredmenyek.pliszepro.cta_title')}
               </h3>
               <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
-                Megtervezzük és felépítjük azt a hirdetési és ügyfélszerző rendszert, amely nemcsak kattintásokat, hanem valódi üzleti lehetőségeket generál.
+                {t('eredmenyek.pliszepro.cta_subtitle')}
               </p>
               <a
                 href="/#kapcsolat"
                 onClick={handleCTA}
                 className="group inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold text-lg text-white hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300"
               >
-                <span>Ingyenes konzultáció</span>
+                <span>{t('eredmenyek.pliszepro.cta_button')}</span>
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
               </a>
             </div>

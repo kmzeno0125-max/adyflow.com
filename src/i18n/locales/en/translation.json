@@ -572,10 +572,22 @@
     "kpi_title_part1": "Our average client results",
     "kpi_title_highlight": "at a glance",
     "kpi_cards": {
-      "roas": { "label": "average ROAS", "description": "ad return on spend" },
-      "conversion": { "label": "conversion rate", "description": "average growth" },
-      "cac": { "label": "CAC reduction", "description": "customer acquisition cost" },
-      "transparency": { "label": "transparency", "description": "every client, every report" }
+      "roas": {
+        "label": "average ROAS",
+        "description": "ad return on spend"
+      },
+      "conversion": {
+        "label": "conversion rate",
+        "description": "average growth"
+      },
+      "cac": {
+        "label": "CAC reduction",
+        "description": "customer acquisition cost"
+      },
+      "transparency": {
+        "label": "transparency",
+        "description": "every client, every report"
+      }
     },
     "case_study": {
       "label": "Featured success story",
@@ -634,6 +646,66 @@
       "title_part2": "?",
       "subtitle": "On a free consultation we'll show you how we can deliver measurable growth for your business too.",
       "cta": "Free consultation"
+    },
+    "pliszepro": {
+      "label": "Featured success story",
+      "industry_label": "Industry:",
+      "industry_value": "Custom-made pleated insect screens and shading solutions",
+      "period_label": "Period:",
+      "period_value": "July 2026 (3 weeks)",
+      "description": "PliszéPro offers custom-made pleated insect screens nationwide. The goal of the campaign was to acquire not just simple enquiries, but quote requests with specific measurements and genuine purchase intent. To achieve this, we connected the paid ads with an automated online calculator and a targeted quote-request flow.",
+      "what_we_did": "What we did",
+      "tasks": [
+        "Building a multi-layered Meta Ads campaign structure",
+        "Testing national and regional targeting",
+        "A/B testing multiple ad creatives and copy",
+        "Designing a campaign flow leading to an automated price calculator",
+        "Creating interest and remarketing audiences",
+        "Accurate conversion tracking and quote-request measurement",
+        "Continuous campaign optimization and daily monitoring"
+      ],
+      "highlight_label": "Total value of quotes sent",
+      "highlight_stat_label": "Total value of the quotes sent during the campaign",
+      "currency_suffix": " HUF",
+      "ratio_part1": "From every 1 HUF of ad spend",
+      "ratio_part2": "23.06 HUF in quote value.",
+      "stat_ad_spend": "Ad spend",
+      "stat_requests": "Quote requests received",
+      "stat_avg_value": "Average quote value",
+      "stat_calculator": "Calculator completions",
+      "stat_quotes_sent": "Quotes sent",
+      "stat_reach": "In the targeted audience",
+      "pcs_suffix": " pcs",
+      "reach_suffix": "+ reach",
+      "important_prefix": "Important:",
+      "important_text": " every quote request came from a prospect with specific measurements.",
+      "gallery_meta_alt": "PliszéPro Meta Ads campaign results",
+      "gallery_meta_caption": "Meta Ads campaign",
+      "gallery_crm_alt": "PliszéPro CRM pipeline and revenue",
+      "gallery_crm_caption": "CRM pipeline and revenue",
+      "why_title_part1": "Why did it",
+      "why_title_highlight": "work?",
+      "why_items": [
+        {
+          "title": "Instant price calculation",
+          "text": "Right at the first step, prospects could get a personalized, size-based calculation, significantly reducing uncertainty and the number of unqualified enquiries."
+        },
+        {
+          "title": "High purchase intent",
+          "text": "The campaign didn’t collect generic website visitors. Prospects entered specific measurements, so they were much closer to a buying decision."
+        },
+        {
+          "title": "Targeted creatives",
+          "text": "The ads clearly presented the product’s key benefits: custom sizing, transparent pricing, premium build quality and fast quote requests."
+        },
+        {
+          "title": "A connected system",
+          "text": "The ad, the calculator, the quote request and the follow-up worked as one unified flow, so prospects didn’t get lost between the different steps."
+        }
+      ],
+      "cta_title": "Want similar results for your business?",
+      "cta_subtitle": "We design and build the advertising and customer-acquisition system that generates not just clicks, but real business opportunities.",
+      "cta_button": "Free consultation"
     }
   },
   "partners_page": {
@@ -865,7 +937,8 @@
       "secondary": "Free consultation"
     },
     "cta_button": "I want a website",
-    "cta_subtitle": "Free consultation — reply within 24 hours."
+    "cta_subtitle": "Free consultation — reply within 24 hours.",
+    "card_preview_alt": "Preview of the {{domain}} website homepage"
   },
   "meta": {
     "home": {
@@ -896,5 +969,169 @@
       "title": "Legal Disclaimer – AdyFlow",
       "description": "AdyFlow's legal disclaimer, liability terms and usage conditions."
     }
+  },
+  "scroll_landing": {
+    "aud_eyebrow": "Who it’s for",
+    "aud_title_part1": "AdyFlow is for those who",
+    "aud_title_highlight": "want to grow",
+    "aud_slides": [
+      {
+        "big": "SMBs and startups",
+        "sub": "Ready for rapid growth."
+      },
+      {
+        "big": "Already advertising, but…",
+        "sub": "Lots of activity, little predictable revenue."
+      },
+      {
+        "big": "Open to the new",
+        "sub": "Ready for AI automation."
+      },
+      {
+        "big": "Planning long-term",
+        "sub": "Sustainable, systematic growth."
+      }
+    ],
+    "aud_punch_part1": "This is",
+    "aud_punch_highlight": "for you",
+    "aud_punch_part2": " if you’re ready for a system that delivers real results.",
+    "chaos_words": [
+      "Meta",
+      "Google Ads",
+      "post",
+      "story",
+      "reel",
+      "email",
+      "blog",
+      "creative",
+      "ad",
+      "campaign",
+      "DM",
+      "SEO",
+      "newsletter",
+      "banner",
+      "video",
+      "carousel",
+      "remarketing",
+      "landing",
+      "A/B test",
+      "TikTok"
+    ],
+    "prob_eyebrow": "The real problem",
+    "prob_title_part1": "Lots of activity,",
+    "prob_title_highlight": "few results",
+    "prob_items": [
+      {
+        "h": "Unpredictable customer acquisition",
+        "p": "You don’t know how many clients will come next month."
+      },
+      {
+        "h": "Low return",
+        "p": "High ad spend, few real results."
+      },
+      {
+        "h": "Manual processes",
+        "p": "Your team burns out on repetitive tasks."
+      },
+      {
+        "h": "Marketing and sales fall apart",
+        "p": "Lead generation and sales aren’t connected."
+      }
+    ],
+    "prob_punch_line1": "The problem isn’t that you have no marketing.",
+    "prob_punch_line2": "There’s no system behind it.",
+    "proc_pill": "A lead’s journey through the system",
+    "proc_title_part1": "This is how we build the",
+    "proc_title_highlight": "client-acquisition system",
+    "proc_sub": "Follow along as a single click turns into a returning customer.",
+    "proc_steps": [
+      {
+        "title": "Ad management",
+        "tag": "Meta / Google Ads",
+        "line": "Targeted campaigns that bring in the right prospects.",
+        "chip": "Meta + Google"
+      },
+      {
+        "title": "Conversion page",
+        "tag": "Landing page",
+        "line": "A page that generates leads and bookings.",
+        "chip": "AI-optimized form"
+      },
+      {
+        "title": "Into the CRM",
+        "tag": "Lead management",
+        "line": "Every lead in one place, with AI tracking.",
+        "chip": "Auto-categorization"
+      },
+      {
+        "title": "Automation",
+        "tag": "Workflows",
+        "line": "Repetitive tasks run on their own.",
+        "chip": "Auto follow-up"
+      },
+      {
+        "title": "Optimization",
+        "tag": "Scaling",
+        "line": "Weekly fine-tuning, predictable growth.",
+        "chip": "A/B test"
+      }
+    ],
+    "station_labels": [
+      "Click",
+      "Lead",
+      "In CRM",
+      "Nurtured",
+      "Customer"
+    ],
+    "cmp_eyebrow": "The AI-driven difference",
+    "cmp_title_part1": "Why it works",
+    "cmp_title_highlight": "better",
+    "cmp_trad_title": "Traditional marketing",
+    "cmp_trad_rows": [
+      "Manages ads",
+      "Produces creatives",
+      "Stops at the click"
+    ],
+    "cmp_trad_foot": "Using tools, not a system.",
+    "cmp_ady_title": "AdyFlow",
+    "cmp_ady_rows": [
+      "Guides the entire customer journey",
+      "Optimizes for revenue, not vanity metrics",
+      "Every decision backed by AI"
+    ],
+    "cmp_ady_foot": "A complete system with predictable growth.",
+    "ben_eyebrow": "Measurable benefits",
+    "ben_title_part1": "Why it’s worth it",
+    "ben_title_highlight": "for the client",
+    "ben_sub": "Every element works in the same direction: upward.",
+    "ben_items": [
+      {
+        "title": "Less wasted spend",
+        "desc": "AI filters out the weak campaigns."
+      },
+      {
+        "title": "More closed deals",
+        "desc": "From the same traffic."
+      },
+      {
+        "title": "Full transparency",
+        "desc": "Always see where every lead stands."
+      },
+      {
+        "title": "Higher customer value",
+        "desc": "More repeat business and upsells."
+      },
+      {
+        "title": "Scalable growth",
+        "desc": "More clients, the same resources."
+      }
+    ],
+    "final_title_part1": "Let’s build your",
+    "final_title_highlight": "system",
+    "final_sub": "On a free consultation we’ll show you how it would look for you.",
+    "final_cta": "Free consultation"
+  },
+  "floating_call": {
+    "aria": "Call now: +36 20 437 8880"
   }
 }

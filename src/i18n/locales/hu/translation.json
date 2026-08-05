@@ -572,10 +572,22 @@
     "kpi_title_part1": "Átlagos ügyféleredményeink",
     "kpi_title_highlight": "egy pillantásra",
     "kpi_cards": {
-      "roas": { "label": "átlagos ROAS", "description": "hirdetési megtérülés" },
-      "conversion": { "label": "konverziós ráta", "description": "átlagos növekedés" },
-      "cac": { "label": "CAC csökkenés", "description": "ügyfélszerzési költség" },
-      "transparency": { "label": "transzparencia", "description": "minden ügyfélnek, minden riportban" }
+      "roas": {
+        "label": "átlagos ROAS",
+        "description": "hirdetési megtérülés"
+      },
+      "conversion": {
+        "label": "konverziós ráta",
+        "description": "átlagos növekedés"
+      },
+      "cac": {
+        "label": "CAC csökkenés",
+        "description": "ügyfélszerzési költség"
+      },
+      "transparency": {
+        "label": "transzparencia",
+        "description": "minden ügyfélnek, minden riportban"
+      }
     },
     "case_study": {
       "label": "Kiemelt sikertörténet",
@@ -634,6 +646,66 @@
       "title_part2": "?",
       "subtitle": "Egy ingyenes konzultáción megmutatjuk, hogyan érhetünk el mérhető növekedést a Te vállalkozásodban is.",
       "cta": "Ingyenes konzultáció"
+    },
+    "pliszepro": {
+      "label": "Kiemelt sikertörténet",
+      "industry_label": "Iparág:",
+      "industry_value": "Egyedi méretre gyártott pliszé szúnyoghálók és árnyékolástechnika",
+      "period_label": "Időszak:",
+      "period_value": "2026. július (3 hét)",
+      "description": "A PliszéPro egyedi méretre gyártott pliszé szúnyoghálókat kínál országosan. A kampány célja az volt, hogy ne egyszerű érdeklődéseket, hanem konkrét méretekkel és valós vásárlási szándékkal rendelkező ajánlatkérőket szerezzünk. Ehhez a fizetett hirdetéseket egy automatikus online kalkulátorral és célzott ajánlatkérési folyamattal kapcsoltuk össze.",
+      "what_we_did": "Mit csináltunk",
+      "tasks": [
+        "Többrétegű Meta Ads kampánystruktúra kialakítása",
+        "Országos és területi célzások tesztelése",
+        "Többféle hirdetési kreatív és szöveg A/B tesztelése",
+        "Automatikus árkalkulátorhoz vezető kampányfolyamat kialakítása",
+        "Érdeklődő- és remarketingközönségek létrehozása",
+        "Konverziómérés és ajánlatkérések pontos követése",
+        "Folyamatos kampányoptimalizálás és napi monitoring"
+      ],
+      "highlight_label": "Kiküldött árajánlatok összértéke",
+      "highlight_stat_label": "A kampány során kiküldött ajánlatok teljes értéke",
+      "currency_suffix": " Ft",
+      "ratio_part1": "Minden 1 forint hirdetési költésből",
+      "ratio_part2": "23,06 forint ajánlati érték.",
+      "stat_ad_spend": "Hirdetési költés",
+      "stat_requests": "Beérkezett ajánlatkérés",
+      "stat_avg_value": "Átlagos ajánlati érték",
+      "stat_calculator": "Kalkulátorkitöltés",
+      "stat_quotes_sent": "Kiküldött árajánlat",
+      "stat_reach": "Célzott közönségben",
+      "pcs_suffix": " db",
+      "reach_suffix": "+ elérés",
+      "important_prefix": "Fontos:",
+      "important_text": " minden ajánlatkérés konkrét méretekkel rendelkező érdeklődőtől érkezett.",
+      "gallery_meta_alt": "Pliszé Pro Meta Ads kampány eredményei",
+      "gallery_meta_caption": "Meta Ads kampány",
+      "gallery_crm_alt": "Pliszé Pro CRM pipeline és bevétel",
+      "gallery_crm_caption": "CRM pipeline és bevétel",
+      "why_title_part1": "Miért",
+      "why_title_highlight": "működött?",
+      "why_items": [
+        {
+          "title": "Azonnali árkalkuláció",
+          "text": "Az érdeklődők már az első lépésben személyre szabott, méretalapú kalkulációt kaphattak, így jelentősen csökkent a bizonytalanság és a felesleges érdeklődések száma."
+        },
+        {
+          "title": "Magas vásárlási szándék",
+          "text": "A kampány nem általános weboldal-látogatókat gyűjtött. Az érdeklődők konkrét méreteket adtak meg, ezért jóval közelebb álltak a vásárlási döntéshez."
+        },
+        {
+          "title": "Célzott kreatívok",
+          "text": "A hirdetések egyértelműen bemutatták a termék legfontosabb előnyeit: az egyedi méretet, az átlátható árképzést, a prémium kialakítást és a gyors ajánlatkérést."
+        },
+        {
+          "title": "Összekapcsolt rendszer",
+          "text": "A hirdetés, a kalkulátor, az ajánlatkérés és az utánkövetés egyetlen egységes folyamatként működött, így az érdeklődők nem vesztek el a különböző lépések között."
+        }
+      ],
+      "cta_title": "Hasonló eredményeket szeretnél a vállalkozásodban?",
+      "cta_subtitle": "Megtervezzük és felépítjük azt a hirdetési és ügyfélszerző rendszert, amely nemcsak kattintásokat, hanem valódi üzleti lehetőségeket generál.",
+      "cta_button": "Ingyenes konzultáció"
     }
   },
   "partners_page": {
@@ -865,7 +937,8 @@
       "secondary": "Ingyenes konzultáció"
     },
     "cta_button": "Szeretnék egy weboldalt",
-    "cta_subtitle": "Ingyenes konzultáció — válasz 24 órán belül."
+    "cta_subtitle": "Ingyenes konzultáció — válasz 24 órán belül.",
+    "card_preview_alt": "A {{domain}} weboldal kezdőoldalának előnézete"
   },
   "meta": {
     "home": {
@@ -896,5 +969,169 @@
       "title": "Jogi nyilatkozat – AdyFlow",
       "description": "Az AdyFlow jogi nyilatkozata, felelősségi és felhasználási feltételek."
     }
+  },
+  "scroll_landing": {
+    "aud_eyebrow": "Kinek",
+    "aud_title_part1": "Az AdyFlow azoknak szól, akik",
+    "aud_title_highlight": "növekedni akarnak",
+    "aud_slides": [
+      {
+        "big": "KKV-k és startupok",
+        "sub": "Gyors növekedésre készen."
+      },
+      {
+        "big": "Már hirdetnek, de...",
+        "sub": "Sok aktivitás, kevés kiszámítható bevétel."
+      },
+      {
+        "big": "Nyitottak az újra",
+        "sub": "Készen az AI-automatizációra."
+      },
+      {
+        "big": "Hosszú távra terveznek",
+        "sub": "Fenntartható, rendszerszintű növekedés."
+      }
+    ],
+    "aud_punch_part1": "Ez",
+    "aud_punch_highlight": "neked szól",
+    "aud_punch_part2": ", ha készen állsz egy rendszerre, ami valódi eredményt hoz.",
+    "chaos_words": [
+      "Meta",
+      "Google Ads",
+      "poszt",
+      "story",
+      "reel",
+      "email",
+      "blog",
+      "kreatív",
+      "hirdetés",
+      "kampány",
+      "DM",
+      "SEO",
+      "hírlevél",
+      "banner",
+      "videó",
+      "carousel",
+      "remarketing",
+      "landing",
+      "A/B teszt",
+      "TikTok"
+    ],
+    "prob_eyebrow": "A valódi probléma",
+    "prob_title_part1": "Sok tevékenység,",
+    "prob_title_highlight": "kevés eredmény",
+    "prob_items": [
+      {
+        "h": "Kiszámíthatatlan ügyfélszerzés",
+        "p": "Nem tudod, mennyi ügyfél jön jövő hónapban."
+      },
+      {
+        "h": "Alacsony megtérülés",
+        "p": "Sok hirdetési költés, kevés valódi eredmény."
+      },
+      {
+        "h": "Manuális folyamatok",
+        "p": "A csapat a repetitív feladatokban ég el."
+      },
+      {
+        "h": "Marketing és sales szétesik",
+        "p": "A leadgenerálás és az értékesítés nincs összekötve."
+      }
+    ],
+    "prob_punch_line1": "A probléma nem az, hogy nincs marketinged.",
+    "prob_punch_line2": "Nincs mögötte rendszer.",
+    "proc_pill": "Egy lead útja a rendszeren át",
+    "proc_title_part1": "Így épül fel az",
+    "proc_title_highlight": "ügyfélszerző rendszer",
+    "proc_sub": "Kövesd végig, ahogy egy kattintásból visszatérő ügyfél lesz.",
+    "proc_steps": [
+      {
+        "title": "Hirdetéskezelés",
+        "tag": "Meta / Google Ads",
+        "line": "Célzott kampányok, amik a jó érdeklődőket hozzák.",
+        "chip": "Meta + Google"
+      },
+      {
+        "title": "Konverziós oldal",
+        "tag": "Landing page",
+        "line": "Oldal, ami leadet és időpontot generál.",
+        "chip": "AI-optimalizált űrlap"
+      },
+      {
+        "title": "CRM bekerülés",
+        "tag": "Lead kezelés",
+        "line": "Minden lead egy helyen, AI-követéssel.",
+        "chip": "Auto-kategorizálás"
+      },
+      {
+        "title": "Automatizáció",
+        "tag": "Munkafolyamatok",
+        "line": "Az ismétlődő feladatok maguktól futnak.",
+        "chip": "Auto utánkövetés"
+      },
+      {
+        "title": "Optimalizálás",
+        "tag": "Skálázás",
+        "line": "Heti finomhangolás, kiszámítható növekedés.",
+        "chip": "A/B teszt"
+      }
+    ],
+    "station_labels": [
+      "Kattintás",
+      "Lead",
+      "CRM-ben",
+      "Nurtured",
+      "Ügyfél"
+    ],
+    "cmp_eyebrow": "AI-alapú különbség",
+    "cmp_title_part1": "Miért működik",
+    "cmp_title_highlight": "jobban",
+    "cmp_trad_title": "Hagyományos marketing",
+    "cmp_trad_rows": [
+      "Hirdetéseket kezel",
+      "Kreatívokat gyárt",
+      "A kattintásnál megáll"
+    ],
+    "cmp_trad_foot": "Eszközhasználat, nem rendszer.",
+    "cmp_ady_title": "AdyFlow",
+    "cmp_ady_rows": [
+      "Végigviszi a teljes ügyfélutat",
+      "Bevételre optimalizál, nem látszatra",
+      "Minden döntést AI támogat"
+    ],
+    "cmp_ady_foot": "Teljes rendszer, kiszámítható növekedéssel.",
+    "ben_eyebrow": "Mérhető előnyök",
+    "ben_title_part1": "Miért éri meg ez",
+    "ben_title_highlight": "az ügyfélnek",
+    "ben_sub": "Minden elem ugyanabba az irányba dolgozik: felfelé.",
+    "ben_items": [
+      {
+        "title": "Kevesebb elpazarolt költség",
+        "desc": "Az AI kiszűri a gyenge kampányokat."
+      },
+      {
+        "title": "Több lezárt üzlet",
+        "desc": "Ugyanabból a forgalomból."
+      },
+      {
+        "title": "Teljes átláthatóság",
+        "desc": "Mindig látod, hol tart minden lead."
+      },
+      {
+        "title": "Nagyobb ügyfélérték",
+        "desc": "Több visszatérő és upsell."
+      },
+      {
+        "title": "Skálázható növekedés",
+        "desc": "Több ügyfél, ugyanannyi erőforrás."
+      }
+    ],
+    "final_title_part1": "Építsük fel a te",
+    "final_title_highlight": "rendszeredet",
+    "final_sub": "Ingyenes konzultáción megmutatjuk, hogy nézne ki nálad.",
+    "final_cta": "Ingyenes konzultáció"
+  },
+  "floating_call": {
+    "aria": "Hívjon most: +36 20 437 8880"
   }
 }

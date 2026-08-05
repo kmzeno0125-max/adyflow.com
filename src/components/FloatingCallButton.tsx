@@ -1,11 +1,13 @@
 import { Phone } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function FloatingCallButton() {
+  const { t } = useTranslation();
   return (
     <>
       <a
         href="tel:+36204378880"
-        aria-label="Hívjon most: +36 20 437 8880"
+        aria-label={t('floating_call.aria')}
         className="fcb fixed z-50 right-4 bottom-5 sm:right-5 sm:bottom-6 lg:right-6 lg:bottom-8 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold w-14 h-14 sm:w-auto sm:h-auto sm:px-5 sm:py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
       >
         <Phone size={20} className="shrink-0" />

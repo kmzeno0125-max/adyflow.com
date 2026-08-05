@@ -572,10 +572,22 @@
     "kpi_title_part1": "Unsere durchschnittlichen Kundenergebnisse",
     "kpi_title_highlight": "auf einen Blick",
     "kpi_cards": {
-      "roas": { "label": "durchschnittlicher ROAS", "description": "Werbeausgaben-Rendite" },
-      "conversion": { "label": "Conversion-Rate", "description": "durchschnittliche Steigerung" },
-      "cac": { "label": "CAC-Senkung", "description": "Kundengewinnungskosten" },
-      "transparency": { "label": "Transparenz", "description": "jeder Kunde, jeder Bericht" }
+      "roas": {
+        "label": "durchschnittlicher ROAS",
+        "description": "Werbeausgaben-Rendite"
+      },
+      "conversion": {
+        "label": "Conversion-Rate",
+        "description": "durchschnittliche Steigerung"
+      },
+      "cac": {
+        "label": "CAC-Senkung",
+        "description": "Kundengewinnungskosten"
+      },
+      "transparency": {
+        "label": "Transparenz",
+        "description": "jeder Kunde, jeder Bericht"
+      }
     },
     "case_study": {
       "label": "Ausgewählte Erfolgsgeschichte",
@@ -634,6 +646,66 @@
       "title_part2": "?",
       "subtitle": "In einer kostenlosen Beratung zeigen wir Ihnen, wie wir auch für Ihr Unternehmen messbares Wachstum liefern können.",
       "cta": "Kostenlose Beratung"
+    },
+    "pliszepro": {
+      "label": "Ausgewählte Erfolgsgeschichte",
+      "industry_label": "Branche:",
+      "industry_value": "Maßgefertigte Plissee-Insektenschutzgitter und Beschattungstechnik",
+      "period_label": "Zeitraum:",
+      "period_value": "Juli 2026 (3 Wochen)",
+      "description": "PliszéPro bietet bundesweit maßgefertigte Plissee-Insektenschutzgitter an. Ziel der Kampagne war es, nicht einfache Anfragen zu gewinnen, sondern Angebotsanfragen mit konkreten Maßen und echter Kaufabsicht. Dazu haben wir die bezahlten Anzeigen mit einem automatischen Online-Rechner und einem gezielten Angebotsprozess verbunden.",
+      "what_we_did": "Was wir gemacht haben",
+      "tasks": [
+        "Aufbau einer mehrschichtigen Meta-Ads-Kampagnenstruktur",
+        "Test von landesweiten und regionalen Zielgruppen",
+        "A/B-Tests mehrerer Anzeigen-Creatives und Texte",
+        "Gestaltung eines Kampagnenflusses zum automatischen Preisrechner",
+        "Erstellung von Interessenten- und Remarketing-Zielgruppen",
+        "Präzise Conversion-Messung und Nachverfolgung der Anfragen",
+        "Laufende Kampagnenoptimierung und tägliches Monitoring"
+      ],
+      "highlight_label": "Gesamtwert der versendeten Angebote",
+      "highlight_stat_label": "Gesamtwert der während der Kampagne versendeten Angebote",
+      "currency_suffix": " HUF",
+      "ratio_part1": "Aus jedem 1 HUF Werbeausgabe",
+      "ratio_part2": "23,06 HUF Angebotswert.",
+      "stat_ad_spend": "Werbeausgaben",
+      "stat_requests": "Eingegangene Angebotsanfragen",
+      "stat_avg_value": "Durchschnittlicher Angebotswert",
+      "stat_calculator": "Rechner-Abschlüsse",
+      "stat_quotes_sent": "Versendete Angebote",
+      "stat_reach": "In der Zielgruppe",
+      "pcs_suffix": " Stk",
+      "reach_suffix": "+ Reichweite",
+      "important_prefix": "Wichtig:",
+      "important_text": " jede Angebotsanfrage kam von einem Interessenten mit konkreten Maßen.",
+      "gallery_meta_alt": "PliszéPro Meta-Ads-Kampagnenergebnisse",
+      "gallery_meta_caption": "Meta-Ads-Kampagne",
+      "gallery_crm_alt": "PliszéPro CRM-Pipeline und Umsatz",
+      "gallery_crm_caption": "CRM-Pipeline und Umsatz",
+      "why_title_part1": "Warum hat es",
+      "why_title_highlight": "funktioniert?",
+      "why_items": [
+        {
+          "title": "Sofortige Preisberechnung",
+          "text": "Bereits im ersten Schritt erhielten Interessenten eine personalisierte, maßbasierte Kalkulation, was Unsicherheit und unnötige Anfragen deutlich reduzierte."
+        },
+        {
+          "title": "Hohe Kaufabsicht",
+          "text": "Die Kampagne sammelte keine allgemeinen Website-Besucher. Interessenten gaben konkrete Maße an und standen daher deutlich näher an der Kaufentscheidung."
+        },
+        {
+          "title": "Gezielte Creatives",
+          "text": "Die Anzeigen zeigten klar die wichtigsten Produktvorteile: Maßanfertigung, transparente Preise, hochwertige Verarbeitung und schnelle Angebotsanfrage."
+        },
+        {
+          "title": "Ein verbundenes System",
+          "text": "Anzeige, Rechner, Angebotsanfrage und Nachverfolgung funktionierten als ein einheitlicher Ablauf, sodass Interessenten zwischen den Schritten nicht verloren gingen."
+        }
+      ],
+      "cta_title": "Möchtest du ähnliche Ergebnisse für dein Unternehmen?",
+      "cta_subtitle": "Wir planen und bauen das Werbe- und Kundengewinnungssystem, das nicht nur Klicks, sondern echte Geschäftschancen generiert.",
+      "cta_button": "Kostenlose Beratung"
     }
   },
   "partners_page": {
@@ -865,7 +937,8 @@
       "secondary": "Kostenlose Beratung"
     },
     "cta_button": "Ich möchte eine Webseite",
-    "cta_subtitle": "Kostenlose Beratung – Antwort innerhalb von 24 Stunden."
+    "cta_subtitle": "Kostenlose Beratung – Antwort innerhalb von 24 Stunden.",
+    "card_preview_alt": "Vorschau der Startseite von {{domain}}"
   },
   "meta": {
     "home": {
@@ -896,5 +969,169 @@
       "title": "Impressum – AdyFlow",
       "description": "Das Impressum von AdyFlow, Haftungsbedingungen und Nutzungsbedingungen."
     }
+  },
+  "scroll_landing": {
+    "aud_eyebrow": "Für wen",
+    "aud_title_part1": "AdyFlow ist für alle, die",
+    "aud_title_highlight": "wachsen wollen",
+    "aud_slides": [
+      {
+        "big": "KMU und Start-ups",
+        "sub": "Bereit für schnelles Wachstum."
+      },
+      {
+        "big": "Werben bereits, aber…",
+        "sub": "Viel Aktivität, wenig planbarer Umsatz."
+      },
+      {
+        "big": "Offen für Neues",
+        "sub": "Bereit für KI-Automatisierung."
+      },
+      {
+        "big": "Planen langfristig",
+        "sub": "Nachhaltiges, systematisches Wachstum."
+      }
+    ],
+    "aud_punch_part1": "Das ist",
+    "aud_punch_highlight": "für dich",
+    "aud_punch_part2": ", wenn du bereit bist für ein System, das echte Ergebnisse liefert.",
+    "chaos_words": [
+      "Meta",
+      "Google Ads",
+      "Post",
+      "Story",
+      "Reel",
+      "E-Mail",
+      "Blog",
+      "Creative",
+      "Anzeige",
+      "Kampagne",
+      "DM",
+      "SEO",
+      "Newsletter",
+      "Banner",
+      "Video",
+      "Carousel",
+      "Remarketing",
+      "Landing",
+      "A/B-Test",
+      "TikTok"
+    ],
+    "prob_eyebrow": "Das eigentliche Problem",
+    "prob_title_part1": "Viel Aktivität,",
+    "prob_title_highlight": "wenig Ergebnis",
+    "prob_items": [
+      {
+        "h": "Unvorhersehbare Kundengewinnung",
+        "p": "Du weißt nicht, wie viele Kunden nächsten Monat kommen."
+      },
+      {
+        "h": "Geringe Rendite",
+        "p": "Hohe Werbeausgaben, wenig echtes Ergebnis."
+      },
+      {
+        "h": "Manuelle Prozesse",
+        "p": "Das Team verbrennt sich an repetitiven Aufgaben."
+      },
+      {
+        "h": "Marketing und Vertrieb zerfallen",
+        "p": "Leadgenerierung und Vertrieb sind nicht verbunden."
+      }
+    ],
+    "prob_punch_line1": "Das Problem ist nicht, dass du kein Marketing hast.",
+    "prob_punch_line2": "Es fehlt das System dahinter.",
+    "proc_pill": "Der Weg eines Leads durch das System",
+    "proc_title_part1": "So entsteht das",
+    "proc_title_highlight": "Kundengewinnungssystem",
+    "proc_sub": "Verfolge, wie aus einem Klick ein wiederkehrender Kunde wird.",
+    "proc_steps": [
+      {
+        "title": "Anzeigenmanagement",
+        "tag": "Meta / Google Ads",
+        "line": "Gezielte Kampagnen, die die richtigen Interessenten bringen.",
+        "chip": "Meta + Google"
+      },
+      {
+        "title": "Conversion-Seite",
+        "tag": "Landingpage",
+        "line": "Eine Seite, die Leads und Termine generiert.",
+        "chip": "KI-optimiertes Formular"
+      },
+      {
+        "title": "Ins CRM",
+        "tag": "Lead-Management",
+        "line": "Alle Leads an einem Ort, mit KI-Tracking.",
+        "chip": "Auto-Kategorisierung"
+      },
+      {
+        "title": "Automatisierung",
+        "tag": "Workflows",
+        "line": "Wiederkehrende Aufgaben laufen von selbst.",
+        "chip": "Auto-Nachverfolgung"
+      },
+      {
+        "title": "Optimierung",
+        "tag": "Skalierung",
+        "line": "Wöchentliches Feintuning, planbares Wachstum.",
+        "chip": "A/B-Test"
+      }
+    ],
+    "station_labels": [
+      "Klick",
+      "Lead",
+      "Im CRM",
+      "Nurtured",
+      "Kunde"
+    ],
+    "cmp_eyebrow": "Der KI-basierte Unterschied",
+    "cmp_title_part1": "Warum es",
+    "cmp_title_highlight": "besser funktioniert",
+    "cmp_trad_title": "Klassisches Marketing",
+    "cmp_trad_rows": [
+      "Verwaltet Anzeigen",
+      "Produziert Creatives",
+      "Hört beim Klick auf"
+    ],
+    "cmp_trad_foot": "Werkzeugeinsatz, kein System.",
+    "cmp_ady_title": "AdyFlow",
+    "cmp_ady_rows": [
+      "Begleitet die gesamte Customer Journey",
+      "Optimiert auf Umsatz, nicht auf Schein",
+      "Jede Entscheidung KI-gestützt"
+    ],
+    "cmp_ady_foot": "Ein komplettes System mit planbarem Wachstum.",
+    "ben_eyebrow": "Messbare Vorteile",
+    "ben_title_part1": "Warum es sich",
+    "ben_title_highlight": "für den Kunden lohnt",
+    "ben_sub": "Jedes Element arbeitet in dieselbe Richtung: nach oben.",
+    "ben_items": [
+      {
+        "title": "Weniger verschwendetes Budget",
+        "desc": "Die KI filtert schwache Kampagnen heraus."
+      },
+      {
+        "title": "Mehr abgeschlossene Deals",
+        "desc": "Aus demselben Traffic."
+      },
+      {
+        "title": "Volle Transparenz",
+        "desc": "Du siehst jederzeit, wo jeder Lead steht."
+      },
+      {
+        "title": "Höherer Kundenwert",
+        "desc": "Mehr Wiederkäufe und Upsells."
+      },
+      {
+        "title": "Skalierbares Wachstum",
+        "desc": "Mehr Kunden, gleiche Ressourcen."
+      }
+    ],
+    "final_title_part1": "Lass uns dein",
+    "final_title_highlight": "System",
+    "final_sub": "In einem kostenlosen Beratungsgespräch zeigen wir dir, wie es bei dir aussehen würde.",
+    "final_cta": "Kostenlose Beratung"
+  },
+  "floating_call": {
+    "aria": "Jetzt anrufen: +36 20 437 8880"
   }
 }

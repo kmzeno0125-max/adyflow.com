@@ -142,6 +142,7 @@ export default function WebsiteService() {
 }
 
 function PortfolioCard({ item, viewLabel }: { item: PortfolioItem; viewLabel: string }) {
+  const { t } = useTranslation();
   const sources = screenshotSources(item.domain);
   const [srcIdx, setSrcIdx] = useState(0);
   const [showLogo, setShowLogo] = useState(false);
@@ -180,7 +181,7 @@ function PortfolioCard({ item, viewLabel }: { item: PortfolioItem; viewLabel: st
         ) : item.localImage ? (
           <img
             src={item.localImage}
-            alt={`A ${item.domain} weboldal kezdőoldalának előnézete`}
+            alt={t('website.card_preview_alt', { domain: item.domain })}
             loading="lazy"
             decoding="async"
             className="w-full h-full object-cover object-top group-hover:scale-105 transition-all duration-500 motion-reduce:transform-none"
