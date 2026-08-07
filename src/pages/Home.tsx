@@ -30,11 +30,13 @@ const Home = () => {
       <ScrollLanding />
       <FlowSection />
       <Suspense fallback={null}>
-        <Team />
-        <CTA />
-        <PartnersSlider />
-        <FAQ />
-        <Footer />
+        <div className="content-auto">
+          <Team />
+          <CTA />
+          <PartnersSlider />
+          <FAQ />
+          <Footer />
+        </div>
       </Suspense>
       <FloatingCallButton />
     </>

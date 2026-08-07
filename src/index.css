@@ -319,4 +319,28 @@
       transform: none !important;
     }
   }
+
+  /* Mobile performance: skip rendering offscreen sections */
+  @media (max-width: 920px) {
+    .content-auto {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 600px;
+    }
+  }
+
+  /* Mobile performance: reduce expensive blur on small screens */
+  @media (max-width: 640px) {
+    .backdrop-blur-sm {
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+    }
+    .backdrop-blur {
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+    }
+    .backdrop-blur-\[2px\] {
+      -webkit-backdrop-filter: blur(1px);
+      backdrop-filter: blur(1px);
+    }
+  }
 }

@@ -13,21 +13,33 @@ export default function Navigation() {
   const isHome = location.pathname === '/'
 
   useEffect(() => {
+    let ticking = false
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      if (ticking) return
+      ticking = true
+      requestAnimationFrame(() => {
+        setIsScrolled(window.scrollY > 50)
+        ticking = false
+      })
     }
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   useEffect(() => {
     if (location.hash) {
-      setTimeout(() => {
-        const element = document.getElementById(location.hash.substring(1))
+      const hash = location.hash.substring(1)
+      let attempts = 0
+      const tryScroll = () => {
+        const element = document.getElementById(hash)
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        } else if (attempts < 8) {
+          attempts++
+          setTimeout(tryScroll, 100)
         }
-      }, 100)
+      }
+      setTimeout(tryScroll, 100)
     }
   }, [location])
 

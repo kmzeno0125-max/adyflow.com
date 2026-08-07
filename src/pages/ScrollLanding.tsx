@@ -17,8 +17,11 @@ export default function ScrollLanding() {
   const [audCur, setAudCur] = useState(0)
   const [vsRevealed, setVsRevealed] = useState(false)
   const [chartDrawn, setChartDrawn] = useState(false)
-  const [procProgress, setProcProgress] = useState(0)
-  const [scrollProgress, setScrollProgress] = useState(0)
+
+  // Performance: scroll/proc progress as refs, updated via direct DOM manipulation
+  const scrollProgressRef = useRef(0)
+  const procProgressRef = useRef(0)
+  const procActiveRef = useRef(0)
 
   const procRef = useRef<HTMLElement>(null)
   const ptrackRef = useRef<HTMLDivElement>(null)
@@ -26,6 +29,12 @@ export default function ScrollLanding() {
   const vsRef = useRef<HTMLDivElement>(null)
   const chartRef = useRef<HTMLDivElement>(null)
   const glineRef = useRef<SVGPathElement>(null)
+  const progressBarRef = useRef<HTMLDivElement>(null)
+  const pwireFillRef = useRef<HTMLDivElement>(null)
+  const ptokenRef = useRef<HTMLDivElement>(null)
+  const ptokenLabelRef = useRef<HTMLDivElement>(null)
+  const pwireStationsRef = useRef<HTMLDivElement>(null)
+  const procStepsRef = useRef<HTMLDivElement>(null)
   const autoRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const reduceMotion = useRef(false)
 
@@ -93,17 +102,71 @@ export default function ScrollLanding() {
         procRef.current.style.height = 'auto'
       }
     }
-    // Run after a frame to ensure layout is stable
     const raf = requestAnimationFrame(() => {
       sizeProc()
-      // Run again after fonts/images settle
       setTimeout(sizeProc, 300)
     })
     window.addEventListener('resize', sizeProc)
     return () => { cancelAnimationFrame(raf); window.removeEventListener('resize', sizeProc) }
   }, [])
 
-  // Scroll handler: progress bar + process section
+  // Direct DOM update for process section — no React re-render
+  const updateProcDOM = useCallback(() => {
+    const prog = procProgressRef.current
+    const active = Math.min(4, Math.max(0, Math.floor(prog * 5 - 0.0001)))
+    procActiveRef.current = active
+
+    // Track translate
+    if (ptrackRef.current) {
+      const viewport = ptrackRef.current.parentElement
+      if (viewport) {
+        const overflow = ptrackRef.current.scrollWidth - viewport.clientWidth
+        if (overflow > 0) {
+          ptrackRef.current.style.transform = `translateX(${-prog * overflow}px)`
+        }
+      }
+    }
+
+    // Wire fill
+    if (pwireFillRef.current) {
+      pwireFillRef.current.style.width = `${prog * 100}%`
+    }
+
+    // Stations
+    if (pwireStationsRef.current) {
+      const stations = pwireStationsRef.current.children
+      for (let i = 0; i < stations.length; i++) {
+        const pct = i * 20 + 10
+        if (pct <= prog * 100) {
+          stations[i].classList.add('on')
+        } else {
+          stations[i].classList.remove('on')
+        }
+      }
+    }
+
+    // Token position + label
+    if (ptokenRef.current) {
+      ptokenRef.current.style.left = `${prog * 100}%`
+    }
+    if (ptokenLabelRef.current) {
+      ptokenLabelRef.current.textContent = stationLabels[active] || ''
+    }
+
+    // Step active classes
+    if (procStepsRef.current) {
+      const steps = procStepsRef.current.children
+      for (let i = 0; i < steps.length; i++) {
+        if (i === active) {
+          steps[i].classList.add('on')
+        } else {
+          steps[i].classList.remove('on')
+        }
+      }
+    }
+  }, [stationLabels])
+
+  // Scroll handler: progress bar + process section — all via direct DOM, no state updates
   useEffect(() => {
     let ticking = false
     const onScroll = () => {
@@ -111,15 +174,21 @@ export default function ScrollLanding() {
       ticking = true
       requestAnimationFrame(() => {
         const h = document.documentElement.scrollHeight - window.innerHeight
-        setScrollProgress(h > 0 ? Math.min(1, Math.max(0, window.scrollY / h)) : 0)
+        const sp = h > 0 ? Math.min(1, Math.max(0, window.scrollY / h)) : 0
+        scrollProgressRef.current = sp
+
+        // Direct DOM update for progress bar
+        if (progressBarRef.current) {
+          progressBarRef.current.style.transform = `scaleX(${sp})`
+        }
 
         if (procRef.current && window.innerWidth > 920 && !reduceMotion.current) {
           const rect = procRef.current.getBoundingClientRect()
           const sectionHeight = procRef.current.offsetHeight
           const scrollable = sectionHeight - window.innerHeight
           if (scrollable > 0) {
-            const prog = Math.min(1, Math.max(0, -rect.top / scrollable))
-            setProcProgress(prog)
+            procProgressRef.current = Math.min(1, Math.max(0, -rect.top / scrollable))
+            updateProcDOM()
           }
         }
         ticking = false
@@ -128,7 +197,7 @@ export default function ScrollLanding() {
     window.addEventListener('scroll', onScroll, { passive: true })
     onScroll()
     return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  }, [updateProcDOM])
 
   // Audience auto-advance
   useEffect(() => {
@@ -173,23 +242,11 @@ export default function ScrollLanding() {
     if (autoRef.current) { clearInterval(autoRef.current); autoRef.current = null }
   }, [])
 
-  // Process computed values
-  const procActive = Math.min(4, Math.max(0, Math.floor(procProgress * 5 - 0.0001)))
-  const getTrackTranslate = () => {
-    if (!ptrackRef.current) return 0
-    const viewport = ptrackRef.current.parentElement
-    if (!viewport) return 0
-    const overflow = ptrackRef.current.scrollWidth - viewport.clientWidth
-    if (overflow <= 0) return 0
-    return -(procProgress * overflow)
-  }
-  const ptrackTranslate = getTrackTranslate()
-
   return (
     <div className="sl-page">
       {/* Progress bar */}
       <div className="sl-progress">
-        <i style={{ transform: `scaleX(${scrollProgress})` }} />
+        <i ref={progressBarRef} />
       </div>
 
       {/* 2. AUDIENCE */}
@@ -253,25 +310,27 @@ export default function ScrollLanding() {
             <div className="sub">{t(`${sl}.proc_sub`)}</div>
           </div>
           <div className="sl-proc-viewport">
-            <div className="sl-ptrack" ref={ptrackRef} style={{ transform: `translateX(${ptrackTranslate}px)` }}>
+            <div className="sl-ptrack" ref={ptrackRef}>
               {procSteps.map((s, i) => (
-                <StepWithConnect key={i} step={{ num: String(i + 1).padStart(2, '0'), ...s }} active={procActive === i} isLast={i === 4} />
+                <StepWithConnect key={i} step={{ num: String(i + 1).padStart(2, '0'), ...s }} isLast={i === 4} />
               ))}
             </div>
           </div>
           <div className="sl-pwire">
             <div className="sl-pwire-rail" />
-            <div className="sl-pwire-fill" style={{ width: `${procProgress * 100}%` }} />
-            {[10, 30, 50, 70, 90].map((pct, i) => (
-              <div key={i} className={`sl-pstation${(i * 20 + 10) <= procProgress * 100 ? ' on' : ''}`} style={{ left: `${pct}%` }} />
-            ))}
-            <div className="sl-ptoken" style={{ left: `${procProgress * 100}%` }}>
+            <div className="sl-pwire-fill" ref={pwireFillRef} />
+            <div ref={pwireStationsRef}>
+              {[10, 30, 50, 70, 90].map((pct, i) => (
+                <div key={i} className="sl-pstation" style={{ left: `${pct}%` }} />
+              ))}
+            </div>
+            <div className="sl-ptoken" ref={ptokenRef}>
               <div className="core" />
-              <div className="label">{stationLabels[procActive]}</div>
+              <div className="label" ref={ptokenLabelRef}>{stationLabels[0]}</div>
             </div>
           </div>
         </div>
-        <div className="sl-proc-mobile">
+        <div className="sl-proc-mobile" ref={procStepsRef}>
           {procSteps.map((step, i) => (
             <div key={i} className="sl-pstep on"><div className="num">{String(i + 1).padStart(2, '0')}</div><h3>{step.title}</h3><div className="tag">{step.tag}</div><div className="line">{step.line}</div></div>
           ))}
@@ -318,7 +377,7 @@ export default function ScrollLanding() {
         <div className={`sl-chart${chartDrawn ? ' draw' : ''}`} ref={chartRef}>
           <svg viewBox="0 0 1000 460" preserveAspectRatio="none">
             <defs>
-              <linearGradient id="sl-gg" x1="0" y1="0" x2="1" y2="0">
+              <linearGradient id="sl-gg" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0" stopColor="#3B82F6" /><stop offset="0.5" stopColor="#8B5CF6" /><stop offset="1" stopColor="#EC4899" />
               </linearGradient>
               <linearGradient id="sl-ga" x1="0" y1="0" x2="0" y2="1">
@@ -374,10 +433,10 @@ export default function ScrollLanding() {
   )
 }
 
-function StepWithConnect({ step, active, isLast }: { step: { num: string; title: string; tag: string; line: string; chip: string }; active: boolean; isLast: boolean }) {
+function StepWithConnect({ step, isLast }: { step: { num: string; title: string; tag: string; line: string; chip: string }; isLast: boolean }) {
   return (
     <>
-      <div className={`sl-pstep${active ? ' on' : ''}`}>
+      <div className="sl-pstep">
         <div className="num">{step.num}</div>
         <h3>{step.title}</h3>
         <div className="tag">{step.tag}</div>

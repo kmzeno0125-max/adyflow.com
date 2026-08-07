@@ -67,9 +67,9 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-20 bg-gradient-to-b from-white via-slate-50/50 to-white">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-1/4 w-[250px] h-[250px] sm:w-[500px] sm:h-[500px] bg-purple-100/60 rounded-full filter blur-[80px] sm:blur-[140px]" />
-        <div className="absolute top-40 right-1/4 w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] bg-blue-100/50 rounded-full filter blur-[60px] sm:blur-[120px]" />
-        <div className="absolute bottom-20 left-1/2 w-[175px] h-[175px] sm:w-[350px] sm:h-[350px] bg-pink-100/40 rounded-full filter blur-[60px] sm:blur-[120px]" />
+        <div className="absolute top-20 left-1/4 w-[250px] h-[250px] sm:w-[500px] sm:h-[500px] bg-purple-100/60 rounded-full filter blur-[40px] sm:blur-[140px]" />
+        <div className="absolute top-40 right-1/4 w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] bg-blue-100/50 rounded-full filter blur-[30px] sm:blur-[120px]" />
+        <div className="absolute bottom-20 left-1/2 w-[175px] h-[175px] sm:w-[350px] sm:h-[350px] bg-pink-100/40 rounded-full filter blur-[30px] sm:blur-[120px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
@@ -164,7 +164,7 @@ export default function Hero() {
             style={{ animationDelay: '0.3s', opacity: 0 }}
           >
             <div className="relative">
-              <div className="absolute -inset-4 rounded-[32px] bg-gradient-to-br from-purple-200/40 via-pink-200/30 to-blue-200/40 blur-2xl pointer-events-none" />
+              <div className="absolute -inset-4 rounded-[32px] bg-gradient-to-br from-purple-200/40 via-pink-200/30 to-blue-200/40 blur-xl sm:blur-2xl pointer-events-none" />
 
               <div
                 className="relative rounded-[24px] overflow-hidden aspect-[4/3] border border-slate-200/80 shadow-2xl"

@@ -144,7 +144,6 @@ function PartnersCTA() {
 
 export default function Partners() {
   const { t, i18n } = useTranslation()
-  const navigate = useNavigate()
 
   const handleHeroCTAClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
