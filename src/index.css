@@ -165,7 +165,7 @@
   }
 
   .animate-slide-in-left {
-    animation: slide-in-left 0.6s ease-out forwards;
+    animation: slide-in-left 0.6s ease-out both;
     will-change: transform, opacity;
   }
 
@@ -317,14 +317,6 @@
       animation: none !important;
       opacity: 1 !important;
       transform: none !important;
-    }
-  }
-
-  /* Mobile performance: skip rendering offscreen sections */
-  @media (max-width: 920px) {
-    .content-auto {
-      content-visibility: auto;
-      contain-intrinsic-size: auto 600px;
     }
   }
 

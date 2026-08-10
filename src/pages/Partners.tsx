@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -6,24 +6,12 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import TestimonialsSection from '../components/TestimonialsSection'
 import { partners } from '../data/partners'
+import { useInView } from '../hooks/useInView'
 
 
 function useScrollReveal() {
-  const ref = useRef<HTMLDivElement>(null)
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect() } },
-      { threshold: 0.12 }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [])
-
-  return { ref, visible }
+  const { ref, inView } = useInView(0.12)
+  return { ref, visible: inView }
 }
 
 function LogoGrid() {
@@ -187,31 +175,31 @@ export default function Partners() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <p
             className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-6 animate-slide-in-left"
-            style={{ animationDelay: '0.1s', opacity: 0 }}
+            style={{ animationDelay: '0.1s' }}
           >
             {t('partners_page.hero_label')}
           </p>
           <h1
             className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-slide-in-left"
-            style={{ animationDelay: '0.2s', opacity: 0 }}
+            style={{ animationDelay: '0.2s' }}
           >
             <span className="gradient-text">{t('partners_page.hero_title')}</span>
           </h1>
           <p
             className="text-2xl sm:text-3xl text-slate-900 font-semibold mb-5 animate-slide-in-left"
-            style={{ animationDelay: '0.3s', opacity: 0 }}
+            style={{ animationDelay: '0.3s' }}
           >
             {t('partners_page.hero_subtitle')}
           </p>
           <p
             className="text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed animate-slide-in-left"
-            style={{ animationDelay: '0.4s', opacity: 0 }}
+            style={{ animationDelay: '0.4s' }}
           >
             {t('partners_page.hero_description')}
           </p>
           <div
             className="animate-slide-in-left"
-            style={{ animationDelay: '0.5s', opacity: 0 }}
+            style={{ animationDelay: '0.5s' }}
           >
             <a
               href="#ugyfelvelemenyek"

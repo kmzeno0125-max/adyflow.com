@@ -48,8 +48,10 @@
   opacity: 0;
   transform: translateY(22px);
   transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  animation: sl-rv-fallback 0.8s 2s forwards;
 }
-.sl-page .sl-rv.in { opacity: 1; transform: none; }
+.sl-page .sl-rv.in { opacity: 1; transform: none; animation: none; }
+@keyframes sl-rv-fallback { to { opacity: 1; transform: none; } }
 
 /* === Progress Bar === */
 .sl-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 300; background: transparent; pointer-events: none; }
@@ -139,8 +141,9 @@
   background: rgba(255,255,255,0.75); backdrop-filter: blur(6px); border: 1px solid var(--line);
   box-shadow: 0 10px 30px rgba(60,40,120,0.06);
   opacity: 0; transform: translateY(26px); transition: opacity 0.7s cubic-bezier(0.2,0.7,0.2,1), transform 0.7s cubic-bezier(0.2,0.7,0.2,1);
+  animation: sl-rv-fallback 0.7s 2.2s forwards;
 }
-.sl-prob-item.in { opacity: 1; transform: none; }
+.sl-prob-item.in { opacity: 1; transform: none; animation: none; }
 .sl-prob-item:nth-child(even) { margin-left: auto; flex-direction: row-reverse; text-align: right; }
 .sl-prob-dot { flex: 0 0 auto; width: 12px; height: 12px; border-radius: 50%; background: var(--red); color: var(--red); position: relative; top: 6px; }
 .sl-prob-dot::after { content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid currentColor; opacity: 0.4; animation: sl-ping 2s ease-out infinite; }

@@ -4,32 +4,10 @@ import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import { useInView } from '../hooks/useInView'
 
 const prefersReducedMotion = () =>
   typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
-
-function useInView(threshold = 0.2) {
-  const ref = useRef<HTMLDivElement>(null)
-  const [inView, setInView] = useState(false)
-
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true)
-          observer.disconnect()
-        }
-      },
-      { threshold }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [threshold])
-
-  return { ref, inView }
-}
 
 function formatNumber(value: number, decimals: number, thousands: boolean, locale: string) {
   if (locale === 'en') {
@@ -191,31 +169,31 @@ function Hero() {
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <p
           className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-6 animate-slide-in-left"
-          style={{ animationDelay: '0.1s', opacity: 0 }}
+          style={{ animationDelay: '0.1s' }}
         >
           {t('eredmenyek.hero_label')}
         </p>
         <h1
           className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-slide-in-left"
-          style={{ animationDelay: '0.2s', opacity: 0 }}
+          style={{ animationDelay: '0.2s' }}
         >
           <span className="gradient-text">{t('eredmenyek.hero_title')}</span>
         </h1>
         <p
           className="text-2xl sm:text-3xl text-slate-700 font-semibold mb-5 animate-slide-in-left"
-          style={{ animationDelay: '0.3s', opacity: 0 }}
+          style={{ animationDelay: '0.3s' }}
         >
           {t('eredmenyek.hero_subtitle')}
         </p>
         <p
           className="text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed animate-slide-in-left"
-          style={{ animationDelay: '0.4s', opacity: 0 }}
+          style={{ animationDelay: '0.4s' }}
         >
           {t('eredmenyek.hero_description')}
         </p>
         <div
           className="animate-slide-in-left"
-          style={{ animationDelay: '0.5s', opacity: 0 }}
+          style={{ animationDelay: '0.5s' }}
         >
           <a
             href="/#kapcsolat"

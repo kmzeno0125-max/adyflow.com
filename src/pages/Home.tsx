@@ -6,11 +6,20 @@ import ScrollLanding from './ScrollLanding';
 import FlowSection from '../components/FlowSection';
 import CTA from '../components/CTA';
 import FloatingCallButton from '../components/FloatingCallButton';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 const Team = lazy(() => import('../components/Team'));
 const PartnersSlider = lazy(() => import('../components/PartnersSlider'));
 const FAQ = lazy(() => import('../components/FAQ'));
 const Footer = lazy(() => import('../components/Footer'));
+
+function SectionFallback() {
+  return (
+    <div className="flex items-center justify-center py-20">
+      <div className="w-8 h-8 rounded-full border-2 border-slate-300 border-t-purple-500 animate-spin" />
+    </div>
+  );
+}
 
 const Home = () => {
   const { t, i18n } = useTranslation();
@@ -29,15 +38,27 @@ const Home = () => {
       <Hero />
       <ScrollLanding />
       <FlowSection />
-      <Suspense fallback={null}>
-        <div className="content-auto">
+      <ErrorBoundary>
+        <Suspense fallback={<SectionFallback />}>
           <Team />
-          <CTA />
+        </Suspense>
+      </ErrorBoundary>
+      <CTA />
+      <ErrorBoundary>
+        <Suspense fallback={<SectionFallback />}>
           <PartnersSlider />
+        </Suspense>
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Suspense fallback={<SectionFallback />}>
           <FAQ />
+        </Suspense>
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Suspense fallback={<SectionFallback />}>
           <Footer />
-        </div>
-      </Suspense>
+        </Suspense>
+      </ErrorBoundary>
       <FloatingCallButton />
     </>
   );
