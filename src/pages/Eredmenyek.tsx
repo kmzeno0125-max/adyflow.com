@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import KanapekiralyCaseStudy from '../components/KanapekiralyCaseStudy'
 import { useInView } from '../hooks/useInView'
 
 const prefersReducedMotion = () =>
@@ -864,6 +865,7 @@ export default function Eredmenyek() {
       <KpiRow />
       <CaseStudy />
       <PliszéProCaseStudy />
+      <KanapekiralyCaseStudy />
       <WhyItWorks />
       <FinalCTA />
       <Footer />

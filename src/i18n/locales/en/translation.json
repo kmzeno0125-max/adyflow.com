@@ -712,6 +712,39 @@
       "cta_title": "Want similar results for your business?",
       "cta_subtitle": "We design and build the advertising and customer-acquisition system that generates not just clicks, but real business opportunities.",
       "cta_button": "Free consultation"
+    },
+    "kanapekiraly": {
+      "label": "Featured success story",
+      "industry_label": "Industry:",
+      "industry_value": "Furniture and sofa e-commerce",
+      "period_label": "Period:",
+      "period_value": "June 10 – August 11, 2026 (approx. 9 weeks)",
+      "description": "Kanapékirály is a nationwide furniture and sofa e-commerce business. The goal of the Google Ads campaign was not simply to increase traffic, but to generate measurable purchase value and maximize the return on advertising spend. During the period reviewed, the campaign achieved an 11.93x ROAS.",
+      "what_we_did": "What we did",
+      "tasks": [
+        "Built a conversion-focused Google Ads campaign structure",
+        "Targeted high purchase-intent searches and products",
+        "Measured conversion value and advertising return precisely",
+        "Continuously optimized keywords, bids and budgets"
+      ],
+      "highlight_label": "Return on ad spend",
+      "highlight_stat_label": "Conversion value-to-cost ratio achieved during the period reviewed.",
+      "ratio_part1": "For every 1 HUF spent on Google Ads,",
+      "ratio_part2": "11.93 HUF in measured conversion value was generated.",
+      "duration_suffix": " weeks",
+      "duration_label": "Period reviewed",
+      "channel_value": "Google Ads",
+      "channel_label": "Campaign channel",
+      "image_alt": "11.93x return on the Kanapékirály Google Ads campaign",
+      "image_caption": "Google Ads – measured campaign result for the period reviewed",
+      "why_title_part1": "Why did it",
+      "why_title_highlight": "work?",
+      "why_items": [
+        { "title": "High purchase intent", "text": "The campaign focused on searches and products that were close to the purchase decision." },
+        { "title": "Value-based optimization", "text": "We considered not only the number of conversions, but also their measured value." },
+        { "title": "Accurate conversion tracking", "text": "Connecting costs with conversion value made the campaign return clear." },
+        { "title": "Continuous refinement", "text": "Regular optimization of keywords, bids and budgets helped maintain efficiency." }
+      ]
     }
   },
   "partners_page": {

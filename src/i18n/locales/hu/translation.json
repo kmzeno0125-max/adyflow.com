@@ -712,6 +712,39 @@
       "cta_title": "Hasonló eredményeket szeretnél a vállalkozásodban?",
       "cta_subtitle": "Megtervezzük és felépítjük azt a hirdetési és ügyfélszerző rendszert, amely nemcsak kattintásokat, hanem valódi üzleti lehetőségeket generál.",
       "cta_button": "Ingyenes konzultáció"
+    },
+    "kanapekiraly": {
+      "label": "Kiemelt sikertörténet",
+      "industry_label": "Iparág:",
+      "industry_value": "Bútor- és kanapé webáruház",
+      "period_label": "Vizsgált időszak:",
+      "period_value": "2026. június 10. – augusztus 11. (kb. 9 hét)",
+      "description": "A Kanapékirály egy országosan értékesítő bútor- és kanapé webáruház. A Google Ads kampány célja nem egyszerűen a látogatottság növelése volt, hanem mérhető vásárlási érték generálása és a hirdetési költség lehető leghatékonyabb megtérülése. A vizsgált időszakban a kampány 11,93-szoros ROAS-eredményt ért el.",
+      "what_we_did": "Mit csináltunk",
+      "tasks": [
+        "Konverzióközpontú Google Ads kampánystruktúra kialakítása",
+        "Magas vásárlási szándékú keresések és termékek célzása",
+        "Konverziós érték és hirdetési megtérülés pontos mérése",
+        "Kulcsszavak, ajánlatok és költségkeretek folyamatos optimalizálása"
+      ],
+      "highlight_label": "Hirdetési megtérülés",
+      "highlight_stat_label": "A vizsgált időszakban elért konverziósérték-/költség arány.",
+      "ratio_part1": "Minden 1 Ft Google Ads-költségre",
+      "ratio_part2": "11,93 Ft mért konverziós érték jutott.",
+      "duration_suffix": " hét",
+      "duration_label": "Vizsgált időszak",
+      "channel_value": "Google Ads",
+      "channel_label": "Kampánycsatorna",
+      "image_alt": "A Kanapékirály Google Ads kampányának 11,93-szoros megtérülése",
+      "image_caption": "Google Ads – a vizsgált időszak mért kampányeredménye",
+      "why_title_part1": "Miért",
+      "why_title_highlight": "működött?",
+      "why_items": [
+        { "title": "Magas vásárlási szándék", "text": "A kampány olyan keresésekre és termékekre koncentrált, amelyek közel álltak a vásárlási döntéshez." },
+        { "title": "Értékalapú optimalizálás", "text": "Nemcsak a konverziók számát, hanem azok mért értékét is figyelembe vettük." },
+        { "title": "Pontos konverziómérés", "text": "A költségek és a konverziós érték összekapcsolása egyértelműen megmutatta a kampány megtérülését." },
+        { "title": "Folyamatos finomhangolás", "text": "A kulcsszavak, ajánlatok és költségkeretek rendszeres optimalizálása segített fenntartani a hatékonyságot." }
+      ]
     }
   },
   "partners_page": {

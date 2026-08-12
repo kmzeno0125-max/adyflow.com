@@ -712,6 +712,39 @@
       "cta_title": "Möchtest du ähnliche Ergebnisse für dein Unternehmen?",
       "cta_subtitle": "Wir planen und bauen das Werbe- und Kundengewinnungssystem, das nicht nur Klicks, sondern echte Geschäftschancen generiert.",
       "cta_button": "Kostenlose Beratung"
+    },
+    "kanapekiraly": {
+      "label": "Ausgewählte Erfolgsgeschichte",
+      "industry_label": "Branche:",
+      "industry_value": "Möbel- und Sofa-Onlineshop",
+      "period_label": "Zeitraum:",
+      "period_value": "10. Juni – 11. August 2026 (ca. 9 Wochen)",
+      "description": "Kanapékirály ist ein landesweit tätiger Möbel- und Sofa-Onlineshop. Ziel der Google-Ads-Kampagne war nicht einfach mehr Besucherverkehr, sondern messbaren Kaufwert zu generieren und die Rendite der Werbeausgaben bestmöglich zu steigern. Im untersuchten Zeitraum erzielte die Kampagne einen ROAS von 11,93.",
+      "what_we_did": "Was wir gemacht haben",
+      "tasks": [
+        "Aufbau einer conversionsorientierten Google-Ads-Kampagnenstruktur",
+        "Targeting von Suchanfragen und Produkten mit hoher Kaufabsicht",
+        "Präzise Messung von Conversion-Wert und Werberendite",
+        "Kontinuierliche Optimierung von Keywords, Geboten und Budgets"
+      ],
+      "highlight_label": "Werbeausgaben-Rendite",
+      "highlight_stat_label": "Verhältnis von gemessenem Conversion-Wert zu Kosten im untersuchten Zeitraum.",
+      "ratio_part1": "Für jeden 1 HUF Google-Ads-Ausgaben",
+      "ratio_part2": "entstanden 11,93 HUF gemessener Conversion-Wert.",
+      "duration_suffix": " Wochen",
+      "duration_label": "Untersuchter Zeitraum",
+      "channel_value": "Google Ads",
+      "channel_label": "Kampagnenkanal",
+      "image_alt": "11,93-fache Rendite der Google-Ads-Kampagne von Kanapékirály",
+      "image_caption": "Google Ads – gemessenes Kampagnenergebnis im untersuchten Zeitraum",
+      "why_title_part1": "Warum hat es",
+      "why_title_highlight": "funktioniert?",
+      "why_items": [
+        { "title": "Hohe Kaufabsicht", "text": "Die Kampagne konzentrierte sich auf Suchanfragen und Produkte, die nahe an der Kaufentscheidung lagen." },
+        { "title": "Wertbasierte Optimierung", "text": "Wir berücksichtigten nicht nur die Anzahl der Conversions, sondern auch deren gemessenen Wert." },
+        { "title": "Präzises Conversion-Tracking", "text": "Die Verbindung von Kosten und Conversion-Wert machte die Kampagnenrendite eindeutig sichtbar." },
+        { "title": "Kontinuierliche Feinabstimmung", "text": "Die regelmäßige Optimierung von Keywords, Geboten und Budgets half, die Effizienz aufrechtzuerhalten." }
+      ]
     }
   },
   "partners_page": {
