@@ -19,6 +19,7 @@ type PortfolioItem = {
   domain: string;
   fallbackLogo?: string;
   localImage?: string;
+  containPreview?: boolean;
 };
 
 const PORTFOLIO: PortfolioItem[] = [
@@ -33,8 +34,8 @@ const PORTFOLIO: PortfolioItem[] = [
   { domain: 'pliszepro.hu', localImage: '/assets/partners/pliszepro-preview.jpg' },
   { domain: 'fakocka-apartman.hu', fallbackLogo: '/assets/partners/fakocka-apartman-logo.png' },
   { domain: 'examcenter.hu', fallbackLogo: '/assets/partners/files_10287071-2026-07-22T14-13-18-563Z-image.webp' },
-  { domain: 'eventvolt.hu', localImage: '/assets/img/weboldal-preview/eventvolt-preview.webp' },
-  { domain: 'hips.hu', localImage: '/assets/img/weboldal-preview/hips-preview.webp' }
+  { domain: 'eventvolt.hu', localImage: '/assets/img/weboldal-preview/image copy.png', containPreview: true },
+  { domain: 'hips.hu', localImage: '/assets/img/weboldal-preview/image.png', containPreview: true }
 ];
 
 const screenshotSources = (domain: string) => [
@@ -186,7 +187,7 @@ function PortfolioCard({ item, viewLabel }: { item: PortfolioItem; viewLabel: st
             alt={t('website.card_preview_alt', { domain: item.domain })}
             loading="lazy"
             decoding="async"
-            className="w-full h-full object-cover object-top group-hover:scale-105 transition-all duration-500 motion-reduce:transform-none"
+            className={`w-full h-full ${item.containPreview ? 'object-contain object-center bg-white' : 'object-cover object-top'} group-hover:scale-105 transition-all duration-500 motion-reduce:transform-none`}
           />
         ) : (
           <img
