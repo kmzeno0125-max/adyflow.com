@@ -27,4 +27,5 @@ export const partners: Partner[] = [
   { src: '/assets/partners/pliszepro-logo.png', alt: 'PliszéPro logó', whiteBg: true, logoScale: 1.6 },
   { src: '/assets/partners/fakocka-apartman-logo.png', alt: 'Fakocka Apartman logó', whiteBg: true },
   { src: '/assets/partners/image copy.png', alt: 'EventVolt Kft. logó' },
+  { src: '/assets/partners/hips-wordmark.svg', alt: 'Dr. Hips Frigyes Zsolt', whiteBg: true },
 ]

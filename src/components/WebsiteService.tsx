@@ -32,7 +32,9 @@ const PORTFOLIO: PortfolioItem[] = [
   { domain: 'mecsekszerviz.hu' },
   { domain: 'pliszepro.hu', localImage: '/assets/partners/pliszepro-preview.jpg' },
   { domain: 'fakocka-apartman.hu', fallbackLogo: '/assets/partners/fakocka-apartman-logo.png' },
-  { domain: 'examcenter.hu', fallbackLogo: '/assets/partners/files_10287071-2026-07-22T14-13-18-563Z-image.webp' }
+  { domain: 'examcenter.hu', fallbackLogo: '/assets/partners/files_10287071-2026-07-22T14-13-18-563Z-image.webp' },
+  { domain: 'eventvolt.hu', localImage: '/assets/img/weboldal-preview/eventvolt-preview.webp' },
+  { domain: 'hips.hu', localImage: '/assets/img/weboldal-preview/hips-preview.webp' }
 ];
 
 const screenshotSources = (domain: string) => [
