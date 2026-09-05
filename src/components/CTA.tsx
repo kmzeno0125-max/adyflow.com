@@ -23,7 +23,7 @@ export default function CTA() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
     const service = params.get('service')
-    const allowed = ['hirdeteskezeles', 'weboldal', 'crm-rendszer', 'kreativ-tartalomgyartas', 'teljesköru-marketing', 'egyeb']
+    const allowed = ['hirdeteskezeles', 'weboldal', 'crm-rendszer', 'teljesköru-marketing', 'egyeb']
     if (service && allowed.includes(service)) {
       setFormData((prev) => ({ ...prev, company_type: service }))
       const el = document.getElementById('kapcsolat')
@@ -222,7 +222,6 @@ export default function CTA() {
                     <option value="hirdeteskezeles" className="bg-white text-slate-900">{t('cta.interest_ads')}</option>
                     <option value="weboldal" className="bg-white text-slate-900">{t('cta.interest_website')}</option>
                     <option value="crm-rendszer" className="bg-white text-slate-900">{t('cta.interest_crm')}</option>
-                    <option value="kreativ-tartalomgyartas" className="bg-white text-slate-900">{t('cta.interest_creative')}</option>
                     <option value="teljesköru-marketing" className="bg-white text-slate-900">{t('cta.interest_full')}</option>
                     <option value="egyeb" className="bg-white text-slate-900">{t('cta.interest_other')}</option>
                   </select>
