@@ -13,7 +13,7 @@ export const partners: Partner[] = [
   { src: '/files_8595244-2026-02-18T09-19-48-604Z-image.png', alt: 'Piccolo Italiano' },
   { src: '/files_8595244-2026-02-19T10-42-58-465Z-image.png', alt: 'Beauty BOX' },
   { src: '/files_8595244-2026-02-19T10-48-30-841Z-files_8595244-2026-02-19T10-43-41-800Z-image.png', alt: 'LDSZ Biztonságtechnika' },
-  { src: '/files_8595244-2026-02-19T16-11-19-555Z-files_8595244-2026-02-19T16-06-16-708Z-files_8595244-2026-02-19T16-05-40-810Z-files_8595244-2026-02-19T15-58-19-307Z-image.png', alt: 'SmoothSkin' },
+  { src: '/assets/partners/files_8595244-2026-04-21T18-34-44-633Z-image.png', alt: 'SmoothSkin', whiteBg: true },
   { src: '/files_8595244-2026-04-20T09-37-05-952Z-files_8595244-2026-04-20T09-34-29-822Z-image.png', alt: 'WBC Land Balaton' },
   { src: '/assets/partners/upgrade-zeitarbeit-logo.png', alt: 'Upgrade Zeitarbeit GmbH', whiteBg: true },
   { src: '/files_8595244-2026-05-14T14-44-11-304Z-files_8595244-2026-05-14T14-42-14-170Z-image.webp', alt: 'Expresszablak.hu' },
