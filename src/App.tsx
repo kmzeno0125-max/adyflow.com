@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import ErrorBoundary from './components/ErrorBoundary';
 import ScrollToTop from './components/ScrollToTop';
+import CookieConsent from './components/CookieConsent';
 
 const ASZF = lazy(() => import('./pages/ASZF'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Disclaimer = lazy(() => import('./pages/Disclaimer'));
+const CookiePolicy = lazy(() => import('./pages/CookiePolicy'));
 const Partners = lazy(() => import('./pages/Partners'));
 const Eredmenyek = lazy(() => import('./pages/Eredmenyek'));
 const Weboldal = lazy(() => import('./pages/Weboldal'));
@@ -34,10 +36,12 @@ function App() {
               <Route path="/aszf" element={<ASZF />} />
               <Route path="/adatvedelem" element={<Privacy />} />
               <Route path="/disclaimer" element={<Disclaimer />} />
+              <Route path="/suti-tajekoztato" element={<CookiePolicy />} />
               <Route path="*" element={<Home />} />
             </Routes>
           </Suspense>
         </ErrorBoundary>
+        <CookieConsent />
       </Router>
     </div>
   );
