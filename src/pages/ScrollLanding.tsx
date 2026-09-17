@@ -92,11 +92,13 @@ export default function ScrollLanding() {
     const active = Math.min(4, Math.max(0, Math.floor(prog * 5 - 0.0001)))
     procActiveRef.current = active
 
-    // Track translate
+    // Track translate — use offsetWidth for reliable content width measurement
     if (ptrackRef.current) {
       const viewport = ptrackRef.current.parentElement
       if (viewport) {
-        const overflow = Math.max(0, ptrackRef.current.scrollWidth - viewport.clientWidth)
+        const trackWidth = ptrackRef.current.offsetWidth
+        const viewportWidth = viewport.clientWidth
+        const overflow = Math.max(0, trackWidth - viewportWidth)
         if (overflow > 0) {
           ptrackRef.current.style.transform = `translateX(${-prog * overflow}px)`
         } else {
@@ -158,7 +160,9 @@ export default function ScrollLanding() {
     if (window.innerWidth > 920 && !reduceMotion.current) {
       const viewport = ptrackRef.current.parentElement
       if (viewport) {
-        const overflow = Math.max(0, ptrackRef.current.scrollWidth - viewport.clientWidth)
+        const trackWidth = ptrackRef.current.offsetWidth
+        const viewportWidth = viewport.clientWidth
+        const overflow = Math.max(0, trackWidth - viewportWidth)
         procRef.current.style.height = `${overflow + window.innerHeight + 200}px`
       }
     } else {
