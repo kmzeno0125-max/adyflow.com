@@ -86,35 +86,6 @@ export default function ScrollLanding() {
     }
   }, [chartDrawn])
 
-  // Process section height for pin — must run before scroll handler
-  useEffect(() => {
-    const sizeProc = () => {
-      if (!procRef.current || !ptrackRef.current) return
-      if (window.innerWidth > 920 && !reduceMotion.current) {
-        const viewport = ptrackRef.current.parentElement
-        if (viewport) {
-          const overflow = Math.max(0, ptrackRef.current.scrollWidth - viewport.clientWidth)
-          procRef.current.style.height = `${overflow + window.innerHeight}px`
-        }
-      } else {
-        procRef.current.style.height = 'auto'
-      }
-      updateProcDOM()
-    }
-    const raf = requestAnimationFrame(() => {
-      sizeProc()
-      setTimeout(sizeProc, 300)
-      setTimeout(sizeProc, 1000)
-    })
-    window.addEventListener('resize', sizeProc)
-    window.addEventListener('load', sizeProc)
-    return () => {
-      cancelAnimationFrame(raf)
-      window.removeEventListener('resize', sizeProc)
-      window.removeEventListener('load', sizeProc)
-    }
-  }, [])
-
   // Direct DOM update for process section — no React re-render
   const updateProcDOM = useCallback(() => {
     const prog = procProgressRef.current
@@ -125,9 +96,11 @@ export default function ScrollLanding() {
     if (ptrackRef.current) {
       const viewport = ptrackRef.current.parentElement
       if (viewport) {
-        const overflow = ptrackRef.current.scrollWidth - viewport.clientWidth
+        const overflow = Math.max(0, ptrackRef.current.scrollWidth - viewport.clientWidth)
         if (overflow > 0) {
           ptrackRef.current.style.transform = `translateX(${-prog * overflow}px)`
+        } else {
+          ptrackRef.current.style.transform = 'translateX(0)'
         }
       }
     }
@@ -158,7 +131,15 @@ export default function ScrollLanding() {
       ptokenLabelRef.current.textContent = stationLabels[active] || ''
     }
 
-    // Step active classes
+    // Step active classes — toggle on desktop track cards
+    if (ptrackRef.current) {
+      const cards = ptrackRef.current.querySelectorAll('.sl-pstep')
+      cards.forEach((card, i) => {
+        if (i === active) card.classList.add('on')
+        else card.classList.remove('on')
+      })
+    }
+    // Also toggle mobile cards
     if (procStepsRef.current) {
       const steps = procStepsRef.current.children
       for (let i = 0; i < steps.length; i++) {
@@ -170,6 +151,51 @@ export default function ScrollLanding() {
       }
     }
   }, [stationLabels])
+
+  // Size the process section so sticky pinning has room to scroll horizontally
+  const sizeProc = useCallback(() => {
+    if (!procRef.current || !ptrackRef.current) return
+    if (window.innerWidth > 920 && !reduceMotion.current) {
+      const viewport = ptrackRef.current.parentElement
+      if (viewport) {
+        const overflow = Math.max(0, ptrackRef.current.scrollWidth - viewport.clientWidth)
+        procRef.current.style.height = `${overflow + window.innerHeight + 200}px`
+      }
+    } else {
+      procRef.current.style.height = 'auto'
+      ptrackRef.current.style.transform = 'translateX(0)'
+    }
+    updateProcDOM()
+  }, [updateProcDOM])
+
+  // Process section height — ResizeObserver + fallbacks for reliable measurement
+  useEffect(() => {
+    const raf = requestAnimationFrame(() => {
+      sizeProc()
+      setTimeout(sizeProc, 200)
+      setTimeout(sizeProc, 600)
+      setTimeout(sizeProc, 1500)
+    })
+    window.addEventListener('resize', sizeProc)
+    window.addEventListener('load', sizeProc)
+
+    let ro: ResizeObserver | null = null
+    if (ptrackRef.current && 'ResizeObserver' in window) {
+      ro = new ResizeObserver(() => sizeProc())
+      ro.observe(ptrackRef.current)
+    }
+    // Also recalc when fonts are ready
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => sizeProc())
+    }
+
+    return () => {
+      cancelAnimationFrame(raf)
+      window.removeEventListener('resize', sizeProc)
+      window.removeEventListener('load', sizeProc)
+      if (ro) ro.disconnect()
+    }
+  }, [sizeProc])
 
   // Scroll handler: progress bar + process section — all via direct DOM, no state updates
   useEffect(() => {
@@ -191,8 +217,8 @@ export default function ScrollLanding() {
           const rect = procRef.current.getBoundingClientRect()
           const sectionHeight = procRef.current.offsetHeight
           const scrollable = sectionHeight - window.innerHeight
-          if (scrollable >= 0) {
-            procProgressRef.current = scrollable === 0 ? 0 : Math.min(1, Math.max(0, -rect.top / scrollable))
+          if (scrollable > 0) {
+            procProgressRef.current = Math.min(1, Math.max(0, -rect.top / scrollable))
             updateProcDOM()
           }
         }
