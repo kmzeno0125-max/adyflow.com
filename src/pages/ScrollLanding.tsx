@@ -93,21 +93,26 @@ export default function ScrollLanding() {
       if (window.innerWidth > 920 && !reduceMotion.current) {
         const viewport = ptrackRef.current.parentElement
         if (viewport) {
-          const overflow = ptrackRef.current.scrollWidth - viewport.clientWidth
-          if (overflow > 0) {
-            procRef.current.style.height = (overflow + window.innerHeight) + 'px'
-          }
+          const overflow = Math.max(0, ptrackRef.current.scrollWidth - viewport.clientWidth)
+          procRef.current.style.height = `${overflow + window.innerHeight}px`
         }
       } else {
         procRef.current.style.height = 'auto'
       }
+      updateProcDOM()
     }
     const raf = requestAnimationFrame(() => {
       sizeProc()
       setTimeout(sizeProc, 300)
+      setTimeout(sizeProc, 1000)
     })
     window.addEventListener('resize', sizeProc)
-    return () => { cancelAnimationFrame(raf); window.removeEventListener('resize', sizeProc) }
+    window.addEventListener('load', sizeProc)
+    return () => {
+      cancelAnimationFrame(raf)
+      window.removeEventListener('resize', sizeProc)
+      window.removeEventListener('load', sizeProc)
+    }
   }, [])
 
   // Direct DOM update for process section — no React re-render
@@ -186,8 +191,8 @@ export default function ScrollLanding() {
           const rect = procRef.current.getBoundingClientRect()
           const sectionHeight = procRef.current.offsetHeight
           const scrollable = sectionHeight - window.innerHeight
-          if (scrollable > 0) {
-            procProgressRef.current = Math.min(1, Math.max(0, -rect.top / scrollable))
+          if (scrollable >= 0) {
+            procProgressRef.current = scrollable === 0 ? 0 : Math.min(1, Math.max(0, -rect.top / scrollable))
             updateProcDOM()
           }
         }
